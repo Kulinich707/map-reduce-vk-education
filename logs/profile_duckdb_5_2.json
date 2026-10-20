@@ -1,0 +1,10 @@
+{
+  "engine": "duckdb",
+  "cap": 5,
+  "attempt": 2,
+  "seconds": 0.5018340419919696,
+  "cpu_seconds": 0.670994,
+  "peak_rss_mib": 402.03125,
+  "groups": 22046,
+  "emissions": 167633
+}

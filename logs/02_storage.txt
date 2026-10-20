@@ -1,0 +1,3 @@
+$ /Users/gpr/Documents/Codex/2026-10-04/new-chat/work/hw3-venv/bin/python /Users/gpr/Documents/Codex/2026-10-04/new-chat/outputs/HW3_Kulinich_PHP/src/storage.py input
+PUT/GET SHA256 OK s3://hh-lake/variant5-php/input/all_sources.csv 78430228 6a7708659dcc8923bf834a13a34e6a350f02ebec7fdf0f2b6219d28651910280
+PUT/GET SHA256 OK s3://hh-lake/variant5-php/input/php_vacancies.csv 2722797 5ac05e963dc5f99d2163837a0bb730ea6dec13f037f71d3e4cbabfcd22c74847

@@ -1,0 +1,76 @@
+$ /Users/gpr/Documents/Codex/2026-10-04/new-chat/work/hw3-venv/bin/python /Users/gpr/Documents/Codex/2026-10-04/new-chat/outputs/HW3_Kulinich_PHP/src/source_audit.py
+{
+  "archive_unique_ids": 10000,
+  "overlap_with_csv": 10000,
+  "archive_only": 0,
+  "conflicts_by_field": {
+    "published_at": 9904,
+    "area": 5,
+    "title": 14,
+    "gross": 1,
+    "skills_json": 3
+  },
+  "sample_conflicts": [
+    {
+      "id": "106654617",
+      "changed_fields": [
+        "published_at"
+      ]
+    },
+    {
+      "id": "93502358",
+      "changed_fields": [
+        "published_at"
+      ]
+    },
+    {
+      "id": "91090091",
+      "changed_fields": [
+        "published_at"
+      ]
+    },
+    {
+      "id": "106672552",
+      "changed_fields": [
+        "published_at"
+      ]
+    },
+    {
+      "id": "106282846",
+      "changed_fields": [
+        "published_at"
+      ]
+    },
+    {
+      "id": "106612455",
+      "changed_fields": [
+        "published_at"
+      ]
+    },
+    {
+      "id": "106652716",
+      "changed_fields": [
+        "published_at"
+      ]
+    },
+    {
+      "id": "93123459",
+      "changed_fields": [
+        "published_at"
+      ]
+    },
+    {
+      "id": "104645038",
+      "changed_fields": [
+        "published_at"
+      ]
+    },
+    {
+      "id": "94075272",
+      "changed_fields": [
+        "published_at"
+      ]
+    }
+  ],
+  "precedence": "hh.zip first, before variant filtering"
+}

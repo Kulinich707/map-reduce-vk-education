@@ -1,0 +1,26 @@
+Редакционная переработка кода: 2026-10-20
+
+Изменены оформление, имена локальных переменных, комментарии и docstring.
+Методика, SQL, данные, PDF и сохранённые профили не изменены.
+
+Фактические результаты проверок:
+PASS: syntax of 15 programs; normalized AST unchanged for 13 programs
+PASS: old mapper = new mapper = saved complete counts at caps 5, 10, 30
+PASS: 4 caps; dedup; role AND (PHP/version title OR skill); PHPStorm/PHPUnit excluded; multiline CSV; empty/duplicate skills
+
+verify.py:
+population = 8661
+all_keys_equal = true
+combinatorial_identities_checked = 9
+caps = [5, 10, 30]
+
+quality.py:
+all_passed = true
+php_population = 8661
+salary_n = 4202
+salary_combinations_checked = 20
+regions_checked = 3
+regional_skill_rows_checked = 1821
+
+Проверки выполнены локально без повторной загрузки в S3 и без запуска Docker.
+Профилирование после редакционных изменений не повторялось.

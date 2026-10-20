@@ -1,0 +1,702 @@
+{
+  "population": {
+    "vacancies": 8661,
+    "salary_n": 4202,
+    "median_salary": 127750.0,
+    "min_salary": 75.0,
+    "max_salary": 1500000.0,
+    "no_skills": 1002,
+    "max_stack": 30,
+    "min_date": "2023-12-18",
+    "max_date": "2024-09-14",
+    "inverted_bounds": 0,
+    "salary_low_n": 3,
+    "median_salary_without_low": 129000.0,
+    "with_title_php": 5381,
+    "skill_only_php": 3280
+  },
+  "selected_regions": [
+    {
+      "area": "Москва",
+      "vacancies": 3053,
+      "salary_n": 1306,
+      "salary_coverage_pct": 42.78,
+      "median_salary": 165000.0,
+      "q1": 120000.0,
+      "q3": 220000.0,
+      "avg_stack": 6.553226334752702
+    },
+    {
+      "area": "Санкт-Петербург",
+      "vacancies": 1148,
+      "salary_n": 574,
+      "salary_coverage_pct": 50.0,
+      "median_salary": 150000.0,
+      "q1": 100000.0,
+      "q3": 193750.0,
+      "avg_stack": 6.7369337979094075
+    },
+    {
+      "area": "Екатеринбург",
+      "vacancies": 323,
+      "salary_n": 209,
+      "salary_coverage_pct": 64.71,
+      "median_salary": 120000.0,
+      "q1": 80000.0,
+      "q3": 175000.0,
+      "avg_stack": 6.585139318885449
+    }
+  ],
+  "salary_extremes": {
+    "2": {
+      "higher": [
+        {
+          "combo": "[\"api\",\"go\"]",
+          "k": 2,
+          "support": 18,
+          "salary_n": 10,
+          "median_with": 350000.0,
+          "q1": 236250.0,
+          "q3": 350000.0,
+          "median_without": 125000.0,
+          "without_n": 4192,
+          "delta": 225000.0,
+          "uplift_pct": 179.99999999999997
+        },
+        {
+          "combo": "[\"api\",\"golang\"]",
+          "k": 2,
+          "support": 23,
+          "salary_n": 10,
+          "median_with": 350000.0,
+          "q1": 262500.0,
+          "q3": 350000.0,
+          "median_without": 125000.0,
+          "without_n": 4192,
+          "delta": 225000.0,
+          "uplift_pct": 179.99999999999997
+        },
+        {
+          "combo": "[\"backend\",\"golang\"]",
+          "k": 2,
+          "support": 18,
+          "salary_n": 11,
+          "median_with": 350000.0,
+          "q1": 155000.0,
+          "q3": 350000.0,
+          "median_without": 125000.0,
+          "without_n": 4191,
+          "delta": 225000.0,
+          "uplift_pct": 179.99999999999997
+        },
+        {
+          "combo": "[\"docker\",\"highload\"]",
+          "k": 2,
+          "support": 32,
+          "salary_n": 22,
+          "median_with": 350000.0,
+          "q1": 230000.0,
+          "q3": 350000.0,
+          "median_without": 125000.0,
+          "without_n": 4180,
+          "delta": 225000.0,
+          "uplift_pct": 179.99999999999997
+        },
+        {
+          "combo": "[\"go\",\"php7\"]",
+          "k": 2,
+          "support": 10,
+          "salary_n": 10,
+          "median_with": 350000.0,
+          "q1": 200000.0,
+          "q3": 350000.0,
+          "median_without": 125000.0,
+          "without_n": 4192,
+          "delta": 225000.0,
+          "uplift_pct": 179.99999999999997
+        }
+      ],
+      "lower": [
+        {
+          "combo": "[\"c++\",\"java\"]",
+          "k": 2,
+          "support": 47,
+          "salary_n": 10,
+          "median_with": 50000.0,
+          "q1": 50000.0,
+          "q3": 65000.0,
+          "median_without": 130000.0,
+          "without_n": 4192,
+          "delta": -80000.0,
+          "uplift_pct": -61.53846153846154
+        },
+        {
+          "combo": "[\"c++\",\"разработка по\"]",
+          "k": 2,
+          "support": 19,
+          "salary_n": 10,
+          "median_with": 50000.0,
+          "q1": 50000.0,
+          "q3": 65000.0,
+          "median_without": 130000.0,
+          "without_n": 4192,
+          "delta": -80000.0,
+          "uplift_pct": -61.53846153846154
+        },
+        {
+          "combo": "[\"crm\",\"css\"]",
+          "k": 2,
+          "support": 31,
+          "salary_n": 13,
+          "median_with": 50000.0,
+          "q1": 50000.0,
+          "q3": 80000.0,
+          "median_without": 130000.0,
+          "without_n": 4189,
+          "delta": -80000.0,
+          "uplift_pct": -61.53846153846154
+        },
+        {
+          "combo": "[\"crm\",\"html\"]",
+          "k": 2,
+          "support": 35,
+          "salary_n": 17,
+          "median_with": 50000.0,
+          "q1": 50000.0,
+          "q3": 125000.0,
+          "median_without": 130000.0,
+          "without_n": 4185,
+          "delta": -80000.0,
+          "uplift_pct": -61.53846153846154
+        },
+        {
+          "combo": "[\"crm\",\"javascript\"]",
+          "k": 2,
+          "support": 40,
+          "salary_n": 15,
+          "median_with": 50000.0,
+          "q1": 50000.0,
+          "q3": 102500.0,
+          "median_without": 130000.0,
+          "without_n": 4187,
+          "delta": -80000.0,
+          "uplift_pct": -61.53846153846154
+        }
+      ]
+    },
+    "3": {
+      "higher": [
+        {
+          "combo": "[\"api\",\"go\",\"php\"]",
+          "k": 3,
+          "support": 18,
+          "salary_n": 10,
+          "median_with": 350000.0,
+          "q1": 236250.0,
+          "q3": 350000.0,
+          "median_without": 125000.0,
+          "without_n": 4192,
+          "delta": 225000.0,
+          "uplift_pct": 179.99999999999997
+        },
+        {
+          "combo": "[\"api\",\"go\",\"sql\"]",
+          "k": 3,
+          "support": 17,
+          "salary_n": 10,
+          "median_with": 350000.0,
+          "q1": 236250.0,
+          "q3": 350000.0,
+          "median_without": 125000.0,
+          "without_n": 4192,
+          "delta": 225000.0,
+          "uplift_pct": 179.99999999999997
+        },
+        {
+          "combo": "[\"api\",\"golang\",\"php\"]",
+          "k": 3,
+          "support": 23,
+          "salary_n": 10,
+          "median_with": 350000.0,
+          "q1": 262500.0,
+          "q3": 350000.0,
+          "median_without": 125000.0,
+          "without_n": 4192,
+          "delta": 225000.0,
+          "uplift_pct": 179.99999999999997
+        },
+        {
+          "combo": "[\"backend\",\"docker\",\"golang\"]",
+          "k": 3,
+          "support": 11,
+          "salary_n": 10,
+          "median_with": 350000.0,
+          "q1": 152500.0,
+          "q3": 350000.0,
+          "median_without": 125000.0,
+          "without_n": 4192,
+          "delta": 225000.0,
+          "uplift_pct": 179.99999999999997
+        },
+        {
+          "combo": "[\"backend\",\"golang\",\"mysql\"]",
+          "k": 3,
+          "support": 14,
+          "salary_n": 10,
+          "median_with": 350000.0,
+          "q1": 152500.0,
+          "q3": 350000.0,
+          "median_without": 125000.0,
+          "without_n": 4192,
+          "delta": 225000.0,
+          "uplift_pct": 179.99999999999997
+        }
+      ],
+      "lower": [
+        {
+          "combo": "[\"cms wordpress\",\"html\",\"создание сайтов\"]",
+          "k": 3,
+          "support": 22,
+          "salary_n": 12,
+          "median_with": 45000.0,
+          "q1": 39375.0,
+          "q3": 121250.0,
+          "median_without": 130000.0,
+          "without_n": 4190,
+          "delta": -85000.0,
+          "uplift_pct": -65.38461538461539
+        },
+        {
+          "combo": "[\"1с-битрикс\",\"css3\",\"figma\"]",
+          "k": 3,
+          "support": 13,
+          "salary_n": 11,
+          "median_with": 50000.0,
+          "q1": 50000.0,
+          "q3": 100000.0,
+          "median_without": 130000.0,
+          "without_n": 4191,
+          "delta": -80000.0,
+          "uplift_pct": -61.53846153846154
+        },
+        {
+          "combo": "[\"1с-битрикс\",\"figma\",\"javascript\"]",
+          "k": 3,
+          "support": 19,
+          "salary_n": 13,
+          "median_with": 50000.0,
+          "q1": 50000.0,
+          "q3": 100000.0,
+          "median_without": 130000.0,
+          "without_n": 4189,
+          "delta": -80000.0,
+          "uplift_pct": -61.53846153846154
+        },
+        {
+          "combo": "[\"adobe photoshop\",\"cms wordpress\",\"figma\"]",
+          "k": 3,
+          "support": 11,
+          "salary_n": 10,
+          "median_with": 50000.0,
+          "q1": 50000.0,
+          "q3": 71875.0,
+          "median_without": 130000.0,
+          "without_n": 4192,
+          "delta": -80000.0,
+          "uplift_pct": -61.53846153846154
+        },
+        {
+          "combo": "[\"adobe photoshop\",\"css\",\"figma\"]",
+          "k": 3,
+          "support": 14,
+          "salary_n": 11,
+          "median_with": 50000.0,
+          "q1": 48750.0,
+          "q3": 88750.0,
+          "median_without": 130000.0,
+          "without_n": 4191,
+          "delta": -80000.0,
+          "uplift_pct": -61.53846153846154
+        }
+      ]
+    }
+  },
+  "robust_support30": {
+    "2": {
+      "higher": [
+        {
+          "combo": "[\"php7\",\"rabbitmq\"]",
+          "k": 2,
+          "support": 63,
+          "salary_n": 47,
+          "median_with": 300000.0,
+          "q1": 262500.0,
+          "q3": 350000.0,
+          "median_without": 125000.0,
+          "without_n": 4155,
+          "delta": 175000.0,
+          "uplift_pct": 140.0
+        },
+        {
+          "combo": "[\"backend\",\"php7\"]",
+          "k": 2,
+          "support": 62,
+          "salary_n": 41,
+          "median_with": 262500.0,
+          "q1": 125000.0,
+          "q3": 300000.0,
+          "median_without": 125000.0,
+          "without_n": 4161,
+          "delta": 137500.0,
+          "uplift_pct": 110.00000000000001
+        },
+        {
+          "combo": "[\"rabbitmq\",\"sql\"]",
+          "k": 2,
+          "support": 118,
+          "salary_n": 54,
+          "median_with": 256250.0,
+          "q1": 150000.0,
+          "q3": 275000.0,
+          "median_without": 125000.0,
+          "without_n": 4148,
+          "delta": 131250.0,
+          "uplift_pct": 104.99999999999999
+        },
+        {
+          "combo": "[\"api\",\"rabbitmq\"]",
+          "k": 2,
+          "support": 109,
+          "salary_n": 55,
+          "median_with": 250000.0,
+          "q1": 182500.0,
+          "q3": 300000.0,
+          "median_without": 125000.0,
+          "without_n": 4147,
+          "delta": 125000.0,
+          "uplift_pct": 100.0
+        },
+        {
+          "combo": "[\"docker\",\"php7\"]",
+          "k": 2,
+          "support": 106,
+          "salary_n": 71,
+          "median_with": 250000.0,
+          "q1": 145000.0,
+          "q3": 325000.0,
+          "median_without": 125000.0,
+          "without_n": 4131,
+          "delta": 125000.0,
+          "uplift_pct": 100.0
+        }
+      ],
+      "lower": [
+        {
+          "combo": "[\"c++\",\"php\"]",
+          "k": 2,
+          "support": 87,
+          "salary_n": 36,
+          "median_with": 70000.0,
+          "q1": 50000.0,
+          "q3": 115000.0,
+          "median_without": 130000.0,
+          "without_n": 4166,
+          "delta": -60000.0,
+          "uplift_pct": -46.15384615384615
+        },
+        {
+          "combo": "[\"cms wordpress\",\"адаптивная верстка\"]",
+          "k": 2,
+          "support": 57,
+          "salary_n": 45,
+          "median_with": 70000.0,
+          "q1": 50000.0,
+          "q3": 95000.0,
+          "median_without": 130000.0,
+          "without_n": 4157,
+          "delta": -60000.0,
+          "uplift_pct": -46.15384615384615
+        },
+        {
+          "combo": "[\"css3\",\"адаптивная верстка\"]",
+          "k": 2,
+          "support": 72,
+          "salary_n": 53,
+          "median_with": 70000.0,
+          "q1": 50000.0,
+          "q3": 110000.0,
+          "median_without": 130000.0,
+          "without_n": 4149,
+          "delta": -60000.0,
+          "uplift_pct": -46.15384615384615
+        },
+        {
+          "combo": "[\"jquery\",\"адаптивная верстка\"]",
+          "k": 2,
+          "support": 64,
+          "salary_n": 47,
+          "median_with": 70000.0,
+          "q1": 51500.0,
+          "q3": 108800.0,
+          "median_without": 130000.0,
+          "without_n": 4155,
+          "delta": -60000.0,
+          "uplift_pct": -46.15384615384615
+        },
+        {
+          "combo": "[\"bootstrap\",\"адаптивная верстка\"]",
+          "k": 2,
+          "support": 47,
+          "salary_n": 30,
+          "median_with": 72500.0,
+          "q1": 65000.0,
+          "q3": 113200.0,
+          "median_without": 130000.0,
+          "without_n": 4172,
+          "delta": -57500.0,
+          "uplift_pct": -44.230769230769226
+        }
+      ]
+    },
+    "3": {
+      "higher": [
+        {
+          "combo": "[\"mysql\",\"php7\",\"rabbitmq\"]",
+          "k": 3,
+          "support": 51,
+          "salary_n": 42,
+          "median_with": 325000.0,
+          "q1": 262500.0,
+          "q3": 350000.0,
+          "median_without": 125000.0,
+          "without_n": 4160,
+          "delta": 200000.0,
+          "uplift_pct": 160.0
+        },
+        {
+          "combo": "[\"docker\",\"php7\",\"rabbitmq\"]",
+          "k": 3,
+          "support": 52,
+          "salary_n": 41,
+          "median_with": 300000.0,
+          "q1": 262500.0,
+          "q3": 350000.0,
+          "median_without": 125000.0,
+          "without_n": 4161,
+          "delta": 175000.0,
+          "uplift_pct": 140.0
+        },
+        {
+          "combo": "[\"php\",\"php7\",\"rabbitmq\"]",
+          "k": 3,
+          "support": 62,
+          "salary_n": 47,
+          "median_with": 300000.0,
+          "q1": 262500.0,
+          "q3": 350000.0,
+          "median_without": 125000.0,
+          "without_n": 4155,
+          "delta": 175000.0,
+          "uplift_pct": 140.0
+        },
+        {
+          "combo": "[\"php7\",\"postgresql\",\"rabbitmq\"]",
+          "k": 3,
+          "support": 51,
+          "salary_n": 38,
+          "median_with": 300000.0,
+          "q1": 262500.0,
+          "q3": 350000.0,
+          "median_without": 125000.0,
+          "without_n": 4164,
+          "delta": 175000.0,
+          "uplift_pct": 140.0
+        },
+        {
+          "combo": "[\"api\",\"backend\",\"docker\"]",
+          "k": 3,
+          "support": 59,
+          "salary_n": 33,
+          "median_with": 262500.0,
+          "q1": 250000.0,
+          "q3": 300000.0,
+          "median_without": 125000.0,
+          "without_n": 4169,
+          "delta": 137500.0,
+          "uplift_pct": 110.00000000000001
+        }
+      ],
+      "lower": [
+        {
+          "combo": "[\"cms wordpress\",\"javascript\",\"администрирование сайтов\"]",
+          "k": 3,
+          "support": 41,
+          "salary_n": 31,
+          "median_with": 65000.0,
+          "q1": 50000.0,
+          "q3": 104250.0,
+          "median_without": 130000.0,
+          "without_n": 4171,
+          "delta": -65000.0,
+          "uplift_pct": -50.0
+        },
+        {
+          "combo": "[\"css3\",\"jquery\",\"адаптивная верстка\"]",
+          "k": 3,
+          "support": 43,
+          "salary_n": 32,
+          "median_with": 65000.0,
+          "q1": 50000.0,
+          "q3": 86250.0,
+          "median_without": 130000.0,
+          "without_n": 4170,
+          "delta": -65000.0,
+          "uplift_pct": -50.0
+        },
+        {
+          "combo": "[\"javascript\",\"jquery\",\"адаптивная верстка\"]",
+          "k": 3,
+          "support": 49,
+          "salary_n": 36,
+          "median_with": 65000.0,
+          "q1": 50000.0,
+          "q3": 86250.0,
+          "median_without": 130000.0,
+          "without_n": 4166,
+          "delta": -65000.0,
+          "uplift_pct": -50.0
+        },
+        {
+          "combo": "[\"cms wordpress\",\"css\",\"html5\"]",
+          "k": 3,
+          "support": 59,
+          "salary_n": 39,
+          "median_with": 70000.0,
+          "q1": 55000.0,
+          "q3": 95000.0,
+          "median_without": 130000.0,
+          "without_n": 4163,
+          "delta": -60000.0,
+          "uplift_pct": -46.15384615384615
+        },
+        {
+          "combo": "[\"cms wordpress\",\"css3\",\"адаптивная верстка\"]",
+          "k": 3,
+          "support": 40,
+          "salary_n": 32,
+          "median_with": 70000.0,
+          "q1": 50000.0,
+          "q3": 91250.0,
+          "median_without": 130000.0,
+          "without_n": 4170,
+          "delta": -60000.0,
+          "uplift_pct": -46.15384615384615
+        }
+      ]
+    }
+  },
+  "employer_checks": [
+    {
+      "combo": "[\"api\",\"go\"]",
+      "k": 2,
+      "direction": "higher",
+      "employers": [
+        {
+          "employer_id": "2590553",
+          "n": 6
+        },
+        {
+          "employer_id": "1073798",
+          "n": 2
+        },
+        {
+          "employer_id": "10142885",
+          "n": 1
+        },
+        {
+          "employer_id": "1185071",
+          "n": 1
+        }
+      ]
+    },
+    {
+      "combo": "[\"c++\",\"java\"]",
+      "k": 2,
+      "direction": "lower",
+      "employers": [
+        {
+          "employer_id": "306478",
+          "n": 7
+        },
+        {
+          "employer_id": "3114149",
+          "n": 2
+        },
+        {
+          "employer_id": "3192913",
+          "n": 1
+        }
+      ]
+    },
+    {
+      "combo": "[\"api\",\"go\",\"php\"]",
+      "k": 3,
+      "direction": "higher",
+      "employers": [
+        {
+          "employer_id": "2590553",
+          "n": 6
+        },
+        {
+          "employer_id": "1073798",
+          "n": 2
+        },
+        {
+          "employer_id": "10142885",
+          "n": 1
+        },
+        {
+          "employer_id": "1185071",
+          "n": 1
+        }
+      ]
+    },
+    {
+      "combo": "[\"cms wordpress\",\"html\",\"создание сайтов\"]",
+      "k": 3,
+      "direction": "lower",
+      "employers": [
+        {
+          "employer_id": "1693767",
+          "n": 5
+        },
+        {
+          "employer_id": "867866",
+          "n": 2
+        },
+        {
+          "employer_id": "3873886",
+          "n": 1
+        },
+        {
+          "employer_id": "4129931",
+          "n": 1
+        },
+        {
+          "employer_id": "4591736",
+          "n": 1
+        },
+        {
+          "employer_id": "4963041",
+          "n": 1
+        },
+        {
+          "employer_id": "5073721",
+          "n": 1
+        }
+      ]
+    }
+  ],
+  "salary_min_support": 10,
+  "salary_eligible_groups": 14426
+}

@@ -1,0 +1,156 @@
+$ /Users/gpr/Documents/Codex/2026-10-04/new-chat/work/hw3-venv/bin/python /Users/gpr/Documents/Codex/2026-10-04/new-chat/outputs/HW3_Kulinich_PHP/src/benchmark.py
+$ /Users/gpr/Documents/Codex/2026-10-04/new-chat/work/hw3-venv/bin/python /Users/gpr/Documents/Codex/2026-10-04/new-chat/outputs/HW3_Kulinich_PHP/src/profile_worker.py baseline 5 1
+{"engine": "baseline", "cap": 5, "attempt": 1, "seconds": 1.166092542000115, "cpu_seconds": 1.1253490000000002, "peak_rss_mib": 104.484375, "groups": 22046, "emissions": 167633}
+
+$ /Users/gpr/Documents/Codex/2026-10-04/new-chat/work/hw3-venv/bin/python /Users/gpr/Documents/Codex/2026-10-04/new-chat/outputs/HW3_Kulinich_PHP/src/profile_worker.py combined 5 1
+{"engine": "combined", "cap": 5, "attempt": 1, "seconds": 1.022545000014361, "cpu_seconds": 0.9902770000000001, "peak_rss_mib": 94.1875, "groups": 22046, "emissions": 167633}
+
+$ /Users/gpr/Documents/Codex/2026-10-04/new-chat/work/hw3-venv/bin/python /Users/gpr/Documents/Codex/2026-10-04/new-chat/outputs/HW3_Kulinich_PHP/src/profile_worker.py duckdb 5 1
+{"engine": "duckdb", "cap": 5, "attempt": 1, "seconds": 0.5421504580008332, "cpu_seconds": 0.718061, "peak_rss_mib": 426.140625, "groups": 22046, "emissions": 167633}
+
+$ /Users/gpr/Documents/Codex/2026-10-04/new-chat/work/hw3-venv/bin/python /Users/gpr/Documents/Codex/2026-10-04/new-chat/outputs/HW3_Kulinich_PHP/src/profile_worker.py combined 5 2
+{"engine": "combined", "cap": 5, "attempt": 2, "seconds": 1.2204377920133993, "cpu_seconds": 0.990095, "peak_rss_mib": 91.84375, "groups": 22046, "emissions": 167633}
+
+$ /Users/gpr/Documents/Codex/2026-10-04/new-chat/work/hw3-venv/bin/python /Users/gpr/Documents/Codex/2026-10-04/new-chat/outputs/HW3_Kulinich_PHP/src/profile_worker.py duckdb 5 2
+{"engine": "duckdb", "cap": 5, "attempt": 2, "seconds": 0.5018340419919696, "cpu_seconds": 0.670994, "peak_rss_mib": 402.03125, "groups": 22046, "emissions": 167633}
+
+$ /Users/gpr/Documents/Codex/2026-10-04/new-chat/work/hw3-venv/bin/python /Users/gpr/Documents/Codex/2026-10-04/new-chat/outputs/HW3_Kulinich_PHP/src/profile_worker.py baseline 5 2
+{"engine": "baseline", "cap": 5, "attempt": 2, "seconds": 1.093440999975428, "cpu_seconds": 1.064938, "peak_rss_mib": 101.84375, "groups": 22046, "emissions": 167633}
+
+$ /Users/gpr/Documents/Codex/2026-10-04/new-chat/work/hw3-venv/bin/python /Users/gpr/Documents/Codex/2026-10-04/new-chat/outputs/HW3_Kulinich_PHP/src/profile_worker.py duckdb 5 3
+{"engine": "duckdb", "cap": 5, "attempt": 3, "seconds": 0.5235142080055084, "cpu_seconds": 0.7180369999999999, "peak_rss_mib": 425.953125, "groups": 22046, "emissions": 167633}
+
+$ /Users/gpr/Documents/Codex/2026-10-04/new-chat/work/hw3-venv/bin/python /Users/gpr/Documents/Codex/2026-10-04/new-chat/outputs/HW3_Kulinich_PHP/src/profile_worker.py baseline 5 3
+{"engine": "baseline", "cap": 5, "attempt": 3, "seconds": 1.1478976670186967, "cpu_seconds": 1.123222, "peak_rss_mib": 103.546875, "groups": 22046, "emissions": 167633}
+
+$ /Users/gpr/Documents/Codex/2026-10-04/new-chat/work/hw3-venv/bin/python /Users/gpr/Documents/Codex/2026-10-04/new-chat/outputs/HW3_Kulinich_PHP/src/profile_worker.py combined 5 3
+{"engine": "combined", "cap": 5, "attempt": 3, "seconds": 1.0113239169877488, "cpu_seconds": 0.9849739999999999, "peak_rss_mib": 90.5625, "groups": 22046, "emissions": 167633}
+
+$ /Users/gpr/Documents/Codex/2026-10-04/new-chat/work/hw3-venv/bin/python /Users/gpr/Documents/Codex/2026-10-04/new-chat/outputs/HW3_Kulinich_PHP/src/profile_worker.py baseline 10 1
+{"engine": "baseline", "cap": 10, "attempt": 1, "seconds": 1.6581938749877736, "cpu_seconds": 1.6277760000000001, "peak_rss_mib": 168.09375, "groups": 108455, "emissions": 631468}
+
+$ /Users/gpr/Documents/Codex/2026-10-04/new-chat/work/hw3-venv/bin/python /Users/gpr/Documents/Codex/2026-10-04/new-chat/outputs/HW3_Kulinich_PHP/src/profile_worker.py combined 10 1
+{"engine": "combined", "cap": 10, "attempt": 1, "seconds": 1.3191224579932168, "cpu_seconds": 1.284624, "peak_rss_mib": 136.5625, "groups": 108455, "emissions": 631468}
+
+$ /Users/gpr/Documents/Codex/2026-10-04/new-chat/work/hw3-venv/bin/python /Users/gpr/Documents/Codex/2026-10-04/new-chat/outputs/HW3_Kulinich_PHP/src/profile_worker.py duckdb 10 1
+{"engine": "duckdb", "cap": 10, "attempt": 1, "seconds": 0.5879482920281589, "cpu_seconds": 0.79245, "peak_rss_mib": 430.78125, "groups": 108455, "emissions": 631468}
+
+$ /Users/gpr/Documents/Codex/2026-10-04/new-chat/work/hw3-venv/bin/python /Users/gpr/Documents/Codex/2026-10-04/new-chat/outputs/HW3_Kulinich_PHP/src/profile_worker.py combined 10 2
+{"engine": "combined", "cap": 10, "attempt": 2, "seconds": 1.3090077080123592, "cpu_seconds": 1.278797, "peak_rss_mib": 132.8125, "groups": 108455, "emissions": 631468}
+
+$ /Users/gpr/Documents/Codex/2026-10-04/new-chat/work/hw3-venv/bin/python /Users/gpr/Documents/Codex/2026-10-04/new-chat/outputs/HW3_Kulinich_PHP/src/profile_worker.py duckdb 10 2
+{"engine": "duckdb", "cap": 10, "attempt": 2, "seconds": 0.5803403340105433, "cpu_seconds": 0.781833, "peak_rss_mib": 439.5, "groups": 108455, "emissions": 631468}
+
+$ /Users/gpr/Documents/Codex/2026-10-04/new-chat/work/hw3-venv/bin/python /Users/gpr/Documents/Codex/2026-10-04/new-chat/outputs/HW3_Kulinich_PHP/src/profile_worker.py baseline 10 2
+{"engine": "baseline", "cap": 10, "attempt": 2, "seconds": 1.6540353750169743, "cpu_seconds": 1.6263319999999999, "peak_rss_mib": 171.390625, "groups": 108455, "emissions": 631468}
+
+$ /Users/gpr/Documents/Codex/2026-10-04/new-chat/work/hw3-venv/bin/python /Users/gpr/Documents/Codex/2026-10-04/new-chat/outputs/HW3_Kulinich_PHP/src/profile_worker.py duckdb 10 3
+{"engine": "duckdb", "cap": 10, "attempt": 3, "seconds": 0.5869257909944281, "cpu_seconds": 0.76392, "peak_rss_mib": 436.5, "groups": 108455, "emissions": 631468}
+
+$ /Users/gpr/Documents/Codex/2026-10-04/new-chat/work/hw3-venv/bin/python /Users/gpr/Documents/Codex/2026-10-04/new-chat/outputs/HW3_Kulinich_PHP/src/profile_worker.py baseline 10 3
+{"engine": "baseline", "cap": 10, "attempt": 3, "seconds": 1.6562137919827364, "cpu_seconds": 1.641351, "peak_rss_mib": 165.984375, "groups": 108455, "emissions": 631468}
+
+$ /Users/gpr/Documents/Codex/2026-10-04/new-chat/work/hw3-venv/bin/python /Users/gpr/Documents/Codex/2026-10-04/new-chat/outputs/HW3_Kulinich_PHP/src/profile_worker.py combined 10 3
+{"engine": "combined", "cap": 10, "attempt": 3, "seconds": 1.518725790985627, "cpu_seconds": 1.2999209999999999, "peak_rss_mib": 148.40625, "groups": 108455, "emissions": 631468}
+
+$ /Users/gpr/Documents/Codex/2026-10-04/new-chat/work/hw3-venv/bin/python /Users/gpr/Documents/Codex/2026-10-04/new-chat/outputs/HW3_Kulinich_PHP/src/profile_worker.py baseline 30 1
+{"engine": "baseline", "cap": 30, "attempt": 1, "seconds": 2.8403681249765214, "cpu_seconds": 2.807669, "peak_rss_mib": 335.359375, "groups": 336082, "emissions": 1503247}
+
+$ /Users/gpr/Documents/Codex/2026-10-04/new-chat/work/hw3-venv/bin/python /Users/gpr/Documents/Codex/2026-10-04/new-chat/outputs/HW3_Kulinich_PHP/src/profile_worker.py combined 30 1
+{"engine": "combined", "cap": 30, "attempt": 1, "seconds": 1.937451375008095, "cpu_seconds": 1.902776, "peak_rss_mib": 255.671875, "groups": 336082, "emissions": 1503247}
+
+$ /Users/gpr/Documents/Codex/2026-10-04/new-chat/work/hw3-venv/bin/python /Users/gpr/Documents/Codex/2026-10-04/new-chat/outputs/HW3_Kulinich_PHP/src/profile_worker.py duckdb 30 1
+{"engine": "duckdb", "cap": 30, "attempt": 1, "seconds": 0.9408592920226511, "cpu_seconds": 1.203076, "peak_rss_mib": 568.625, "groups": 336082, "emissions": 1503247}
+
+$ /Users/gpr/Documents/Codex/2026-10-04/new-chat/work/hw3-venv/bin/python /Users/gpr/Documents/Codex/2026-10-04/new-chat/outputs/HW3_Kulinich_PHP/src/profile_worker.py combined 30 2
+{"engine": "combined", "cap": 30, "attempt": 2, "seconds": 1.9912955409963615, "cpu_seconds": 1.959093, "peak_rss_mib": 261.890625, "groups": 336082, "emissions": 1503247}
+
+$ /Users/gpr/Documents/Codex/2026-10-04/new-chat/work/hw3-venv/bin/python /Users/gpr/Documents/Codex/2026-10-04/new-chat/outputs/HW3_Kulinich_PHP/src/profile_worker.py duckdb 30 2
+{"engine": "duckdb", "cap": 30, "attempt": 2, "seconds": 0.8937732499907725, "cpu_seconds": 1.137475, "peak_rss_mib": 579.65625, "groups": 336082, "emissions": 1503247}
+
+$ /Users/gpr/Documents/Codex/2026-10-04/new-chat/work/hw3-venv/bin/python /Users/gpr/Documents/Codex/2026-10-04/new-chat/outputs/HW3_Kulinich_PHP/src/profile_worker.py baseline 30 2
+{"engine": "baseline", "cap": 30, "attempt": 2, "seconds": 2.9442011659848504, "cpu_seconds": 2.9086339999999997, "peak_rss_mib": 338.34375, "groups": 336082, "emissions": 1503247}
+
+$ /Users/gpr/Documents/Codex/2026-10-04/new-chat/work/hw3-venv/bin/python /Users/gpr/Documents/Codex/2026-10-04/new-chat/outputs/HW3_Kulinich_PHP/src/profile_worker.py duckdb 30 3
+{"engine": "duckdb", "cap": 30, "attempt": 3, "seconds": 0.881811416009441, "cpu_seconds": 1.0671940000000002, "peak_rss_mib": 603.03125, "groups": 336082, "emissions": 1503247}
+
+$ /Users/gpr/Documents/Codex/2026-10-04/new-chat/work/hw3-venv/bin/python /Users/gpr/Documents/Codex/2026-10-04/new-chat/outputs/HW3_Kulinich_PHP/src/profile_worker.py baseline 30 3
+{"engine": "baseline", "cap": 30, "attempt": 3, "seconds": 2.8834481250087265, "cpu_seconds": 2.8471859999999998, "peak_rss_mib": 340.671875, "groups": 336082, "emissions": 1503247}
+
+$ /Users/gpr/Documents/Codex/2026-10-04/new-chat/work/hw3-venv/bin/python /Users/gpr/Documents/Codex/2026-10-04/new-chat/outputs/HW3_Kulinich_PHP/src/profile_worker.py combined 30 3
+{"engine": "combined", "cap": 30, "attempt": 3, "seconds": 2.0244948330218904, "cpu_seconds": 1.982203, "peak_rss_mib": 242.140625, "groups": 336082, "emissions": 1503247}
+
+[
+  {
+    "cap": 5,
+    "engine": "baseline",
+    "median_seconds": 1.1478976670186967,
+    "min_seconds": 1.093440999975428,
+    "max_seconds": 1.166092542000115,
+    "median_peak_rss_mib": 103.546875
+  },
+  {
+    "cap": 5,
+    "engine": "combined",
+    "median_seconds": 1.022545000014361,
+    "min_seconds": 1.0113239169877488,
+    "max_seconds": 1.2204377920133993,
+    "median_peak_rss_mib": 91.84375
+  },
+  {
+    "cap": 5,
+    "engine": "duckdb",
+    "median_seconds": 0.5235142080055084,
+    "min_seconds": 0.5018340419919696,
+    "max_seconds": 0.5421504580008332,
+    "median_peak_rss_mib": 425.953125
+  },
+  {
+    "cap": 10,
+    "engine": "baseline",
+    "median_seconds": 1.6562137919827364,
+    "min_seconds": 1.6540353750169743,
+    "max_seconds": 1.6581938749877736,
+    "median_peak_rss_mib": 168.09375
+  },
+  {
+    "cap": 10,
+    "engine": "combined",
+    "median_seconds": 1.3191224579932168,
+    "min_seconds": 1.3090077080123592,
+    "max_seconds": 1.518725790985627,
+    "median_peak_rss_mib": 136.5625
+  },
+  {
+    "cap": 10,
+    "engine": "duckdb",
+    "median_seconds": 0.5869257909944281,
+    "min_seconds": 0.5803403340105433,
+    "max_seconds": 0.5879482920281589,
+    "median_peak_rss_mib": 436.5
+  },
+  {
+    "cap": 30,
+    "engine": "baseline",
+    "median_seconds": 2.8834481250087265,
+    "min_seconds": 2.8403681249765214,
+    "max_seconds": 2.9442011659848504,
+    "median_peak_rss_mib": 338.34375
+  },
+  {
+    "cap": 30,
+    "engine": "combined",
+    "median_seconds": 1.9912955409963615,
+    "min_seconds": 1.937451375008095,
+    "max_seconds": 2.0244948330218904,
+    "median_peak_rss_mib": 255.671875
+  },
+  {
+    "cap": 30,
+    "engine": "duckdb",
+    "median_seconds": 0.8937732499907725,
+    "min_seconds": 0.881811416009441,
+    "max_seconds": 0.9408592920226511,
+    "median_peak_rss_mib": 579.65625
+  }
+]

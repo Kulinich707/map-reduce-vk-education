@@ -1,0 +1,9 @@
+{
+  "all_passed": true,
+  "php_population": 8661,
+  "salary_n": 4202,
+  "salary_combinations_checked": 20,
+  "regions_checked": 3,
+  "regional_skill_rows_checked": 1821,
+  "identities_checked": 9
+}

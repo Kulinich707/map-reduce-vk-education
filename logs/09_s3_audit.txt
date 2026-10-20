@@ -1,0 +1,129 @@
+{
+  "objects": [
+    {
+      "key": "variant5-php/input/all_sources.csv",
+      "bytes": 78430228
+    },
+    {
+      "key": "variant5-php/input/php_vacancies.csv",
+      "bytes": 2722797
+    },
+    {
+      "key": "variant5-php/results/analysis.json",
+      "bytes": 18282
+    },
+    {
+      "key": "variant5-php/results/baseline_10.json",
+      "bytes": 5794366
+    },
+    {
+      "key": "variant5-php/results/baseline_30.json",
+      "bytes": 21434941
+    },
+    {
+      "key": "variant5-php/results/baseline_5.json",
+      "bytes": 1029190
+    },
+    {
+      "key": "variant5-php/results/combined_10.json",
+      "bytes": 5794366
+    },
+    {
+      "key": "variant5-php/results/combined_30.json",
+      "bytes": 21434941
+    },
+    {
+      "key": "variant5-php/results/combined_5.json",
+      "bytes": 1029190
+    },
+    {
+      "key": "variant5-php/results/duckdb_10.json",
+      "bytes": 5794366
+    },
+    {
+      "key": "variant5-php/results/duckdb_30.json",
+      "bytes": 21434941
+    },
+    {
+      "key": "variant5-php/results/duckdb_5.json",
+      "bytes": 1029190
+    },
+    {
+      "key": "variant5-php/results/employers_2_higher.csv",
+      "bytes": 60
+    },
+    {
+      "key": "variant5-php/results/employers_2_lower.csv",
+      "bytes": 47
+    },
+    {
+      "key": "variant5-php/results/employers_3_higher.csv",
+      "bytes": 60
+    },
+    {
+      "key": "variant5-php/results/employers_3_lower.csv",
+      "bytes": 91
+    },
+    {
+      "key": "variant5-php/results/experience.csv",
+      "bytes": 201
+    },
+    {
+      "key": "variant5-php/results/manifest.json",
+      "bytes": 8488
+    },
+    {
+      "key": "variant5-php/results/population.csv",
+      "bytes": 177
+    },
+    {
+      "key": "variant5-php/results/profiling_runs.csv",
+      "bytes": 1938
+    },
+    {
+      "key": "variant5-php/results/profiling_runs.json",
+      "bytes": 5704
+    },
+    {
+      "key": "variant5-php/results/profiling_summary.json",
+      "bytes": 1847
+    },
+    {
+      "key": "variant5-php/results/quality.json",
+      "bytes": 197
+    },
+    {
+      "key": "variant5-php/results/regional_skill_counts.csv",
+      "bytes": 84256
+    },
+    {
+      "key": "variant5-php/results/regional_skills_top10.csv",
+      "bytes": 1297
+    },
+    {
+      "key": "variant5-php/results/regions_all.csv",
+      "bytes": 12468
+    },
+    {
+      "key": "variant5-php/results/s3_audit.json",
+      "bytes": 3238
+    },
+    {
+      "key": "variant5-php/results/salary_associations.csv",
+      "bytes": 1790576
+    },
+    {
+      "key": "variant5-php/results/salary_grouped.csv",
+      "bytes": 1200157
+    },
+    {
+      "key": "variant5-php/results/source_audit.json",
+      "bytes": 1241
+    },
+    {
+      "key": "variant5-php/results/verification.json",
+      "bytes": 9666
+    }
+  ],
+  "nine_results_identical": true
+}

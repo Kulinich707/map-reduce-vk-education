@@ -1,0 +1,52 @@
+$ /Users/gpr/Documents/Codex/2026-10-04/new-chat/work/hw3-venv/bin/python /Users/gpr/Documents/Codex/2026-10-04/new-chat/outputs/HW3_Kulinich_PHP/src/analyze.py
+{
+  "population": {
+    "vacancies": 8661,
+    "salary_n": 4202,
+    "median_salary": 127750.0,
+    "min_salary": 75.0,
+    "max_salary": 1500000.0,
+    "no_skills": 1002,
+    "max_stack": 30,
+    "min_date": "2023-12-18",
+    "max_date": "2024-09-14",
+    "inverted_bounds": 0,
+    "salary_low_n": 3,
+    "median_salary_without_low": 129000.0,
+    "with_title_php": 5381,
+    "skill_only_php": 3280
+  },
+  "selected_regions": [
+    {
+      "area": "Москва",
+      "vacancies": 3053,
+      "salary_n": 1306,
+      "salary_coverage_pct": 42.78,
+      "median_salary": 165000.0,
+      "q1": 120000.0,
+      "q3": 220000.0,
+      "avg_stack": 6.553226334752702
+    },
+    {
+      "area": "Санкт-Петербург",
+      "vacancies": 1148,
+      "salary_n": 574,
+      "salary_coverage_pct": 50.0,
+      "median_salary": 150000.0,
+      "q1": 100000.0,
+      "q3": 193750.0,
+      "avg_stack": 6.7369337979094075
+    },
+    {
+      "area": "Екатеринбург",
+      "vacancies": 323,
+      "salary_n": 209,
+      "salary_coverage_pct": 64.71,
+      "median_salary": 120000.0,
+      "q1": 80000.0,
+      "q3": 175000.0,
+      "avg_stack": 6.585139318885449
+    }
+  ],
+  "salary_eligible_groups": 14426
+}

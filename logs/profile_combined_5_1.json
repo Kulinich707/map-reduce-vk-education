@@ -1,0 +1,10 @@
+{
+  "engine": "combined",
+  "cap": 5,
+  "attempt": 1,
+  "seconds": 1.022545000014361,
+  "cpu_seconds": 0.9902770000000001,
+  "peak_rss_mib": 94.1875,
+  "groups": 22046,
+  "emissions": 167633
+}
