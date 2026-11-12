@@ -1,0 +1,13 @@
+{"time": 1793889988.528499, "monotonic": 157276.7394185, "pid": 55952, "event": "CONNECTED", "session_id": "0x100000b70410002", "requested_timeout_ms": 10000, "negotiated_timeout_ms": 10000}
+{"time": 1793889988.52861, "monotonic": 157276.739529, "pid": 55952, "event": "CANDIDATE", "name": "A"}
+{"time": 1793889988.543018, "monotonic": 157276.753937583, "pid": 55952, "event": "LEADER", "name": "A", "epoch": 1, "epoch_version": 1}
+{"time": 1793889988.5436108, "monotonic": 157276.754529666, "pid": 55952, "event": "RESTORED", "next_batch": 0, "from_epoch": null, "checkpoint_path": null, "checkpoint_sha256": null}
+{"time": 1793889989.3910599, "monotonic": 157277.601974333, "pid": 55952, "event": "CHECKPOINT", "next_batch": 1, "epoch": 1, "path": "results/fenced/checkpoint-A-001.json", "sha256": "57f807b2d0f052e509d910f1f5f9b27065ea87cf98c5fb7da86958e77cdd386f"}
+{"time": 1793889990.301551, "monotonic": 157278.512460958, "pid": 55952, "event": "CHECKPOINT", "next_batch": 2, "epoch": 1, "path": "results/fenced/checkpoint-A-002.json", "sha256": "35e321ff743e9011b1bbe7cddaf8b409d67c8be7ae34a07f0ca52ac6a6d5721d"}
+{"time": 1793890032.3740401, "monotonic": 157320.584691875, "pid": 55952, "event": "SESSION", "state": "SUSPENDED"}
+{"time": 1793890032.441972, "monotonic": 157320.652624041, "pid": 55952, "event": "SESSION", "state": "LOST"}
+{"time": 1793890032.448433, "monotonic": 157320.659084708, "pid": 55952, "event": "SESSION", "state": "CONNECTED"}
+{"time": 1793890032.665199, "monotonic": 157320.875850375, "pid": 55952, "event": "CHECKPOINT_REJECTED", "error": "BadVersionError", "epoch": 1}
+{"time": 1793890057.018385, "monotonic": 157345.2288855, "pid": 55952, "event": "VERIFIED_HW3", "checks": {"5": {"equal_all_keys": true, "unique_groups": 22046, "emissions": 167633, "sha256": "84c1a03a8ab4c8ad155358bb6ccc7690a003a2b062cb33ab60dc1b25a7195c54"}, "10": {"equal_all_keys": true, "unique_groups": 108455, "emissions": 631468, "sha256": "8ba415e142ddeb5bf62676a8e8d2dc88242a9eda5d6551c234778057f4a7782c"}, "30": {"equal_all_keys": true, "unique_groups": 336082, "emissions": 1503247, "sha256": "fae6112ea2c998ac47347857855d894b1c3fa9a48c8336308ccb74ec5cd42eba"}}}
+{"time": 1793890057.024134, "monotonic": 157345.234634583, "pid": 55952, "event": "RESULT_REJECTED", "error": "BadVersionError", "epoch": 1, "fencing": true}
+{"time": 1793890057.0272572, "monotonic": 157345.237757458, "pid": 55952, "event": "SESSION", "state": "LOST"}

@@ -1,0 +1,60 @@
+name: vk-zk-homework
+services:
+  zk1:
+    image: zookeeper:3.9.6
+    user: "1000:1000"
+    hostname: zk1
+    environment:
+      JVMFLAGS: "-Xms64m -Xmx256m"
+    ports: ["127.0.0.1:22181:2181"]
+    volumes:
+      - ./zk1/zoo.cfg:/conf/zoo.cfg:ro
+      - ./zk1/myid:/data/myid:ro
+      - zk1-data:/data/version-2
+      - zk1-log:/datalog
+    healthcheck:
+      test: ["CMD-SHELL", "echo ruok | nc -w 2 127.0.0.1 2181 | grep imok"]
+      interval: 3s
+      timeout: 3s
+      retries: 20
+  zk2:
+    image: zookeeper:3.9.6
+    user: "1000:1000"
+    hostname: zk2
+    environment:
+      JVMFLAGS: "-Xms64m -Xmx256m"
+    ports: ["127.0.0.1:22182:2181"]
+    volumes:
+      - ./zk2/zoo.cfg:/conf/zoo.cfg:ro
+      - ./zk2/myid:/data/myid:ro
+      - zk2-data:/data/version-2
+      - zk2-log:/datalog
+    healthcheck:
+      test: ["CMD-SHELL", "echo ruok | nc -w 2 127.0.0.1 2181 | grep imok"]
+      interval: 3s
+      timeout: 3s
+      retries: 20
+  zk3:
+    image: zookeeper:3.9.6
+    user: "1000:1000"
+    hostname: zk3
+    environment:
+      JVMFLAGS: "-Xms64m -Xmx256m"
+    ports: ["127.0.0.1:22183:2181"]
+    volumes:
+      - ./zk3/zoo.cfg:/conf/zoo.cfg:ro
+      - ./zk3/myid:/data/myid:ro
+      - zk3-data:/data/version-2
+      - zk3-log:/datalog
+    healthcheck:
+      test: ["CMD-SHELL", "echo ruok | nc -w 2 127.0.0.1 2181 | grep imok"]
+      interval: 3s
+      timeout: 3s
+      retries: 20
+volumes:
+  zk1-data: {}
+  zk1-log: {}
+  zk2-data: {}
+  zk2-log: {}
+  zk3-data: {}
+  zk3-log: {}

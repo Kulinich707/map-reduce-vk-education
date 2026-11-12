@@ -1,0 +1,3 @@
+WARNING:kazoo.client:Connection dropped: socket connection broken
+WARNING:kazoo.client:Transition to CONNECTING
+WARNING:kazoo.client:Session has expired

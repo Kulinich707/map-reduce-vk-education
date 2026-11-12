@@ -1,0 +1,20 @@
+WARNING:kazoo.client:Connection dropped: socket connection broken
+WARNING:kazoo.client:Transition to CONNECTING
+WARNING:kazoo.client:Session has expired
+Traceback (most recent call last):
+  File "/Users/gpr/Documents/Codex/2026-11-05/new-chat/outputs/ZooKeeper_HW/src/coordinator.py", line 93, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "/Users/gpr/Documents/Codex/2026-11-05/new-chat/outputs/ZooKeeper_HW/src/coordinator.py", line 64, in main
+    receiver.checkpoint(pointer,epoch_version)
+  File "/Users/gpr/Documents/Codex/2026-11-05/new-chat/outputs/ZooKeeper_HW/src/core.py", line 48, in checkpoint
+    commit(tx)
+  File "/Users/gpr/Documents/Codex/2026-11-05/new-chat/outputs/ZooKeeper_HW/src/core.py", line 26, in commit
+    results=tx.commit()
+            ^^^^^^^^^^^
+  File "/Users/gpr/Documents/Codex/2026-11-05/new-chat/work/venv/lib/python3.12/site-packages/kazoo/client.py", line 1775, in commit
+    return self.commit_async().get()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/gpr/Documents/Codex/2026-11-05/new-chat/work/venv/lib/python3.12/site-packages/kazoo/handlers/utils.py", line 78, in get
+    raise self._exception
+kazoo.exceptions.SessionExpiredError

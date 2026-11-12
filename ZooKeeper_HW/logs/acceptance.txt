@@ -1,0 +1,10 @@
+Infrastructure PASS
+{"event": "SIGSTOP", "time": 1793889921.974299, "monotonic": 157210.185588375, "pid": 55894}
+{"event": "STANDBY_LEADER", "time": 1793889933.4050071, "monotonic": 157221.616233, "pid": 55903, "epoch": 2}
+{"event": "SIGCONT", "time": 1793889963.8104599, "monotonic": 157252.021516208, "pid": 55894}
+unsafe PASS
+{"event": "SIGSTOP", "time": 1793889990.660676, "monotonic": 157278.871582875, "pid": 55952}
+{"event": "STANDBY_LEADER", "time": 1793890001.412431, "monotonic": 157289.623279083, "pid": 55962, "epoch": 2}
+{"event": "SIGCONT", "time": 1793890032.313448, "monotonic": 157320.5241, "pid": 55952}
+fenced PASS
+ALL SELECTED CHECKS PASSED

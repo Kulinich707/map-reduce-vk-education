@@ -1,0 +1,64 @@
+{
+  "all_passed": true,
+  "input_sha256": "6a7708659dcc8923bf834a13a34e6a350f02ebec7fdf0f2b6219d28651910280",
+  "php_population": 8661,
+  "independent_algorithm": "CSV filter and direct combinations; no original mapper imports",
+  "counts": [
+    {
+      "cap": 5,
+      "size": 1,
+      "unique": 924,
+      "total": 35509
+    },
+    {
+      "cap": 5,
+      "size": 2,
+      "unique": 6698,
+      "total": 67318
+    },
+    {
+      "cap": 5,
+      "size": 3,
+      "unique": 14424,
+      "total": 64806
+    },
+    {
+      "cap": 10,
+      "size": 1,
+      "unique": 1416,
+      "total": 52837
+    },
+    {
+      "cap": 10,
+      "size": 2,
+      "unique": 18585,
+      "total": 181102
+    },
+    {
+      "cap": 10,
+      "size": 3,
+      "unique": 88454,
+      "total": 397529
+    },
+    {
+      "cap": 30,
+      "size": 1,
+      "unique": 1714,
+      "total": 60254
+    },
+    {
+      "cap": 30,
+      "size": 2,
+      "unique": 33821,
+      "total": 285780
+    },
+    {
+      "cap": 30,
+      "size": 3,
+      "unique": 300547,
+      "total": 1157213
+    }
+  ],
+  "full_result_dictionaries_compared": 12,
+  "restored_checkpoint_counters_independently_verified": 6
+}

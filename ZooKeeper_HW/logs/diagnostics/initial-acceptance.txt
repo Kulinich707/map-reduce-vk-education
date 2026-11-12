@@ -1,0 +1,19 @@
+Infrastructure PASS
+{"event": "SIGSTOP", "time": 1793889699.044673, "monotonic": 156987.257202416, "pid": 55724}
+{"event": "STANDBY_LEADER", "time": 1793889709.249669, "monotonic": 156997.462142625, "pid": 55728, "epoch": 2}
+{"event": "SIGCONT", "time": 1793889740.068775, "monotonic": 157028.281075958, "pid": 55724}
+unsafe PASS
+{"event": "SIGSTOP", "time": 1793889766.919929, "monotonic": 157055.132080458, "pid": 55777}
+{"event": "STANDBY_LEADER", "time": 1793889777.291998, "monotonic": 157065.504091916, "pid": 55786, "epoch": 2}
+{"event": "SIGCONT", "time": 1793889808.022829, "monotonic": 157096.234751666, "pid": 55777}
+Traceback (most recent call last):
+  File "/Users/gpr/Documents/Codex/2026-11-05/new-chat/outputs/ZooKeeper_HW/src/run_lab.py", line 163, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "/Users/gpr/Documents/Codex/2026-11-05/new-chat/outputs/ZooKeeper_HW/src/run_lab.py", line 160, in main
+    if a.stage in ('all',mode):scenario(mode=='fenced')
+                               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/gpr/Documents/Codex/2026-11-05/new-chat/outputs/ZooKeeper_HW/src/run_lab.py", line 121, in scenario
+    a.wait(timeout=100);assert a.returncode==0
+                        ^^^^^^^^^^^^^^^^^^^^^^
+AssertionError

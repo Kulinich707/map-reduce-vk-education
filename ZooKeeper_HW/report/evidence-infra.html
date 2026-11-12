@@ -1,0 +1,17 @@
+<!doctype html><html lang="ru"><meta charset="utf-8"><title>Ансамбль, кворум и эфемерный узел</title><style>
+    *{box-sizing:border-box}body{margin:0;background:#edf2f7;color:#11243b;font:16px -apple-system,Arial,sans-serif}
+    main{max-width:1120px;padding:30px;margin:auto}h1{font-size:30px;margin:8px 0 6px}h2{font-size:19px;margin:22px 0 8px}
+    .tag{color:#127056;font-weight:700;letter-spacing:1px}.note{color:#536578;font-size:14px}pre{white-space:pre-wrap;overflow-wrap:anywhere;background:white;border:1px solid #ccd6e2;border-left:5px solid #127056;padding:15px;font:14px/1.45 ui-monospace,Menlo,monospace;margin:0}
+    </style><main><div class="tag">ДЗ4 · ФАКТИЧЕСКИЕ РЕЗУЛЬТАТЫ</div><h1>Ансамбль, кворум и эфемерный узел</h1><p class="note">Просмотр сохранённых журналов эксперимента 05.11.2026. Значения взяты из приложенных JSON/TXT.</p><h2>Три сервера · ZooKeeper 3.9.6 · OpenJDK 17.0.21</h2><pre>127.0.0.1:22181 — Mode: follower
+127.0.0.1:22182 — Mode: leader
+127.0.0.1:22183 — Mode: follower
+Источник: results/infrastructure.json; logs/commands.txt</pre><h2>Остановка серверов</h2><pre>Потерян zk3: запись при 2/3 серверах успешна.
+Потеряны zk3 и zk2: KazooTimeoutError за 5 с.
+This ZooKeeper instance is not currently serving requests
+После восстановления: запись успешна.</pre><h2>Настоящий клиент zkCli</h2><pre>{
+  &quot;ephemeralOwner&quot;: &quot;0x100000b70410000&quot;,
+  &quot;exists_after_quit&quot;: false,
+  &quot;exists_before_quit&quot;: true,
+  &quot;path&quot;: &quot;/vk-hw4/ephemeral-1793889918939855000&quot;
+}
+Источник: logs/zkcli-ephemeral.txt</pre></main></html>

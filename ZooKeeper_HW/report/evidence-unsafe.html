@@ -1,0 +1,13 @@
+<!doctype html><html lang="ru"><meta charset="utf-8"><title>FENCING=0 · повторная публикация</title><style>
+    *{box-sizing:border-box}body{margin:0;background:#edf2f7;color:#11243b;font:16px -apple-system,Arial,sans-serif}
+    main{max-width:1120px;padding:30px;margin:auto}h1{font-size:30px;margin:8px 0 6px}h2{font-size:19px;margin:22px 0 8px}
+    .tag{color:#127056;font-weight:700;letter-spacing:1px}.note{color:#536578;font-size:14px}pre{white-space:pre-wrap;overflow-wrap:anywhere;background:white;border:1px solid #ccd6e2;border-left:5px solid #127056;padding:15px;font:14px/1.45 ui-monospace,Menlo,monospace;margin:0}
+    </style><main><div class="tag">ДЗ4 · ФАКТИЧЕСКИЕ РЕЗУЛЬТАТЫ</div><h1>FENCING=0 · повторная публикация</h1><p class="note">Просмотр сохранённых журналов эксперимента 05.11.2026. Значения взяты из приложенных JSON/TXT.</p><h2>Координатор A · logs/unsafe-A.jsonl</h2><pre>{&quot;event&quot;: &quot;LEADER&quot;, &quot;name&quot;: &quot;A&quot;, &quot;epoch&quot;: 1, &quot;epoch_version&quot;: 1}
+{&quot;event&quot;: &quot;RESTORED&quot;, &quot;next_batch&quot;: 0, &quot;from_epoch&quot;: null}
+{&quot;event&quot;: &quot;RESULT_WRITTEN&quot;, &quot;message&quot;: &quot;записал результат&quot;, &quot;epoch&quot;: 1, &quot;pointer_version&quot;: 2, &quot;fencing&quot;: false}</pre><h2>Координатор B · logs/unsafe-B.jsonl</h2><pre>{&quot;event&quot;: &quot;LEADER&quot;, &quot;name&quot;: &quot;B&quot;, &quot;epoch&quot;: 2, &quot;epoch_version&quot;: 2}
+{&quot;event&quot;: &quot;RESTORED&quot;, &quot;next_batch&quot;: 2, &quot;from_epoch&quot;: 1}
+{&quot;event&quot;: &quot;RESULT_WRITTEN&quot;, &quot;message&quot;: &quot;записал результат&quot;, &quot;epoch&quot;: 2, &quot;pointer_version&quot;: 1, &quot;fencing&quot;: false}</pre><h2>Проверка</h2><pre>Смена лидера: 11.268 с
+Пауза: 41.836 с
+Версия указателя: 2
+Владелец результата: A, эпоха 1
+Полное совпадение с ДЗ3 при L=5/10/30: true</pre></main></html>
