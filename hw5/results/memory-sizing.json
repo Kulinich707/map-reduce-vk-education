@@ -1,0 +1,12 @@
+{
+  "measured": {
+    "output": "results/profile.json",
+    "groups": 170019,
+    "elapsed_seconds": 1.5819979999999987,
+    "rss_peak_mib": 115.88671875,
+    "cgroup_peak_bytes": 127909888
+  },
+  "low_limit_mib": 56,
+  "tuned_limit_mib": 160,
+  "formula": "ceil(cgroup_peak_MiB * 1.30 / 16) * 16"
+}

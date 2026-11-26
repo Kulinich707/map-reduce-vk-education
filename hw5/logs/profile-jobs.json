@@ -1,0 +1,263 @@
+{
+    "apiVersion": "v1",
+    "items": [
+        {
+            "apiVersion": "batch/v1",
+            "kind": "Job",
+            "metadata": {
+                "annotations": {
+                    "kubectl.kubernetes.io/last-applied-configuration": "{\"apiVersion\":\"batch/v1\",\"kind\":\"Job\",\"metadata\":{\"annotations\":{},\"name\":\"bootstrap\",\"namespace\":\"hw4\"},\"spec\":{\"activeDeadlineSeconds\":300,\"backoffLimit\":0,\"template\":{\"spec\":{\"containers\":[{\"args\":[\"bootstrap\",\"--run\",\"bootstrap\"],\"env\":[{\"name\":\"S3_ENDPOINT\",\"value\":\"http://rustfs:9000\"},{\"name\":\"S3_ACCESS_KEY\",\"valueFrom\":{\"secretKeyRef\":{\"key\":\"access\",\"name\":\"s3-auth\"}}},{\"name\":\"S3_SECRET_KEY\",\"valueFrom\":{\"secretKeyRef\":{\"key\":\"secret\",\"name\":\"s3-auth\"}}}],\"image\":\"hw4-skills:1.0\",\"imagePullPolicy\":\"Never\",\"name\":\"worker\",\"resources\":{\"limits\":{\"cpu\":\"1000m\",\"memory\":\"512Mi\"},\"requests\":{\"cpu\":\"250m\",\"memory\":\"128Mi\"}}}],\"restartPolicy\":\"Never\"}}}}\n"
+                },
+                "creationTimestamp": "2026-11-26T13:50:09Z",
+                "generation": 1,
+                "labels": {
+                    "batch.kubernetes.io/controller-uid": "2679ed89-ad93-47fa-8328-48135b836744",
+                    "batch.kubernetes.io/job-name": "bootstrap",
+                    "controller-uid": "2679ed89-ad93-47fa-8328-48135b836744",
+                    "job-name": "bootstrap"
+                },
+                "name": "bootstrap",
+                "namespace": "hw4",
+                "resourceVersion": "787",
+                "uid": "2679ed89-ad93-47fa-8328-48135b836744"
+            },
+            "spec": {
+                "activeDeadlineSeconds": 300,
+                "backoffLimit": 0,
+                "completionMode": "NonIndexed",
+                "completions": 1,
+                "manualSelector": false,
+                "parallelism": 1,
+                "podReplacementPolicy": "TerminatingOrFailed",
+                "selector": {
+                    "matchLabels": {
+                        "batch.kubernetes.io/controller-uid": "2679ed89-ad93-47fa-8328-48135b836744"
+                    }
+                },
+                "suspend": false,
+                "template": {
+                    "metadata": {
+                        "labels": {
+                            "batch.kubernetes.io/controller-uid": "2679ed89-ad93-47fa-8328-48135b836744",
+                            "batch.kubernetes.io/job-name": "bootstrap",
+                            "controller-uid": "2679ed89-ad93-47fa-8328-48135b836744",
+                            "job-name": "bootstrap"
+                        }
+                    },
+                    "spec": {
+                        "containers": [
+                            {
+                                "args": [
+                                    "bootstrap",
+                                    "--run",
+                                    "bootstrap"
+                                ],
+                                "env": [
+                                    {
+                                        "name": "S3_ENDPOINT",
+                                        "value": "http://rustfs:9000"
+                                    },
+                                    {
+                                        "name": "S3_ACCESS_KEY",
+                                        "valueFrom": {
+                                            "secretKeyRef": {
+                                                "key": "access",
+                                                "name": "s3-auth"
+                                            }
+                                        }
+                                    },
+                                    {
+                                        "name": "S3_SECRET_KEY",
+                                        "valueFrom": {
+                                            "secretKeyRef": {
+                                                "key": "secret",
+                                                "name": "s3-auth"
+                                            }
+                                        }
+                                    }
+                                ],
+                                "image": "hw4-skills:1.0",
+                                "imagePullPolicy": "Never",
+                                "name": "worker",
+                                "resources": {
+                                    "limits": {
+                                        "cpu": "1",
+                                        "memory": "512Mi"
+                                    },
+                                    "requests": {
+                                        "cpu": "250m",
+                                        "memory": "128Mi"
+                                    }
+                                },
+                                "terminationMessagePath": "/dev/termination-log",
+                                "terminationMessagePolicy": "File"
+                            }
+                        ],
+                        "dnsPolicy": "ClusterFirst",
+                        "restartPolicy": "Never",
+                        "schedulerName": "default-scheduler",
+                        "securityContext": {},
+                        "terminationGracePeriodSeconds": 30
+                    }
+                }
+            },
+            "status": {
+                "completionTime": "2026-11-26T13:50:14Z",
+                "conditions": [
+                    {
+                        "lastProbeTime": "2026-11-26T13:50:14Z",
+                        "lastTransitionTime": "2026-11-26T13:50:14Z",
+                        "message": "Reached expected number of succeeded pods",
+                        "reason": "CompletionsReached",
+                        "status": "True",
+                        "type": "SuccessCriteriaMet"
+                    },
+                    {
+                        "lastProbeTime": "2026-11-26T13:50:14Z",
+                        "lastTransitionTime": "2026-11-26T13:50:14Z",
+                        "message": "Reached expected number of succeeded pods",
+                        "reason": "CompletionsReached",
+                        "status": "True",
+                        "type": "Complete"
+                    }
+                ],
+                "ready": 0,
+                "startTime": "2026-11-26T13:50:09Z",
+                "succeeded": 1,
+                "terminating": 0,
+                "uncountedTerminatedPods": {}
+            }
+        },
+        {
+            "apiVersion": "batch/v1",
+            "kind": "Job",
+            "metadata": {
+                "annotations": {
+                    "kubectl.kubernetes.io/last-applied-configuration": "{\"apiVersion\":\"batch/v1\",\"kind\":\"Job\",\"metadata\":{\"annotations\":{},\"name\":\"profile\",\"namespace\":\"hw4\"},\"spec\":{\"activeDeadlineSeconds\":300,\"backoffLimit\":0,\"template\":{\"spec\":{\"containers\":[{\"args\":[\"single\",\"--run\",\"profile\"],\"env\":[{\"name\":\"S3_ENDPOINT\",\"value\":\"http://rustfs:9000\"},{\"name\":\"S3_ACCESS_KEY\",\"valueFrom\":{\"secretKeyRef\":{\"key\":\"access\",\"name\":\"s3-auth\"}}},{\"name\":\"S3_SECRET_KEY\",\"valueFrom\":{\"secretKeyRef\":{\"key\":\"secret\",\"name\":\"s3-auth\"}}}],\"image\":\"hw4-skills:1.0\",\"imagePullPolicy\":\"Never\",\"name\":\"worker\",\"resources\":{\"limits\":{\"cpu\":\"1000m\",\"memory\":\"512Mi\"},\"requests\":{\"cpu\":\"250m\",\"memory\":\"128Mi\"}}}],\"restartPolicy\":\"Never\"}}}}\n"
+                },
+                "creationTimestamp": "2026-11-26T13:50:16Z",
+                "generation": 1,
+                "labels": {
+                    "batch.kubernetes.io/controller-uid": "03261702-96a8-4c1e-9f8c-5f536dc15ff5",
+                    "batch.kubernetes.io/job-name": "profile",
+                    "controller-uid": "03261702-96a8-4c1e-9f8c-5f536dc15ff5",
+                    "job-name": "profile"
+                },
+                "name": "profile",
+                "namespace": "hw4",
+                "resourceVersion": "815",
+                "uid": "03261702-96a8-4c1e-9f8c-5f536dc15ff5"
+            },
+            "spec": {
+                "activeDeadlineSeconds": 300,
+                "backoffLimit": 0,
+                "completionMode": "NonIndexed",
+                "completions": 1,
+                "manualSelector": false,
+                "parallelism": 1,
+                "podReplacementPolicy": "TerminatingOrFailed",
+                "selector": {
+                    "matchLabels": {
+                        "batch.kubernetes.io/controller-uid": "03261702-96a8-4c1e-9f8c-5f536dc15ff5"
+                    }
+                },
+                "suspend": false,
+                "template": {
+                    "metadata": {
+                        "labels": {
+                            "batch.kubernetes.io/controller-uid": "03261702-96a8-4c1e-9f8c-5f536dc15ff5",
+                            "batch.kubernetes.io/job-name": "profile",
+                            "controller-uid": "03261702-96a8-4c1e-9f8c-5f536dc15ff5",
+                            "job-name": "profile"
+                        }
+                    },
+                    "spec": {
+                        "containers": [
+                            {
+                                "args": [
+                                    "single",
+                                    "--run",
+                                    "profile"
+                                ],
+                                "env": [
+                                    {
+                                        "name": "S3_ENDPOINT",
+                                        "value": "http://rustfs:9000"
+                                    },
+                                    {
+                                        "name": "S3_ACCESS_KEY",
+                                        "valueFrom": {
+                                            "secretKeyRef": {
+                                                "key": "access",
+                                                "name": "s3-auth"
+                                            }
+                                        }
+                                    },
+                                    {
+                                        "name": "S3_SECRET_KEY",
+                                        "valueFrom": {
+                                            "secretKeyRef": {
+                                                "key": "secret",
+                                                "name": "s3-auth"
+                                            }
+                                        }
+                                    }
+                                ],
+                                "image": "hw4-skills:1.0",
+                                "imagePullPolicy": "Never",
+                                "name": "worker",
+                                "resources": {
+                                    "limits": {
+                                        "cpu": "1",
+                                        "memory": "512Mi"
+                                    },
+                                    "requests": {
+                                        "cpu": "250m",
+                                        "memory": "128Mi"
+                                    }
+                                },
+                                "terminationMessagePath": "/dev/termination-log",
+                                "terminationMessagePolicy": "File"
+                            }
+                        ],
+                        "dnsPolicy": "ClusterFirst",
+                        "restartPolicy": "Never",
+                        "schedulerName": "default-scheduler",
+                        "securityContext": {},
+                        "terminationGracePeriodSeconds": 30
+                    }
+                }
+            },
+            "status": {
+                "completionTime": "2026-11-26T13:50:21Z",
+                "conditions": [
+                    {
+                        "lastProbeTime": "2026-11-26T13:50:21Z",
+                        "lastTransitionTime": "2026-11-26T13:50:21Z",
+                        "message": "Reached expected number of succeeded pods",
+                        "reason": "CompletionsReached",
+                        "status": "True",
+                        "type": "SuccessCriteriaMet"
+                    },
+                    {
+                        "lastProbeTime": "2026-11-26T13:50:21Z",
+                        "lastTransitionTime": "2026-11-26T13:50:21Z",
+                        "message": "Reached expected number of succeeded pods",
+                        "reason": "CompletionsReached",
+                        "status": "True",
+                        "type": "Complete"
+                    }
+                ],
+                "ready": 0,
+                "startTime": "2026-11-26T13:50:16Z",
+                "succeeded": 1,
+                "terminating": 0,
+                "uncountedTerminatedPods": {}
+            }
+        }
+    ],
+    "kind": "List",
+    "metadata": {
+        "resourceVersion": ""
+    }
+}

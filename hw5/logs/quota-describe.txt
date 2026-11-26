@@ -1,0 +1,62 @@
+$ kubectl --kubeconfig /Users/gpr/Documents/Codex/2026-11-26/new-chat/work/kubeconfig --cache-dir /Users/gpr/Documents/Codex/2026-11-26/new-chat/outputs/HW4_Kulinich_Kubernetes/.kubectl-cache describe pods -n hw4-quota
+Name:             quota-first
+Namespace:        hw4-quota
+Priority:         0
+Service Account:  default
+Node:             hw4-skills-control-plane/172.24.0.2
+Start Time:       Thu, 26 Nov 2026 16:51:09 +0300
+Labels:           <none>
+Annotations:      <none>
+Status:           Running
+IP:               10.244.0.25
+IPs:
+  IP:  10.244.0.25
+Containers:
+  sleep:
+    Container ID:  containerd://12687bd0aeddb29f9f7d3babe406fbd45c8cab13f68d6168326d7b5ba4f07f95
+    Image:         hw4-skills:1.0
+    Image ID:      sha256:20b9e4ec485f4bf5c5c8812cb57a3fc8236e1671c9d8d025cce337568d53becf
+    Port:          <none>
+    Host Port:     <none>
+    Command:
+      python
+      -c
+      import time; time.sleep(600)
+    State:          Running
+      Started:      Thu, 26 Nov 2026 16:51:10 +0300
+    Ready:          True
+    Restart Count:  0
+    Limits:
+      cpu:     150m
+      memory:  64Mi
+    Requests:
+      cpu:        150m
+      memory:     64Mi
+    Environment:  <none>
+    Mounts:
+      /var/run/secrets/kubernetes.io/serviceaccount from kube-api-access-wswgj (ro)
+Conditions:
+  Type                        Status
+  PodReadyToStartContainers   True 
+  Initialized                 True 
+  Ready                       True 
+  ContainersReady             True 
+  PodScheduled                True 
+Volumes:
+  kube-api-access-wswgj:
+    Type:                    Projected (a volume that contains injected data from multiple sources)
+    TokenExpirationSeconds:  3607
+    ConfigMapName:           kube-root-ca.crt
+    Optional:                false
+    DownwardAPI:             true
+QoS Class:                   Guaranteed
+Node-Selectors:              <none>
+Tolerations:                 node.kubernetes.io/not-ready:NoExecute op=Exists for 300s
+                             node.kubernetes.io/unreachable:NoExecute op=Exists for 300s
+Events:
+  Type    Reason     Age   From               Message
+  ----    ------     ----  ----               -------
+  Normal  Scheduled  3s    default-scheduler  Successfully assigned hw4-quota/quota-first to hw4-skills-control-plane
+  Normal  Pulled     2s    kubelet            spec.containers{sleep}: Container image "hw4-skills:1.0" already present on machine
+  Normal  Created    2s    kubelet            spec.containers{sleep}: Created container: sleep
+  Normal  Started    2s    kubelet            spec.containers{sleep}: Started container sleep

@@ -1,0 +1,7 @@
+{
+  "allocatable_cpu": "12",
+  "pod_request": "10000m",
+  "victim_uid": "e00b81bd-337a-4011-81e1-74206b5be087",
+  "high_running": true,
+  "preempted_event_verified": true
+}

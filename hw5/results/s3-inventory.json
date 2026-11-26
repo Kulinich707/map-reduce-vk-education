@@ -1,0 +1,80 @@
+{
+  "inventory": [
+    {
+      "key": "input/vacancies.csv",
+      "bytes": 60583502
+    },
+    {
+      "key": "metrics/parallel-0.json",
+      "bytes": 98
+    },
+    {
+      "key": "metrics/parallel-1.json",
+      "bytes": 98
+    },
+    {
+      "key": "metrics/parallel-2.json",
+      "bytes": 100
+    },
+    {
+      "key": "metrics/parallel-3.json",
+      "bytes": 99
+    },
+    {
+      "key": "metrics/profile-0.json",
+      "bytes": 101
+    },
+    {
+      "key": "metrics/tuned-0.json",
+      "bytes": 101
+    },
+    {
+      "key": "partials/0.json",
+      "bytes": 2773134
+    },
+    {
+      "key": "partials/1.json",
+      "bytes": 4304305
+    },
+    {
+      "key": "partials/2.json",
+      "bytes": 3489855
+    },
+    {
+      "key": "partials/3.json",
+      "bytes": 4210835
+    },
+    {
+      "key": "results/parallel.json",
+      "bytes": 9460026
+    },
+    {
+      "key": "results/profile.json",
+      "bytes": 9460026
+    },
+    {
+      "key": "results/tuned.json",
+      "bytes": 9460026
+    },
+    {
+      "key": "results/verification.json",
+      "bytes": 578
+    },
+    {
+      "key": "shards/0.csv",
+      "bytes": 254833
+    },
+    {
+      "key": "shards/1.csv",
+      "bytes": 261924
+    },
+    {
+      "key": "shards/2.csv",
+      "bytes": 262151
+    },
+    {
+      "key": "shards/3.csv",
+      "bytes": 264446
+    }
+  ]
+}

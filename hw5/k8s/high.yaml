@@ -1,0 +1,35 @@
+{
+  "apiVersion": "v1",
+  "kind": "Pod",
+  "metadata": {
+    "name": "high",
+    "namespace": "hw4"
+  },
+  "spec": {
+    "restartPolicy": "Never",
+    "terminationGracePeriodSeconds": 0,
+    "containers": [
+      {
+        "name": "sleep",
+        "image": "hw4-skills:1.0",
+        "imagePullPolicy": "Never",
+        "command": [
+          "python",
+          "-c",
+          "import time; time.sleep(600)"
+        ],
+        "resources": {
+          "requests": {
+            "cpu": "10000m",
+            "memory": "64Mi"
+          },
+          "limits": {
+            "cpu": "10000m",
+            "memory": "64Mi"
+          }
+        }
+      }
+    ],
+    "priorityClassName": "hw4-high"
+  }
+}

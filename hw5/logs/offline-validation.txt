@@ -1,0 +1,13 @@
+{
+  "passed": true,
+  "equal_groups": 170019,
+  "parallel_indices": 4,
+  "max_observed_container_overlap": 4,
+  "oom_verified": true,
+  "memory_margin_verified": true,
+  "cpu_pending_verified": true,
+  "preemption_uid_verified": true,
+  "quota_rejection_and_recovery_verified": true,
+  "eight_pvc_bound": true,
+  "input_sha256_verified": true
+}

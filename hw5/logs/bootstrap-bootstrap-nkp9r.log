@@ -1,0 +1,2 @@
+$ kubectl --kubeconfig /Users/gpr/Documents/Codex/2026-11-26/new-chat/work/kubeconfig --cache-dir /Users/gpr/Documents/Codex/2026-11-26/new-chat/outputs/HW4_Kulinich_Kubernetes/.kubectl-cache logs -n hw4 bootstrap-nkp9r
+{"uploaded_sha256": "f5bdf27ed577cac70674481444ed7af7376e323a3f724be840a2b0fc7b55d4e4", "unique_python_rows": 4892, "shards": 4}

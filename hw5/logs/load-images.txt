@@ -1,0 +1,8 @@
+docker.io/library/hw4 skills:1.0        	saved	
+application/vnd.oci.image.index.v1+json sha256:c2f3f139cfd4174f18056c1381524d61ffb6b2fe249f273400756450c670c68c
+Importing	elapsed: 3.9 s	total:   0.0 B	(0.0 B/s)	
+docker.io/library/hw4 skills:1.0        	saved	
+docker.io/rustfs/rustfs:latest          	saved	
+application/vnd.oci.image.index.v1+json sha256:c2f3f139cfd4174f18056c1381524d61ffb6b2fe249f273400756450c670c68c
+application/vnd.oci.image.index.v1+json sha256:1803faef57627e2d9c2e7d89d655d712ddded5389040054987163043fecb6a3c
+Importing	elapsed: 3.9 s	total:   0.0 B	(0.0 B/s)	

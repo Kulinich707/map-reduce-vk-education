@@ -1,0 +1,2853 @@
+{
+    "apiVersion": "v1",
+    "items": [
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-11-26T13:50:09Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "kind": "Pod",
+                "name": "bootstrap-nkp9r",
+                "namespace": "hw4",
+                "resourceVersion": "764",
+                "uid": "bfffa37a-1f32-41e4-94db-4a871af361ee"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-11-26T13:50:09Z",
+            "message": "Successfully assigned hw4/bootstrap-nkp9r to hw4-skills-control-plane",
+            "metadata": {
+                "creationTimestamp": "2026-11-26T13:50:09Z",
+                "name": "bootstrap-nkp9r.18eb9c8dd324f214",
+                "namespace": "hw4",
+                "resourceVersion": "768",
+                "uid": "b159057b-52cb-429c-aeb7-234d527b3ff7"
+            },
+            "reason": "Scheduled",
+            "reportingComponent": "default-scheduler",
+            "reportingInstance": "",
+            "source": {
+                "component": "default-scheduler"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-11-26T13:50:09Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "fieldPath": "spec.containers{worker}",
+                "kind": "Pod",
+                "name": "bootstrap-nkp9r",
+                "namespace": "hw4",
+                "resourceVersion": "766",
+                "uid": "bfffa37a-1f32-41e4-94db-4a871af361ee"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-11-26T13:50:09Z",
+            "message": "Container image \"hw4-skills:1.0\" already present on machine",
+            "metadata": {
+                "creationTimestamp": "2026-11-26T13:50:09Z",
+                "name": "bootstrap-nkp9r.18eb9c8de9aa0d44",
+                "namespace": "hw4",
+                "resourceVersion": "770",
+                "uid": "b7cc014d-327c-4de9-824d-3d83b778108a"
+            },
+            "reason": "Pulled",
+            "reportingComponent": "kubelet",
+            "reportingInstance": "hw4-skills-control-plane",
+            "source": {
+                "component": "kubelet",
+                "host": "hw4-skills-control-plane"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-11-26T13:50:09Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "fieldPath": "spec.containers{worker}",
+                "kind": "Pod",
+                "name": "bootstrap-nkp9r",
+                "namespace": "hw4",
+                "resourceVersion": "766",
+                "uid": "bfffa37a-1f32-41e4-94db-4a871af361ee"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-11-26T13:50:09Z",
+            "message": "Created container: worker",
+            "metadata": {
+                "creationTimestamp": "2026-11-26T13:50:09Z",
+                "name": "bootstrap-nkp9r.18eb9c8dea4731c8",
+                "namespace": "hw4",
+                "resourceVersion": "771",
+                "uid": "c75729c6-5965-401e-a6fd-1f3884922ee0"
+            },
+            "reason": "Created",
+            "reportingComponent": "kubelet",
+            "reportingInstance": "hw4-skills-control-plane",
+            "source": {
+                "component": "kubelet",
+                "host": "hw4-skills-control-plane"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-11-26T13:50:09Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "fieldPath": "spec.containers{worker}",
+                "kind": "Pod",
+                "name": "bootstrap-nkp9r",
+                "namespace": "hw4",
+                "resourceVersion": "766",
+                "uid": "bfffa37a-1f32-41e4-94db-4a871af361ee"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-11-26T13:50:09Z",
+            "message": "Started container worker",
+            "metadata": {
+                "creationTimestamp": "2026-11-26T13:50:09Z",
+                "name": "bootstrap-nkp9r.18eb9c8ded5c6326",
+                "namespace": "hw4",
+                "resourceVersion": "772",
+                "uid": "eb8d67bc-909d-438b-bad6-2737beb58a5c"
+            },
+            "reason": "Started",
+            "reportingComponent": "kubelet",
+            "reportingInstance": "hw4-skills-control-plane",
+            "source": {
+                "component": "kubelet",
+                "host": "hw4-skills-control-plane"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-11-26T13:50:09Z",
+            "involvedObject": {
+                "apiVersion": "batch/v1",
+                "kind": "Job",
+                "name": "bootstrap",
+                "namespace": "hw4",
+                "resourceVersion": "763",
+                "uid": "2679ed89-ad93-47fa-8328-48135b836744"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-11-26T13:50:09Z",
+            "message": "Created pod: bootstrap-nkp9r",
+            "metadata": {
+                "creationTimestamp": "2026-11-26T13:50:09Z",
+                "name": "bootstrap.18eb9c8dd2fe74ba",
+                "namespace": "hw4",
+                "resourceVersion": "765",
+                "uid": "f71224b1-1009-4120-860e-ecd3fca000c5"
+            },
+            "reason": "SuccessfulCreate",
+            "reportingComponent": "job-controller",
+            "reportingInstance": "",
+            "source": {
+                "component": "job-controller"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-11-26T13:50:14Z",
+            "involvedObject": {
+                "apiVersion": "batch/v1",
+                "kind": "Job",
+                "name": "bootstrap",
+                "namespace": "hw4",
+                "resourceVersion": "785",
+                "uid": "2679ed89-ad93-47fa-8328-48135b836744"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-11-26T13:50:14Z",
+            "message": "Job completed",
+            "metadata": {
+                "creationTimestamp": "2026-11-26T13:50:14Z",
+                "name": "bootstrap.18eb9c8ef398e7cc",
+                "namespace": "hw4",
+                "resourceVersion": "788",
+                "uid": "ad077562-1a0a-4d9d-a1e2-2d47f9a263cc"
+            },
+            "reason": "Completed",
+            "reportingComponent": "job-controller",
+            "reportingInstance": "",
+            "source": {
+                "component": "job-controller"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-11-26T13:49:49Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "kind": "PersistentVolumeClaim",
+                "name": "disk1-rustfs-0",
+                "namespace": "hw4",
+                "resourceVersion": "542",
+                "uid": "8614c9e4-2641-410a-8279-e8dd3578b847"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-11-26T13:49:49Z",
+            "message": "waiting for first consumer to be created before binding",
+            "metadata": {
+                "creationTimestamp": "2026-11-26T13:49:49Z",
+                "name": "disk1-rustfs-0.18eb9c8937a1f01c",
+                "namespace": "hw4",
+                "resourceVersion": "550",
+                "uid": "418c25c4-9daa-43a6-91c3-448f9ed1d7b4"
+            },
+            "reason": "WaitForFirstConsumer",
+            "reportingComponent": "persistentvolume-controller",
+            "reportingInstance": "",
+            "source": {
+                "component": "persistentvolume-controller"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 2,
+            "eventTime": null,
+            "firstTimestamp": "2026-11-26T13:49:49Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "kind": "PersistentVolumeClaim",
+                "name": "disk1-rustfs-0",
+                "namespace": "hw4",
+                "resourceVersion": "570",
+                "uid": "8614c9e4-2641-410a-8279-e8dd3578b847"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-11-26T13:49:49Z",
+            "message": "Waiting for a volume to be created either by the external provisioner 'rancher.io/local-path' or manually by the system administrator. If volume creation is delayed, please verify that the provisioner is running and correctly registered.",
+            "metadata": {
+                "creationTimestamp": "2026-11-26T13:49:49Z",
+                "name": "disk1-rustfs-0.18eb9c8938b60849",
+                "namespace": "hw4",
+                "resourceVersion": "581",
+                "uid": "d2adc64d-1fa9-4338-b19c-55b1a21a0506"
+            },
+            "reason": "ExternalProvisioning",
+            "reportingComponent": "persistentvolume-controller",
+            "reportingInstance": "",
+            "source": {
+                "component": "persistentvolume-controller"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-11-26T13:49:49Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "kind": "PersistentVolumeClaim",
+                "name": "disk1-rustfs-0",
+                "namespace": "hw4",
+                "resourceVersion": "570",
+                "uid": "8614c9e4-2641-410a-8279-e8dd3578b847"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-11-26T13:49:49Z",
+            "message": "External provisioner is provisioning volume for claim \"hw4/disk1-rustfs-0\"",
+            "metadata": {
+                "creationTimestamp": "2026-11-26T13:49:49Z",
+                "name": "disk1-rustfs-0.18eb9c8938cf3710",
+                "namespace": "hw4",
+                "resourceVersion": "578",
+                "uid": "739e6f70-2c1c-4cc9-8b27-b39429d011b0"
+            },
+            "reason": "Provisioning",
+            "reportingComponent": "rancher.io/local-path_local-path-provisioner-7b8c8ddbd6-26mgv_1dc9a63a-eb4c-43ca-94a9-0e70567eae0f",
+            "reportingInstance": "",
+            "source": {
+                "component": "rancher.io/local-path_local-path-provisioner-7b8c8ddbd6-26mgv_1dc9a63a-eb4c-43ca-94a9-0e70567eae0f"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-11-26T13:49:52Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "kind": "PersistentVolumeClaim",
+                "name": "disk1-rustfs-0",
+                "namespace": "hw4",
+                "resourceVersion": "570",
+                "uid": "8614c9e4-2641-410a-8279-e8dd3578b847"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-11-26T13:49:52Z",
+            "message": "Successfully provisioned volume pvc-8614c9e4-2641-410a-8279-e8dd3578b847",
+            "metadata": {
+                "creationTimestamp": "2026-11-26T13:49:52Z",
+                "name": "disk1-rustfs-0.18eb9c89d570b443",
+                "namespace": "hw4",
+                "resourceVersion": "639",
+                "uid": "35efd6ac-df5e-4d94-bdb9-457973e9102e"
+            },
+            "reason": "ProvisioningSucceeded",
+            "reportingComponent": "rancher.io/local-path_local-path-provisioner-7b8c8ddbd6-26mgv_1dc9a63a-eb4c-43ca-94a9-0e70567eae0f",
+            "reportingInstance": "",
+            "source": {
+                "component": "rancher.io/local-path_local-path-provisioner-7b8c8ddbd6-26mgv_1dc9a63a-eb4c-43ca-94a9-0e70567eae0f"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-11-26T13:49:49Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "kind": "PersistentVolumeClaim",
+                "name": "disk2-rustfs-0",
+                "namespace": "hw4",
+                "resourceVersion": "545",
+                "uid": "22df0d71-4f0d-4771-8dae-34d384353cd3"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-11-26T13:49:49Z",
+            "message": "waiting for first consumer to be created before binding",
+            "metadata": {
+                "creationTimestamp": "2026-11-26T13:49:49Z",
+                "name": "disk2-rustfs-0.18eb9c8937b917ae",
+                "namespace": "hw4",
+                "resourceVersion": "553",
+                "uid": "e5b9dbe2-cc28-40ea-bc66-c1aa11439c3c"
+            },
+            "reason": "WaitForFirstConsumer",
+            "reportingComponent": "persistentvolume-controller",
+            "reportingInstance": "",
+            "source": {
+                "component": "persistentvolume-controller"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 2,
+            "eventTime": null,
+            "firstTimestamp": "2026-11-26T13:49:49Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "kind": "PersistentVolumeClaim",
+                "name": "disk2-rustfs-0",
+                "namespace": "hw4",
+                "resourceVersion": "575",
+                "uid": "22df0d71-4f0d-4771-8dae-34d384353cd3"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-11-26T13:49:49Z",
+            "message": "Waiting for a volume to be created either by the external provisioner 'rancher.io/local-path' or manually by the system administrator. If volume creation is delayed, please verify that the provisioner is running and correctly registered.",
+            "metadata": {
+                "creationTimestamp": "2026-11-26T13:49:49Z",
+                "name": "disk2-rustfs-0.18eb9c8938f392ae",
+                "namespace": "hw4",
+                "resourceVersion": "588",
+                "uid": "234d5e23-eafd-4dca-9122-049e8c9b3402"
+            },
+            "reason": "ExternalProvisioning",
+            "reportingComponent": "persistentvolume-controller",
+            "reportingInstance": "",
+            "source": {
+                "component": "persistentvolume-controller"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-11-26T13:49:49Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "kind": "PersistentVolumeClaim",
+                "name": "disk2-rustfs-0",
+                "namespace": "hw4",
+                "resourceVersion": "575",
+                "uid": "22df0d71-4f0d-4771-8dae-34d384353cd3"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-11-26T13:49:49Z",
+            "message": "External provisioner is provisioning volume for claim \"hw4/disk2-rustfs-0\"",
+            "metadata": {
+                "creationTimestamp": "2026-11-26T13:49:50Z",
+                "name": "disk2-rustfs-0.18eb9c893908d004",
+                "namespace": "hw4",
+                "resourceVersion": "610",
+                "uid": "14db3d9b-7e02-4268-8764-075f2eb30740"
+            },
+            "reason": "Provisioning",
+            "reportingComponent": "rancher.io/local-path_local-path-provisioner-7b8c8ddbd6-26mgv_1dc9a63a-eb4c-43ca-94a9-0e70567eae0f",
+            "reportingInstance": "",
+            "source": {
+                "component": "rancher.io/local-path_local-path-provisioner-7b8c8ddbd6-26mgv_1dc9a63a-eb4c-43ca-94a9-0e70567eae0f"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-11-26T13:49:55Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "kind": "PersistentVolumeClaim",
+                "name": "disk2-rustfs-0",
+                "namespace": "hw4",
+                "resourceVersion": "575",
+                "uid": "22df0d71-4f0d-4771-8dae-34d384353cd3"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-11-26T13:49:55Z",
+            "message": "Successfully provisioned volume pvc-22df0d71-4f0d-4771-8dae-34d384353cd3",
+            "metadata": {
+                "creationTimestamp": "2026-11-26T13:49:57Z",
+                "name": "disk2-rustfs-0.18eb9c8a7afea5c6",
+                "namespace": "hw4",
+                "resourceVersion": "699",
+                "uid": "710f131f-cbde-4cd5-ae39-f52bfd9819c2"
+            },
+            "reason": "ProvisioningSucceeded",
+            "reportingComponent": "rancher.io/local-path_local-path-provisioner-7b8c8ddbd6-26mgv_1dc9a63a-eb4c-43ca-94a9-0e70567eae0f",
+            "reportingInstance": "",
+            "source": {
+                "component": "rancher.io/local-path_local-path-provisioner-7b8c8ddbd6-26mgv_1dc9a63a-eb4c-43ca-94a9-0e70567eae0f"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-11-26T13:49:49Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "kind": "PersistentVolumeClaim",
+                "name": "disk3-rustfs-0",
+                "namespace": "hw4",
+                "resourceVersion": "547",
+                "uid": "fe4ce148-e456-44ae-ae7e-7e0010f3cc8f"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-11-26T13:49:49Z",
+            "message": "waiting for first consumer to be created before binding",
+            "metadata": {
+                "creationTimestamp": "2026-11-26T13:49:49Z",
+                "name": "disk3-rustfs-0.18eb9c8937d960a7",
+                "namespace": "hw4",
+                "resourceVersion": "557",
+                "uid": "ecc5c4ef-b8fb-4736-ab54-924dd0409d31"
+            },
+            "reason": "WaitForFirstConsumer",
+            "reportingComponent": "persistentvolume-controller",
+            "reportingInstance": "",
+            "source": {
+                "component": "persistentvolume-controller"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 3,
+            "eventTime": null,
+            "firstTimestamp": "2026-11-26T13:49:49Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "kind": "PersistentVolumeClaim",
+                "name": "disk3-rustfs-0",
+                "namespace": "hw4",
+                "resourceVersion": "579",
+                "uid": "fe4ce148-e456-44ae-ae7e-7e0010f3cc8f"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-11-26T13:49:55Z",
+            "message": "Waiting for a volume to be created either by the external provisioner 'rancher.io/local-path' or manually by the system administrator. If volume creation is delayed, please verify that the provisioner is running and correctly registered.",
+            "metadata": {
+                "creationTimestamp": "2026-11-26T13:49:49Z",
+                "name": "disk3-rustfs-0.18eb9c89391e57bc",
+                "namespace": "hw4",
+                "resourceVersion": "672",
+                "uid": "b1e4a3e3-b707-4b8f-b6e4-8ed1465e6210"
+            },
+            "reason": "ExternalProvisioning",
+            "reportingComponent": "persistentvolume-controller",
+            "reportingInstance": "",
+            "source": {
+                "component": "persistentvolume-controller"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-11-26T13:49:52Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "kind": "PersistentVolumeClaim",
+                "name": "disk3-rustfs-0",
+                "namespace": "hw4",
+                "resourceVersion": "579",
+                "uid": "fe4ce148-e456-44ae-ae7e-7e0010f3cc8f"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-11-26T13:49:52Z",
+            "message": "External provisioner is provisioning volume for claim \"hw4/disk3-rustfs-0\"",
+            "metadata": {
+                "creationTimestamp": "2026-11-26T13:49:53Z",
+                "name": "disk3-rustfs-0.18eb9c89dfbb16c4",
+                "namespace": "hw4",
+                "resourceVersion": "645",
+                "uid": "f275d65e-9ba7-442f-93b2-d5f093811615"
+            },
+            "reason": "Provisioning",
+            "reportingComponent": "rancher.io/local-path_local-path-provisioner-7b8c8ddbd6-26mgv_1dc9a63a-eb4c-43ca-94a9-0e70567eae0f",
+            "reportingInstance": "",
+            "source": {
+                "component": "rancher.io/local-path_local-path-provisioner-7b8c8ddbd6-26mgv_1dc9a63a-eb4c-43ca-94a9-0e70567eae0f"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-11-26T13:49:57Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "kind": "PersistentVolumeClaim",
+                "name": "disk3-rustfs-0",
+                "namespace": "hw4",
+                "resourceVersion": "579",
+                "uid": "fe4ce148-e456-44ae-ae7e-7e0010f3cc8f"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-11-26T13:49:57Z",
+            "message": "Successfully provisioned volume pvc-fe4ce148-e456-44ae-ae7e-7e0010f3cc8f",
+            "metadata": {
+                "creationTimestamp": "2026-11-26T13:50:00Z",
+                "name": "disk3-rustfs-0.18eb9c8b219aa6b3",
+                "namespace": "hw4",
+                "resourceVersion": "723",
+                "uid": "05d1cef7-4b86-47b4-a0af-c3f39224f9f0"
+            },
+            "reason": "ProvisioningSucceeded",
+            "reportingComponent": "rancher.io/local-path_local-path-provisioner-7b8c8ddbd6-26mgv_1dc9a63a-eb4c-43ca-94a9-0e70567eae0f",
+            "reportingInstance": "",
+            "source": {
+                "component": "rancher.io/local-path_local-path-provisioner-7b8c8ddbd6-26mgv_1dc9a63a-eb4c-43ca-94a9-0e70567eae0f"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-11-26T13:49:49Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "kind": "PersistentVolumeClaim",
+                "name": "disk4-rustfs-0",
+                "namespace": "hw4",
+                "resourceVersion": "552",
+                "uid": "e4a63746-4be7-4b90-9b51-0c748b479eb3"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-11-26T13:49:49Z",
+            "message": "waiting for first consumer to be created before binding",
+            "metadata": {
+                "creationTimestamp": "2026-11-26T13:49:49Z",
+                "name": "disk4-rustfs-0.18eb9c8937f21e26",
+                "namespace": "hw4",
+                "resourceVersion": "560",
+                "uid": "490a3e19-ce95-405f-b30b-e4cd6cd60118"
+            },
+            "reason": "WaitForFirstConsumer",
+            "reportingComponent": "persistentvolume-controller",
+            "reportingInstance": "",
+            "source": {
+                "component": "persistentvolume-controller"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 3,
+            "eventTime": null,
+            "firstTimestamp": "2026-11-26T13:49:49Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "kind": "PersistentVolumeClaim",
+                "name": "disk4-rustfs-0",
+                "namespace": "hw4",
+                "resourceVersion": "583",
+                "uid": "e4a63746-4be7-4b90-9b51-0c748b479eb3"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-11-26T13:49:55Z",
+            "message": "Waiting for a volume to be created either by the external provisioner 'rancher.io/local-path' or manually by the system administrator. If volume creation is delayed, please verify that the provisioner is running and correctly registered.",
+            "metadata": {
+                "creationTimestamp": "2026-11-26T13:49:49Z",
+                "name": "disk4-rustfs-0.18eb9c8939486680",
+                "namespace": "hw4",
+                "resourceVersion": "669",
+                "uid": "7a773727-7098-49eb-b24a-a5c5f5dd8804"
+            },
+            "reason": "ExternalProvisioning",
+            "reportingComponent": "persistentvolume-controller",
+            "reportingInstance": "",
+            "source": {
+                "component": "persistentvolume-controller"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-11-26T13:49:55Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "kind": "PersistentVolumeClaim",
+                "name": "disk4-rustfs-0",
+                "namespace": "hw4",
+                "resourceVersion": "583",
+                "uid": "e4a63746-4be7-4b90-9b51-0c748b479eb3"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-11-26T13:49:55Z",
+            "message": "External provisioner is provisioning volume for claim \"hw4/disk4-rustfs-0\"",
+            "metadata": {
+                "creationTimestamp": "2026-11-26T13:49:58Z",
+                "name": "disk4-rustfs-0.18eb9c8a86784cff",
+                "namespace": "hw4",
+                "resourceVersion": "709",
+                "uid": "e9b32665-88de-4a48-987e-7c819c474ce6"
+            },
+            "reason": "Provisioning",
+            "reportingComponent": "rancher.io/local-path_local-path-provisioner-7b8c8ddbd6-26mgv_1dc9a63a-eb4c-43ca-94a9-0e70567eae0f",
+            "reportingInstance": "",
+            "source": {
+                "component": "rancher.io/local-path_local-path-provisioner-7b8c8ddbd6-26mgv_1dc9a63a-eb4c-43ca-94a9-0e70567eae0f"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-11-26T13:49:59Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "kind": "PersistentVolumeClaim",
+                "name": "disk4-rustfs-0",
+                "namespace": "hw4",
+                "resourceVersion": "583",
+                "uid": "e4a63746-4be7-4b90-9b51-0c748b479eb3"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-11-26T13:49:59Z",
+            "message": "Successfully provisioned volume pvc-e4a63746-4be7-4b90-9b51-0c748b479eb3",
+            "metadata": {
+                "creationTimestamp": "2026-11-26T13:50:00Z",
+                "name": "disk4-rustfs-0.18eb9c8b81510d9d",
+                "namespace": "hw4",
+                "resourceVersion": "730",
+                "uid": "8402b579-e31c-4a23-a6c5-9ab20fde8837"
+            },
+            "reason": "ProvisioningSucceeded",
+            "reportingComponent": "rancher.io/local-path_local-path-provisioner-7b8c8ddbd6-26mgv_1dc9a63a-eb4c-43ca-94a9-0e70567eae0f",
+            "reportingInstance": "",
+            "source": {
+                "component": "rancher.io/local-path_local-path-provisioner-7b8c8ddbd6-26mgv_1dc9a63a-eb4c-43ca-94a9-0e70567eae0f"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-11-26T13:49:49Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "kind": "PersistentVolumeClaim",
+                "name": "disk5-rustfs-0",
+                "namespace": "hw4",
+                "resourceVersion": "555",
+                "uid": "404d1047-e3df-47fb-abf8-628b3cfb55c6"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-11-26T13:49:49Z",
+            "message": "waiting for first consumer to be created before binding",
+            "metadata": {
+                "creationTimestamp": "2026-11-26T13:49:49Z",
+                "name": "disk5-rustfs-0.18eb9c893801e65a",
+                "namespace": "hw4",
+                "resourceVersion": "563",
+                "uid": "3c99b119-d3dc-41ec-a037-84523ceb4d63"
+            },
+            "reason": "WaitForFirstConsumer",
+            "reportingComponent": "persistentvolume-controller",
+            "reportingInstance": "",
+            "source": {
+                "component": "persistentvolume-controller"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 3,
+            "eventTime": null,
+            "firstTimestamp": "2026-11-26T13:49:49Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "kind": "PersistentVolumeClaim",
+                "name": "disk5-rustfs-0",
+                "namespace": "hw4",
+                "resourceVersion": "587",
+                "uid": "404d1047-e3df-47fb-abf8-628b3cfb55c6"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-11-26T13:49:55Z",
+            "message": "Waiting for a volume to be created either by the external provisioner 'rancher.io/local-path' or manually by the system administrator. If volume creation is delayed, please verify that the provisioner is running and correctly registered.",
+            "metadata": {
+                "creationTimestamp": "2026-11-26T13:49:49Z",
+                "name": "disk5-rustfs-0.18eb9c893962947c",
+                "namespace": "hw4",
+                "resourceVersion": "670",
+                "uid": "ecd019cb-c72e-434d-844d-fa2f7f23c411"
+            },
+            "reason": "ExternalProvisioning",
+            "reportingComponent": "persistentvolume-controller",
+            "reportingInstance": "",
+            "source": {
+                "component": "persistentvolume-controller"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-11-26T13:49:55Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "kind": "PersistentVolumeClaim",
+                "name": "disk5-rustfs-0",
+                "namespace": "hw4",
+                "resourceVersion": "587",
+                "uid": "404d1047-e3df-47fb-abf8-628b3cfb55c6"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-11-26T13:49:55Z",
+            "message": "External provisioner is provisioning volume for claim \"hw4/disk5-rustfs-0\"",
+            "metadata": {
+                "creationTimestamp": "2026-11-26T13:49:58Z",
+                "name": "disk5-rustfs-0.18eb9c8a9e81355e",
+                "namespace": "hw4",
+                "resourceVersion": "710",
+                "uid": "c2c9549c-a306-4881-bac1-6ffbcb65de07"
+            },
+            "reason": "Provisioning",
+            "reportingComponent": "rancher.io/local-path_local-path-provisioner-7b8c8ddbd6-26mgv_1dc9a63a-eb4c-43ca-94a9-0e70567eae0f",
+            "reportingInstance": "",
+            "source": {
+                "component": "rancher.io/local-path_local-path-provisioner-7b8c8ddbd6-26mgv_1dc9a63a-eb4c-43ca-94a9-0e70567eae0f"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-11-26T13:50:00Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "kind": "PersistentVolumeClaim",
+                "name": "disk5-rustfs-0",
+                "namespace": "hw4",
+                "resourceVersion": "587",
+                "uid": "404d1047-e3df-47fb-abf8-628b3cfb55c6"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-11-26T13:50:00Z",
+            "message": "Successfully provisioned volume pvc-404d1047-e3df-47fb-abf8-628b3cfb55c6",
+            "metadata": {
+                "creationTimestamp": "2026-11-26T13:50:01Z",
+                "name": "disk5-rustfs-0.18eb9c8bbcdebeea",
+                "namespace": "hw4",
+                "resourceVersion": "735",
+                "uid": "ea759c98-1ff7-4845-b923-5b0b0d917bb6"
+            },
+            "reason": "ProvisioningSucceeded",
+            "reportingComponent": "rancher.io/local-path_local-path-provisioner-7b8c8ddbd6-26mgv_1dc9a63a-eb4c-43ca-94a9-0e70567eae0f",
+            "reportingInstance": "",
+            "source": {
+                "component": "rancher.io/local-path_local-path-provisioner-7b8c8ddbd6-26mgv_1dc9a63a-eb4c-43ca-94a9-0e70567eae0f"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-11-26T13:49:49Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "kind": "PersistentVolumeClaim",
+                "name": "disk6-rustfs-0",
+                "namespace": "hw4",
+                "resourceVersion": "537",
+                "uid": "4cb7dbfd-9284-4148-b940-8b946d5807fc"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-11-26T13:49:49Z",
+            "message": "waiting for first consumer to be created before binding",
+            "metadata": {
+                "creationTimestamp": "2026-11-26T13:49:49Z",
+                "name": "disk6-rustfs-0.18eb9c893761e1d5",
+                "namespace": "hw4",
+                "resourceVersion": "543",
+                "uid": "f2476567-6f94-4410-896e-ad4af5d43e80"
+            },
+            "reason": "WaitForFirstConsumer",
+            "reportingComponent": "persistentvolume-controller",
+            "reportingInstance": "",
+            "source": {
+                "component": "persistentvolume-controller"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 2,
+            "eventTime": null,
+            "firstTimestamp": "2026-11-26T13:49:49Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "kind": "PersistentVolumeClaim",
+                "name": "disk6-rustfs-0",
+                "namespace": "hw4",
+                "resourceVersion": "589",
+                "uid": "4cb7dbfd-9284-4148-b940-8b946d5807fc"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-11-26T13:49:55Z",
+            "message": "Waiting for a volume to be created either by the external provisioner 'rancher.io/local-path' or manually by the system administrator. If volume creation is delayed, please verify that the provisioner is running and correctly registered.",
+            "metadata": {
+                "creationTimestamp": "2026-11-26T13:49:49Z",
+                "name": "disk6-rustfs-0.18eb9c89397c25e5",
+                "namespace": "hw4",
+                "resourceVersion": "671",
+                "uid": "c4de0dac-d0a7-4ab8-84a6-422d4fb6ba88"
+            },
+            "reason": "ExternalProvisioning",
+            "reportingComponent": "persistentvolume-controller",
+            "reportingInstance": "",
+            "source": {
+                "component": "persistentvolume-controller"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-11-26T13:49:56Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "kind": "PersistentVolumeClaim",
+                "name": "disk6-rustfs-0",
+                "namespace": "hw4",
+                "resourceVersion": "589",
+                "uid": "4cb7dbfd-9284-4148-b940-8b946d5807fc"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-11-26T13:49:56Z",
+            "message": "External provisioner is provisioning volume for claim \"hw4/disk6-rustfs-0\"",
+            "metadata": {
+                "creationTimestamp": "2026-11-26T13:49:59Z",
+                "name": "disk6-rustfs-0.18eb9c8ab63ab3fc",
+                "namespace": "hw4",
+                "resourceVersion": "714",
+                "uid": "92efa918-09b1-4a38-9c41-ab6118425724"
+            },
+            "reason": "Provisioning",
+            "reportingComponent": "rancher.io/local-path_local-path-provisioner-7b8c8ddbd6-26mgv_1dc9a63a-eb4c-43ca-94a9-0e70567eae0f",
+            "reportingInstance": "",
+            "source": {
+                "component": "rancher.io/local-path_local-path-provisioner-7b8c8ddbd6-26mgv_1dc9a63a-eb4c-43ca-94a9-0e70567eae0f"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-11-26T13:50:00Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "kind": "PersistentVolumeClaim",
+                "name": "disk6-rustfs-0",
+                "namespace": "hw4",
+                "resourceVersion": "589",
+                "uid": "4cb7dbfd-9284-4148-b940-8b946d5807fc"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-11-26T13:50:00Z",
+            "message": "Successfully provisioned volume pvc-4cb7dbfd-9284-4148-b940-8b946d5807fc",
+            "metadata": {
+                "creationTimestamp": "2026-11-26T13:50:01Z",
+                "name": "disk6-rustfs-0.18eb9c8bd45f9a58",
+                "namespace": "hw4",
+                "resourceVersion": "736",
+                "uid": "a6541623-2b45-4e71-a54e-a6ddc2cf6756"
+            },
+            "reason": "ProvisioningSucceeded",
+            "reportingComponent": "rancher.io/local-path_local-path-provisioner-7b8c8ddbd6-26mgv_1dc9a63a-eb4c-43ca-94a9-0e70567eae0f",
+            "reportingInstance": "",
+            "source": {
+                "component": "rancher.io/local-path_local-path-provisioner-7b8c8ddbd6-26mgv_1dc9a63a-eb4c-43ca-94a9-0e70567eae0f"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-11-26T13:49:49Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "kind": "PersistentVolumeClaim",
+                "name": "disk7-rustfs-0",
+                "namespace": "hw4",
+                "resourceVersion": "538",
+                "uid": "394ca366-c465-48d5-a1dd-468212aa4094"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-11-26T13:49:49Z",
+            "message": "waiting for first consumer to be created before binding",
+            "metadata": {
+                "creationTimestamp": "2026-11-26T13:49:49Z",
+                "name": "disk7-rustfs-0.18eb9c8937803199",
+                "namespace": "hw4",
+                "resourceVersion": "546",
+                "uid": "5e913b81-cba2-445b-b5a0-9bdeaf114e2d"
+            },
+            "reason": "WaitForFirstConsumer",
+            "reportingComponent": "persistentvolume-controller",
+            "reportingInstance": "",
+            "source": {
+                "component": "persistentvolume-controller"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-11-26T13:49:49Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "kind": "PersistentVolumeClaim",
+                "name": "disk7-rustfs-0",
+                "namespace": "hw4",
+                "resourceVersion": "566",
+                "uid": "394ca366-c465-48d5-a1dd-468212aa4094"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-11-26T13:49:49Z",
+            "message": "Waiting for a volume to be created either by the external provisioner 'rancher.io/local-path' or manually by the system administrator. If volume creation is delayed, please verify that the provisioner is running and correctly registered.",
+            "metadata": {
+                "creationTimestamp": "2026-11-26T13:49:49Z",
+                "name": "disk7-rustfs-0.18eb9c89388414b0",
+                "namespace": "hw4",
+                "resourceVersion": "568",
+                "uid": "ee0fc8da-2e8e-44b7-9c89-0c49716e609b"
+            },
+            "reason": "ExternalProvisioning",
+            "reportingComponent": "persistentvolume-controller",
+            "reportingInstance": "",
+            "source": {
+                "component": "persistentvolume-controller"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-11-26T13:49:49Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "kind": "PersistentVolumeClaim",
+                "name": "disk7-rustfs-0",
+                "namespace": "hw4",
+                "resourceVersion": "566",
+                "uid": "394ca366-c465-48d5-a1dd-468212aa4094"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-11-26T13:49:49Z",
+            "message": "External provisioner is provisioning volume for claim \"hw4/disk7-rustfs-0\"",
+            "metadata": {
+                "creationTimestamp": "2026-11-26T13:49:49Z",
+                "name": "disk7-rustfs-0.18eb9c8938917a89",
+                "namespace": "hw4",
+                "resourceVersion": "571",
+                "uid": "9a881bd8-1cf5-4c28-b746-0906c640e2ec"
+            },
+            "reason": "Provisioning",
+            "reportingComponent": "rancher.io/local-path_local-path-provisioner-7b8c8ddbd6-26mgv_1dc9a63a-eb4c-43ca-94a9-0e70567eae0f",
+            "reportingInstance": "",
+            "source": {
+                "component": "rancher.io/local-path_local-path-provisioner-7b8c8ddbd6-26mgv_1dc9a63a-eb4c-43ca-94a9-0e70567eae0f"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-11-26T13:49:54Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "kind": "PersistentVolumeClaim",
+                "name": "disk7-rustfs-0",
+                "namespace": "hw4",
+                "resourceVersion": "566",
+                "uid": "394ca366-c465-48d5-a1dd-468212aa4094"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-11-26T13:49:54Z",
+            "message": "Successfully provisioned volume pvc-394ca366-c465-48d5-a1dd-468212aa4094",
+            "metadata": {
+                "creationTimestamp": "2026-11-26T13:49:56Z",
+                "name": "disk7-rustfs-0.18eb9c8a6f385221",
+                "namespace": "hw4",
+                "resourceVersion": "681",
+                "uid": "e34ef403-fa53-4291-978c-d8ab51c10f8b"
+            },
+            "reason": "ProvisioningSucceeded",
+            "reportingComponent": "rancher.io/local-path_local-path-provisioner-7b8c8ddbd6-26mgv_1dc9a63a-eb4c-43ca-94a9-0e70567eae0f",
+            "reportingInstance": "",
+            "source": {
+                "component": "rancher.io/local-path_local-path-provisioner-7b8c8ddbd6-26mgv_1dc9a63a-eb4c-43ca-94a9-0e70567eae0f"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-11-26T13:49:49Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "kind": "PersistentVolumeClaim",
+                "name": "disk8-rustfs-0",
+                "namespace": "hw4",
+                "resourceVersion": "540",
+                "uid": "df269ab2-7118-48b9-a27a-4c064136056a"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-11-26T13:49:49Z",
+            "message": "waiting for first consumer to be created before binding",
+            "metadata": {
+                "creationTimestamp": "2026-11-26T13:49:49Z",
+                "name": "disk8-rustfs-0.18eb9c893792b170",
+                "namespace": "hw4",
+                "resourceVersion": "549",
+                "uid": "6f2e0369-185a-46fa-bb1a-7eea72ffe608"
+            },
+            "reason": "WaitForFirstConsumer",
+            "reportingComponent": "persistentvolume-controller",
+            "reportingInstance": "",
+            "source": {
+                "component": "persistentvolume-controller"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-11-26T13:49:49Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "kind": "PersistentVolumeClaim",
+                "name": "disk8-rustfs-0",
+                "namespace": "hw4",
+                "resourceVersion": "569",
+                "uid": "df269ab2-7118-48b9-a27a-4c064136056a"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-11-26T13:49:49Z",
+            "message": "Waiting for a volume to be created either by the external provisioner 'rancher.io/local-path' or manually by the system administrator. If volume creation is delayed, please verify that the provisioner is running and correctly registered.",
+            "metadata": {
+                "creationTimestamp": "2026-11-26T13:49:49Z",
+                "name": "disk8-rustfs-0.18eb9c8938ab5078",
+                "namespace": "hw4",
+                "resourceVersion": "573",
+                "uid": "e94f2834-ee22-47b3-9adc-70a924589502"
+            },
+            "reason": "ExternalProvisioning",
+            "reportingComponent": "persistentvolume-controller",
+            "reportingInstance": "",
+            "source": {
+                "component": "persistentvolume-controller"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-11-26T13:49:49Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "kind": "PersistentVolumeClaim",
+                "name": "disk8-rustfs-0",
+                "namespace": "hw4",
+                "resourceVersion": "569",
+                "uid": "df269ab2-7118-48b9-a27a-4c064136056a"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-11-26T13:49:49Z",
+            "message": "External provisioner is provisioning volume for claim \"hw4/disk8-rustfs-0\"",
+            "metadata": {
+                "creationTimestamp": "2026-11-26T13:49:49Z",
+                "name": "disk8-rustfs-0.18eb9c8938c56704",
+                "namespace": "hw4",
+                "resourceVersion": "577",
+                "uid": "d98ec982-bbd1-4413-bc7d-6fa29ee1a8b1"
+            },
+            "reason": "Provisioning",
+            "reportingComponent": "rancher.io/local-path_local-path-provisioner-7b8c8ddbd6-26mgv_1dc9a63a-eb4c-43ca-94a9-0e70567eae0f",
+            "reportingInstance": "",
+            "source": {
+                "component": "rancher.io/local-path_local-path-provisioner-7b8c8ddbd6-26mgv_1dc9a63a-eb4c-43ca-94a9-0e70567eae0f"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-11-26T13:49:54Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "kind": "PersistentVolumeClaim",
+                "name": "disk8-rustfs-0",
+                "namespace": "hw4",
+                "resourceVersion": "569",
+                "uid": "df269ab2-7118-48b9-a27a-4c064136056a"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-11-26T13:49:54Z",
+            "message": "Successfully provisioned volume pvc-df269ab2-7118-48b9-a27a-4c064136056a",
+            "metadata": {
+                "creationTimestamp": "2026-11-26T13:49:55Z",
+                "name": "disk8-rustfs-0.18eb9c8a632fbc68",
+                "namespace": "hw4",
+                "resourceVersion": "677",
+                "uid": "5a666ba2-f2fe-458c-b5da-b80d05814a67"
+            },
+            "reason": "ProvisioningSucceeded",
+            "reportingComponent": "rancher.io/local-path_local-path-provisioner-7b8c8ddbd6-26mgv_1dc9a63a-eb4c-43ca-94a9-0e70567eae0f",
+            "reportingInstance": "",
+            "source": {
+                "component": "rancher.io/local-path_local-path-provisioner-7b8c8ddbd6-26mgv_1dc9a63a-eb4c-43ca-94a9-0e70567eae0f"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-11-26T13:50:22Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "kind": "Pod",
+                "name": "oom-6ggkx",
+                "namespace": "hw4",
+                "resourceVersion": "819",
+                "uid": "19fa2bd7-2547-467f-87b4-fe347f52def0"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-11-26T13:50:22Z",
+            "message": "Successfully assigned hw4/oom-6ggkx to hw4-skills-control-plane",
+            "metadata": {
+                "creationTimestamp": "2026-11-26T13:50:22Z",
+                "name": "oom-6ggkx.18eb9c90f0940142",
+                "namespace": "hw4",
+                "resourceVersion": "823",
+                "uid": "9349bd00-8e23-48b9-bd48-55e4bdc3278a"
+            },
+            "reason": "Scheduled",
+            "reportingComponent": "default-scheduler",
+            "reportingInstance": "",
+            "source": {
+                "component": "default-scheduler"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-11-26T13:50:23Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "fieldPath": "spec.containers{worker}",
+                "kind": "Pod",
+                "name": "oom-6ggkx",
+                "namespace": "hw4",
+                "resourceVersion": "820",
+                "uid": "19fa2bd7-2547-467f-87b4-fe347f52def0"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-11-26T13:50:23Z",
+            "message": "Container image \"hw4-skills:1.0\" already present on machine",
+            "metadata": {
+                "creationTimestamp": "2026-11-26T13:50:23Z",
+                "name": "oom-6ggkx.18eb9c910779d6fa",
+                "namespace": "hw4",
+                "resourceVersion": "826",
+                "uid": "6823a103-182d-4b77-8b28-de2ce012b64a"
+            },
+            "reason": "Pulled",
+            "reportingComponent": "kubelet",
+            "reportingInstance": "hw4-skills-control-plane",
+            "source": {
+                "component": "kubelet",
+                "host": "hw4-skills-control-plane"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-11-26T13:50:23Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "fieldPath": "spec.containers{worker}",
+                "kind": "Pod",
+                "name": "oom-6ggkx",
+                "namespace": "hw4",
+                "resourceVersion": "820",
+                "uid": "19fa2bd7-2547-467f-87b4-fe347f52def0"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-11-26T13:50:23Z",
+            "message": "Created container: worker",
+            "metadata": {
+                "creationTimestamp": "2026-11-26T13:50:23Z",
+                "name": "oom-6ggkx.18eb9c91081a9a40",
+                "namespace": "hw4",
+                "resourceVersion": "827",
+                "uid": "715dff65-0cf8-4cd3-9de8-592a1ca0b149"
+            },
+            "reason": "Created",
+            "reportingComponent": "kubelet",
+            "reportingInstance": "hw4-skills-control-plane",
+            "source": {
+                "component": "kubelet",
+                "host": "hw4-skills-control-plane"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-11-26T13:50:23Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "fieldPath": "spec.containers{worker}",
+                "kind": "Pod",
+                "name": "oom-6ggkx",
+                "namespace": "hw4",
+                "resourceVersion": "820",
+                "uid": "19fa2bd7-2547-467f-87b4-fe347f52def0"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-11-26T13:50:23Z",
+            "message": "Started container worker",
+            "metadata": {
+                "creationTimestamp": "2026-11-26T13:50:23Z",
+                "name": "oom-6ggkx.18eb9c910b4d1021",
+                "namespace": "hw4",
+                "resourceVersion": "828",
+                "uid": "6f706b3f-07e8-4d60-aa83-3e054720bc48"
+            },
+            "reason": "Started",
+            "reportingComponent": "kubelet",
+            "reportingInstance": "hw4-skills-control-plane",
+            "source": {
+                "component": "kubelet",
+                "host": "hw4-skills-control-plane"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-11-26T13:50:22Z",
+            "involvedObject": {
+                "apiVersion": "batch/v1",
+                "kind": "Job",
+                "name": "oom",
+                "namespace": "hw4",
+                "resourceVersion": "818",
+                "uid": "ceaebe9f-f007-44e3-bbc3-41fc19f90ba0"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-11-26T13:50:22Z",
+            "message": "Created pod: oom-6ggkx",
+            "metadata": {
+                "creationTimestamp": "2026-11-26T13:50:22Z",
+                "name": "oom.18eb9c90f0762972",
+                "namespace": "hw4",
+                "resourceVersion": "821",
+                "uid": "8308d2d3-6d0b-43c2-b0ab-acf42b386c18"
+            },
+            "reason": "SuccessfulCreate",
+            "reportingComponent": "job-controller",
+            "reportingInstance": "",
+            "source": {
+                "component": "job-controller"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-11-26T13:50:25Z",
+            "involvedObject": {
+                "apiVersion": "batch/v1",
+                "kind": "Job",
+                "name": "oom",
+                "namespace": "hw4",
+                "resourceVersion": "838",
+                "uid": "ceaebe9f-f007-44e3-bbc3-41fc19f90ba0"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-11-26T13:50:25Z",
+            "message": "Job has reached the specified backoff limit",
+            "metadata": {
+                "creationTimestamp": "2026-11-26T13:50:25Z",
+                "name": "oom.18eb9c91a5125f57",
+                "namespace": "hw4",
+                "resourceVersion": "841",
+                "uid": "6986c366-b1c5-430a-8955-6e132593dbba"
+            },
+            "reason": "BackoffLimitExceeded",
+            "reportingComponent": "job-controller",
+            "reportingInstance": "",
+            "source": {
+                "component": "job-controller"
+            },
+            "type": "Warning"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-11-26T13:50:34Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "kind": "Pod",
+                "name": "parallel-0-wm6tr",
+                "namespace": "hw4",
+                "resourceVersion": "874",
+                "uid": "c70084d2-ec9e-4c5c-b05d-eae57d092d2d"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-11-26T13:50:34Z",
+            "message": "Successfully assigned hw4/parallel-0-wm6tr to hw4-skills-control-plane",
+            "metadata": {
+                "creationTimestamp": "2026-11-26T13:50:34Z",
+                "name": "parallel-0-wm6tr.18eb9c9394a6658d",
+                "namespace": "hw4",
+                "resourceVersion": "881",
+                "uid": "f93b29ad-2252-41fa-83c9-ebdd016aca8f"
+            },
+            "reason": "Scheduled",
+            "reportingComponent": "default-scheduler",
+            "reportingInstance": "",
+            "source": {
+                "component": "default-scheduler"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-11-26T13:50:34Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "fieldPath": "spec.containers{worker}",
+                "kind": "Pod",
+                "name": "parallel-0-wm6tr",
+                "namespace": "hw4",
+                "resourceVersion": "877",
+                "uid": "c70084d2-ec9e-4c5c-b05d-eae57d092d2d"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-11-26T13:50:34Z",
+            "message": "Container image \"hw4-skills:1.0\" already present on machine",
+            "metadata": {
+                "creationTimestamp": "2026-11-26T13:50:34Z",
+                "name": "parallel-0-wm6tr.18eb9c93acd61336",
+                "namespace": "hw4",
+                "resourceVersion": "895",
+                "uid": "b8028d99-f55c-4dea-8135-385d77ff92ff"
+            },
+            "reason": "Pulled",
+            "reportingComponent": "kubelet",
+            "reportingInstance": "hw4-skills-control-plane",
+            "source": {
+                "component": "kubelet",
+                "host": "hw4-skills-control-plane"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-11-26T13:50:34Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "fieldPath": "spec.containers{worker}",
+                "kind": "Pod",
+                "name": "parallel-0-wm6tr",
+                "namespace": "hw4",
+                "resourceVersion": "877",
+                "uid": "c70084d2-ec9e-4c5c-b05d-eae57d092d2d"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-11-26T13:50:34Z",
+            "message": "Created container: worker",
+            "metadata": {
+                "creationTimestamp": "2026-11-26T13:50:34Z",
+                "name": "parallel-0-wm6tr.18eb9c93adb2e2b8",
+                "namespace": "hw4",
+                "resourceVersion": "899",
+                "uid": "564ebc21-3168-4ae1-be8f-df51593763fe"
+            },
+            "reason": "Created",
+            "reportingComponent": "kubelet",
+            "reportingInstance": "hw4-skills-control-plane",
+            "source": {
+                "component": "kubelet",
+                "host": "hw4-skills-control-plane"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-11-26T13:50:34Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "fieldPath": "spec.containers{worker}",
+                "kind": "Pod",
+                "name": "parallel-0-wm6tr",
+                "namespace": "hw4",
+                "resourceVersion": "877",
+                "uid": "c70084d2-ec9e-4c5c-b05d-eae57d092d2d"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-11-26T13:50:34Z",
+            "message": "Started container worker",
+            "metadata": {
+                "creationTimestamp": "2026-11-26T13:50:34Z",
+                "name": "parallel-0-wm6tr.18eb9c93b3140d68",
+                "namespace": "hw4",
+                "resourceVersion": "903",
+                "uid": "85bb5b84-5ce3-4a08-97e3-7b5f33a8b20c"
+            },
+            "reason": "Started",
+            "reportingComponent": "kubelet",
+            "reportingInstance": "hw4-skills-control-plane",
+            "source": {
+                "component": "kubelet",
+                "host": "hw4-skills-control-plane"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-11-26T13:50:34Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "kind": "Pod",
+                "name": "parallel-1-mqkxk",
+                "namespace": "hw4",
+                "resourceVersion": "876",
+                "uid": "188fd392-4868-4e29-9802-35b809b40200"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-11-26T13:50:34Z",
+            "message": "Successfully assigned hw4/parallel-1-mqkxk to hw4-skills-control-plane",
+            "metadata": {
+                "creationTimestamp": "2026-11-26T13:50:34Z",
+                "name": "parallel-1-mqkxk.18eb9c9394edc750",
+                "namespace": "hw4",
+                "resourceVersion": "890",
+                "uid": "cb5f4f75-a7d1-4db5-a611-4cc75ab9a6b7"
+            },
+            "reason": "Scheduled",
+            "reportingComponent": "default-scheduler",
+            "reportingInstance": "",
+            "source": {
+                "component": "default-scheduler"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-11-26T13:50:34Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "fieldPath": "spec.containers{worker}",
+                "kind": "Pod",
+                "name": "parallel-1-mqkxk",
+                "namespace": "hw4",
+                "resourceVersion": "880",
+                "uid": "188fd392-4868-4e29-9802-35b809b40200"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-11-26T13:50:34Z",
+            "message": "Container image \"hw4-skills:1.0\" already present on machine",
+            "metadata": {
+                "creationTimestamp": "2026-11-26T13:50:34Z",
+                "name": "parallel-1-mqkxk.18eb9c93ad239267",
+                "namespace": "hw4",
+                "resourceVersion": "898",
+                "uid": "385016fc-6db0-43ed-b2aa-92a5a6a06b5b"
+            },
+            "reason": "Pulled",
+            "reportingComponent": "kubelet",
+            "reportingInstance": "hw4-skills-control-plane",
+            "source": {
+                "component": "kubelet",
+                "host": "hw4-skills-control-plane"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-11-26T13:50:34Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "fieldPath": "spec.containers{worker}",
+                "kind": "Pod",
+                "name": "parallel-1-mqkxk",
+                "namespace": "hw4",
+                "resourceVersion": "880",
+                "uid": "188fd392-4868-4e29-9802-35b809b40200"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-11-26T13:50:34Z",
+            "message": "Created container: worker",
+            "metadata": {
+                "creationTimestamp": "2026-11-26T13:50:34Z",
+                "name": "parallel-1-mqkxk.18eb9c93ae5913a4",
+                "namespace": "hw4",
+                "resourceVersion": "902",
+                "uid": "909ef486-2354-4dcf-940e-805c35748263"
+            },
+            "reason": "Created",
+            "reportingComponent": "kubelet",
+            "reportingInstance": "hw4-skills-control-plane",
+            "source": {
+                "component": "kubelet",
+                "host": "hw4-skills-control-plane"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-11-26T13:50:34Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "fieldPath": "spec.containers{worker}",
+                "kind": "Pod",
+                "name": "parallel-1-mqkxk",
+                "namespace": "hw4",
+                "resourceVersion": "880",
+                "uid": "188fd392-4868-4e29-9802-35b809b40200"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-11-26T13:50:34Z",
+            "message": "Started container worker",
+            "metadata": {
+                "creationTimestamp": "2026-11-26T13:50:34Z",
+                "name": "parallel-1-mqkxk.18eb9c93b3a66d69",
+                "namespace": "hw4",
+                "resourceVersion": "906",
+                "uid": "fd7f194e-9522-439f-b516-e379816d745a"
+            },
+            "reason": "Started",
+            "reportingComponent": "kubelet",
+            "reportingInstance": "hw4-skills-control-plane",
+            "source": {
+                "component": "kubelet",
+                "host": "hw4-skills-control-plane"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-11-26T13:50:34Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "kind": "Pod",
+                "name": "parallel-2-6wv7k",
+                "namespace": "hw4",
+                "resourceVersion": "878",
+                "uid": "9c2bcf14-e0ad-44e6-bf07-4f33a114d93d"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-11-26T13:50:34Z",
+            "message": "Successfully assigned hw4/parallel-2-6wv7k to hw4-skills-control-plane",
+            "metadata": {
+                "creationTimestamp": "2026-11-26T13:50:34Z",
+                "name": "parallel-2-6wv7k.18eb9c9394ebbc5d",
+                "namespace": "hw4",
+                "resourceVersion": "885",
+                "uid": "8d05401b-31b5-4695-80e9-d7293dc7f6df"
+            },
+            "reason": "Scheduled",
+            "reportingComponent": "default-scheduler",
+            "reportingInstance": "",
+            "source": {
+                "component": "default-scheduler"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-11-26T13:50:34Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "fieldPath": "spec.containers{worker}",
+                "kind": "Pod",
+                "name": "parallel-2-6wv7k",
+                "namespace": "hw4",
+                "resourceVersion": "882",
+                "uid": "9c2bcf14-e0ad-44e6-bf07-4f33a114d93d"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-11-26T13:50:34Z",
+            "message": "Container image \"hw4-skills:1.0\" already present on machine",
+            "metadata": {
+                "creationTimestamp": "2026-11-26T13:50:34Z",
+                "name": "parallel-2-6wv7k.18eb9c93ad0677e2",
+                "namespace": "hw4",
+                "resourceVersion": "896",
+                "uid": "7736b5c2-9ed9-4b38-ac70-c39e620a9bbb"
+            },
+            "reason": "Pulled",
+            "reportingComponent": "kubelet",
+            "reportingInstance": "hw4-skills-control-plane",
+            "source": {
+                "component": "kubelet",
+                "host": "hw4-skills-control-plane"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-11-26T13:50:34Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "fieldPath": "spec.containers{worker}",
+                "kind": "Pod",
+                "name": "parallel-2-6wv7k",
+                "namespace": "hw4",
+                "resourceVersion": "882",
+                "uid": "9c2bcf14-e0ad-44e6-bf07-4f33a114d93d"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-11-26T13:50:34Z",
+            "message": "Created container: worker",
+            "metadata": {
+                "creationTimestamp": "2026-11-26T13:50:34Z",
+                "name": "parallel-2-6wv7k.18eb9c93ae37b4ac",
+                "namespace": "hw4",
+                "resourceVersion": "901",
+                "uid": "e8570490-85b1-4426-90f6-3080619030db"
+            },
+            "reason": "Created",
+            "reportingComponent": "kubelet",
+            "reportingInstance": "hw4-skills-control-plane",
+            "source": {
+                "component": "kubelet",
+                "host": "hw4-skills-control-plane"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-11-26T13:50:34Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "fieldPath": "spec.containers{worker}",
+                "kind": "Pod",
+                "name": "parallel-2-6wv7k",
+                "namespace": "hw4",
+                "resourceVersion": "882",
+                "uid": "9c2bcf14-e0ad-44e6-bf07-4f33a114d93d"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-11-26T13:50:34Z",
+            "message": "Started container worker",
+            "metadata": {
+                "creationTimestamp": "2026-11-26T13:50:34Z",
+                "name": "parallel-2-6wv7k.18eb9c93b3480fdc",
+                "namespace": "hw4",
+                "resourceVersion": "905",
+                "uid": "58ffcc44-8a0d-4f2a-b92e-59f4c4ec4e87"
+            },
+            "reason": "Started",
+            "reportingComponent": "kubelet",
+            "reportingInstance": "hw4-skills-control-plane",
+            "source": {
+                "component": "kubelet",
+                "host": "hw4-skills-control-plane"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-11-26T13:50:34Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "kind": "Pod",
+                "name": "parallel-3-2zddl",
+                "namespace": "hw4",
+                "resourceVersion": "883",
+                "uid": "b6325b60-b8c9-480a-af4d-6dca35582498"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-11-26T13:50:34Z",
+            "message": "Successfully assigned hw4/parallel-3-2zddl to hw4-skills-control-plane",
+            "metadata": {
+                "creationTimestamp": "2026-11-26T13:50:34Z",
+                "name": "parallel-3-2zddl.18eb9c939541e196",
+                "namespace": "hw4",
+                "resourceVersion": "891",
+                "uid": "49e039a3-c105-4650-8abc-c4ef6d50f16f"
+            },
+            "reason": "Scheduled",
+            "reportingComponent": "default-scheduler",
+            "reportingInstance": "",
+            "source": {
+                "component": "default-scheduler"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-11-26T13:50:34Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "fieldPath": "spec.containers{worker}",
+                "kind": "Pod",
+                "name": "parallel-3-2zddl",
+                "namespace": "hw4",
+                "resourceVersion": "886",
+                "uid": "b6325b60-b8c9-480a-af4d-6dca35582498"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-11-26T13:50:34Z",
+            "message": "Container image \"hw4-skills:1.0\" already present on machine",
+            "metadata": {
+                "creationTimestamp": "2026-11-26T13:50:34Z",
+                "name": "parallel-3-2zddl.18eb9c93ad06eeb3",
+                "namespace": "hw4",
+                "resourceVersion": "897",
+                "uid": "88d2ab78-f76c-47e6-993e-f4010db37de5"
+            },
+            "reason": "Pulled",
+            "reportingComponent": "kubelet",
+            "reportingInstance": "hw4-skills-control-plane",
+            "source": {
+                "component": "kubelet",
+                "host": "hw4-skills-control-plane"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-11-26T13:50:34Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "fieldPath": "spec.containers{worker}",
+                "kind": "Pod",
+                "name": "parallel-3-2zddl",
+                "namespace": "hw4",
+                "resourceVersion": "886",
+                "uid": "b6325b60-b8c9-480a-af4d-6dca35582498"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-11-26T13:50:34Z",
+            "message": "Created container: worker",
+            "metadata": {
+                "creationTimestamp": "2026-11-26T13:50:34Z",
+                "name": "parallel-3-2zddl.18eb9c93add55bc0",
+                "namespace": "hw4",
+                "resourceVersion": "900",
+                "uid": "3b13ac16-75cd-40ad-a0e7-c630e502fac5"
+            },
+            "reason": "Created",
+            "reportingComponent": "kubelet",
+            "reportingInstance": "hw4-skills-control-plane",
+            "source": {
+                "component": "kubelet",
+                "host": "hw4-skills-control-plane"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-11-26T13:50:34Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "fieldPath": "spec.containers{worker}",
+                "kind": "Pod",
+                "name": "parallel-3-2zddl",
+                "namespace": "hw4",
+                "resourceVersion": "886",
+                "uid": "b6325b60-b8c9-480a-af4d-6dca35582498"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-11-26T13:50:34Z",
+            "message": "Started container worker",
+            "metadata": {
+                "creationTimestamp": "2026-11-26T13:50:34Z",
+                "name": "parallel-3-2zddl.18eb9c93b318f22c",
+                "namespace": "hw4",
+                "resourceVersion": "904",
+                "uid": "c910eb6a-b352-4388-8091-fa162713d91b"
+            },
+            "reason": "Started",
+            "reportingComponent": "kubelet",
+            "reportingInstance": "hw4-skills-control-plane",
+            "source": {
+                "component": "kubelet",
+                "host": "hw4-skills-control-plane"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-11-26T13:50:34Z",
+            "involvedObject": {
+                "apiVersion": "batch/v1",
+                "kind": "Job",
+                "name": "parallel",
+                "namespace": "hw4",
+                "resourceVersion": "873",
+                "uid": "d095bf5d-8c17-487b-9929-1c00b1c6dd17"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-11-26T13:50:34Z",
+            "message": "Created pod: parallel-0-wm6tr",
+            "metadata": {
+                "creationTimestamp": "2026-11-26T13:50:34Z",
+                "name": "parallel.18eb9c9394674a47",
+                "namespace": "hw4",
+                "resourceVersion": "875",
+                "uid": "2de74083-203e-4b2b-963f-39b5b7b46361"
+            },
+            "reason": "SuccessfulCreate",
+            "reportingComponent": "job-controller",
+            "reportingInstance": "",
+            "source": {
+                "component": "job-controller"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-11-26T13:50:34Z",
+            "involvedObject": {
+                "apiVersion": "batch/v1",
+                "kind": "Job",
+                "name": "parallel",
+                "namespace": "hw4",
+                "resourceVersion": "873",
+                "uid": "d095bf5d-8c17-487b-9929-1c00b1c6dd17"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-11-26T13:50:34Z",
+            "message": "Created pod: parallel-2-6wv7k",
+            "metadata": {
+                "creationTimestamp": "2026-11-26T13:50:34Z",
+                "name": "parallel.18eb9c9394a4604c",
+                "namespace": "hw4",
+                "resourceVersion": "879",
+                "uid": "2c248b35-4df3-43c9-ad1b-fc32898b56b1"
+            },
+            "reason": "SuccessfulCreate",
+            "reportingComponent": "job-controller",
+            "reportingInstance": "",
+            "source": {
+                "component": "job-controller"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-11-26T13:50:34Z",
+            "involvedObject": {
+                "apiVersion": "batch/v1",
+                "kind": "Job",
+                "name": "parallel",
+                "namespace": "hw4",
+                "resourceVersion": "873",
+                "uid": "d095bf5d-8c17-487b-9929-1c00b1c6dd17"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-11-26T13:50:34Z",
+            "message": "Created pod: parallel-1-mqkxk",
+            "metadata": {
+                "creationTimestamp": "2026-11-26T13:50:34Z",
+                "name": "parallel.18eb9c9394a868b0",
+                "namespace": "hw4",
+                "resourceVersion": "884",
+                "uid": "d314ff99-5eea-47f0-8c8e-cf4f0752c615"
+            },
+            "reason": "SuccessfulCreate",
+            "reportingComponent": "job-controller",
+            "reportingInstance": "",
+            "source": {
+                "component": "job-controller"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-11-26T13:50:34Z",
+            "involvedObject": {
+                "apiVersion": "batch/v1",
+                "kind": "Job",
+                "name": "parallel",
+                "namespace": "hw4",
+                "resourceVersion": "873",
+                "uid": "d095bf5d-8c17-487b-9929-1c00b1c6dd17"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-11-26T13:50:34Z",
+            "message": "Created pod: parallel-3-2zddl",
+            "metadata": {
+                "creationTimestamp": "2026-11-26T13:50:34Z",
+                "name": "parallel.18eb9c9394e98648",
+                "namespace": "hw4",
+                "resourceVersion": "889",
+                "uid": "adf60f16-4043-48e9-8da0-4e146bb54ce1"
+            },
+            "reason": "SuccessfulCreate",
+            "reportingComponent": "job-controller",
+            "reportingInstance": "",
+            "source": {
+                "component": "job-controller"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-11-26T13:50:38Z",
+            "involvedObject": {
+                "apiVersion": "batch/v1",
+                "kind": "Job",
+                "name": "parallel",
+                "namespace": "hw4",
+                "resourceVersion": "926",
+                "uid": "d095bf5d-8c17-487b-9929-1c00b1c6dd17"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-11-26T13:50:38Z",
+            "message": "Job completed",
+            "metadata": {
+                "creationTimestamp": "2026-11-26T13:50:38Z",
+                "name": "parallel.18eb9c94905e2d8b",
+                "namespace": "hw4",
+                "resourceVersion": "931",
+                "uid": "476cdd3d-708c-4f85-a782-ddc30d7b823d"
+            },
+            "reason": "Completed",
+            "reportingComponent": "job-controller",
+            "reportingInstance": "",
+            "source": {
+                "component": "job-controller"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-11-26T13:50:16Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "kind": "Pod",
+                "name": "profile-kh6p9",
+                "namespace": "hw4",
+                "resourceVersion": "794",
+                "uid": "13219a73-9057-451f-b8ee-4a4bad43424f"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-11-26T13:50:16Z",
+            "message": "Successfully assigned hw4/profile-kh6p9 to hw4-skills-control-plane",
+            "metadata": {
+                "creationTimestamp": "2026-11-26T13:50:16Z",
+                "name": "profile-kh6p9.18eb9c8f601e9e4b",
+                "namespace": "hw4",
+                "resourceVersion": "798",
+                "uid": "98ffb212-45cc-4903-876a-a48dd33ce659"
+            },
+            "reason": "Scheduled",
+            "reportingComponent": "default-scheduler",
+            "reportingInstance": "",
+            "source": {
+                "component": "default-scheduler"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-11-26T13:50:16Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "fieldPath": "spec.containers{worker}",
+                "kind": "Pod",
+                "name": "profile-kh6p9",
+                "namespace": "hw4",
+                "resourceVersion": "795",
+                "uid": "13219a73-9057-451f-b8ee-4a4bad43424f"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-11-26T13:50:16Z",
+            "message": "Container image \"hw4-skills:1.0\" already present on machine",
+            "metadata": {
+                "creationTimestamp": "2026-11-26T13:50:16Z",
+                "name": "profile-kh6p9.18eb9c8f77498048",
+                "namespace": "hw4",
+                "resourceVersion": "800",
+                "uid": "dc887cb3-62d8-40e0-be8b-33bba09c0022"
+            },
+            "reason": "Pulled",
+            "reportingComponent": "kubelet",
+            "reportingInstance": "hw4-skills-control-plane",
+            "source": {
+                "component": "kubelet",
+                "host": "hw4-skills-control-plane"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-11-26T13:50:16Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "fieldPath": "spec.containers{worker}",
+                "kind": "Pod",
+                "name": "profile-kh6p9",
+                "namespace": "hw4",
+                "resourceVersion": "795",
+                "uid": "13219a73-9057-451f-b8ee-4a4bad43424f"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-11-26T13:50:16Z",
+            "message": "Created container: worker",
+            "metadata": {
+                "creationTimestamp": "2026-11-26T13:50:16Z",
+                "name": "profile-kh6p9.18eb9c8f77eaa395",
+                "namespace": "hw4",
+                "resourceVersion": "801",
+                "uid": "2191a259-15f7-4e25-975d-061e6f02251a"
+            },
+            "reason": "Created",
+            "reportingComponent": "kubelet",
+            "reportingInstance": "hw4-skills-control-plane",
+            "source": {
+                "component": "kubelet",
+                "host": "hw4-skills-control-plane"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-11-26T13:50:16Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "fieldPath": "spec.containers{worker}",
+                "kind": "Pod",
+                "name": "profile-kh6p9",
+                "namespace": "hw4",
+                "resourceVersion": "795",
+                "uid": "13219a73-9057-451f-b8ee-4a4bad43424f"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-11-26T13:50:16Z",
+            "message": "Started container worker",
+            "metadata": {
+                "creationTimestamp": "2026-11-26T13:50:16Z",
+                "name": "profile-kh6p9.18eb9c8f7b1ad081",
+                "namespace": "hw4",
+                "resourceVersion": "802",
+                "uid": "94c12a43-f3eb-45a6-a629-e0cbdbedb46e"
+            },
+            "reason": "Started",
+            "reportingComponent": "kubelet",
+            "reportingInstance": "hw4-skills-control-plane",
+            "source": {
+                "component": "kubelet",
+                "host": "hw4-skills-control-plane"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-11-26T13:50:16Z",
+            "involvedObject": {
+                "apiVersion": "batch/v1",
+                "kind": "Job",
+                "name": "profile",
+                "namespace": "hw4",
+                "resourceVersion": "793",
+                "uid": "03261702-96a8-4c1e-9f8c-5f536dc15ff5"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-11-26T13:50:16Z",
+            "message": "Created pod: profile-kh6p9",
+            "metadata": {
+                "creationTimestamp": "2026-11-26T13:50:16Z",
+                "name": "profile.18eb9c8f5ff64c07",
+                "namespace": "hw4",
+                "resourceVersion": "796",
+                "uid": "0873dcc4-5823-4d7d-848a-dfbe22fa8194"
+            },
+            "reason": "SuccessfulCreate",
+            "reportingComponent": "job-controller",
+            "reportingInstance": "",
+            "source": {
+                "component": "job-controller"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-11-26T13:50:21Z",
+            "involvedObject": {
+                "apiVersion": "batch/v1",
+                "kind": "Job",
+                "name": "profile",
+                "namespace": "hw4",
+                "resourceVersion": "813",
+                "uid": "03261702-96a8-4c1e-9f8c-5f536dc15ff5"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-11-26T13:50:21Z",
+            "message": "Job completed",
+            "metadata": {
+                "creationTimestamp": "2026-11-26T13:50:21Z",
+                "name": "profile.18eb9c909a062ccc",
+                "namespace": "hw4",
+                "resourceVersion": "816",
+                "uid": "847217f7-3e13-4fa3-be2e-c909290fa883"
+            },
+            "reason": "Completed",
+            "reportingComponent": "job-controller",
+            "reportingInstance": "",
+            "source": {
+                "component": "job-controller"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-11-26T13:50:01Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "kind": "Pod",
+                "name": "rustfs-0",
+                "namespace": "hw4",
+                "resourceVersion": "558",
+                "uid": "fe574ef2-87af-4c11-aa52-d96c7b86ab3e"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-11-26T13:50:01Z",
+            "message": "Successfully assigned hw4/rustfs-0 to hw4-skills-control-plane",
+            "metadata": {
+                "creationTimestamp": "2026-11-26T13:50:01Z",
+                "name": "rustfs-0.18eb9c8c050bb95c",
+                "namespace": "hw4",
+                "resourceVersion": "739",
+                "uid": "db14029d-2cdc-474e-a76c-e96579863d8c"
+            },
+            "reason": "Scheduled",
+            "reportingComponent": "default-scheduler",
+            "reportingInstance": "",
+            "source": {
+                "component": "default-scheduler"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-11-26T13:50:02Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "fieldPath": "spec.containers{rustfs}",
+                "kind": "Pod",
+                "name": "rustfs-0",
+                "namespace": "hw4",
+                "resourceVersion": "738",
+                "uid": "fe574ef2-87af-4c11-aa52-d96c7b86ab3e"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-11-26T13:50:02Z",
+            "message": "Container image \"rustfs/rustfs:latest\" already present on machine",
+            "metadata": {
+                "creationTimestamp": "2026-11-26T13:50:02Z",
+                "name": "rustfs-0.18eb9c8c1b7ecda4",
+                "namespace": "hw4",
+                "resourceVersion": "742",
+                "uid": "279b54f3-e6f5-46b2-ad74-a0679ab7813b"
+            },
+            "reason": "Pulled",
+            "reportingComponent": "kubelet",
+            "reportingInstance": "hw4-skills-control-plane",
+            "source": {
+                "component": "kubelet",
+                "host": "hw4-skills-control-plane"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-11-26T13:50:02Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "fieldPath": "spec.containers{rustfs}",
+                "kind": "Pod",
+                "name": "rustfs-0",
+                "namespace": "hw4",
+                "resourceVersion": "738",
+                "uid": "fe574ef2-87af-4c11-aa52-d96c7b86ab3e"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-11-26T13:50:02Z",
+            "message": "Created container: rustfs",
+            "metadata": {
+                "creationTimestamp": "2026-11-26T13:50:02Z",
+                "name": "rustfs-0.18eb9c8c1c6c48e3",
+                "namespace": "hw4",
+                "resourceVersion": "743",
+                "uid": "b86d25ef-acf4-4ad6-9da8-229b8d323c49"
+            },
+            "reason": "Created",
+            "reportingComponent": "kubelet",
+            "reportingInstance": "hw4-skills-control-plane",
+            "source": {
+                "component": "kubelet",
+                "host": "hw4-skills-control-plane"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-11-26T13:50:02Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "fieldPath": "spec.containers{rustfs}",
+                "kind": "Pod",
+                "name": "rustfs-0",
+                "namespace": "hw4",
+                "resourceVersion": "738",
+                "uid": "fe574ef2-87af-4c11-aa52-d96c7b86ab3e"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-11-26T13:50:02Z",
+            "message": "Started container rustfs",
+            "metadata": {
+                "creationTimestamp": "2026-11-26T13:50:02Z",
+                "name": "rustfs-0.18eb9c8c1f86b301",
+                "namespace": "hw4",
+                "resourceVersion": "744",
+                "uid": "9f92ad76-6aa6-4909-a862-c4d18b8ea303"
+            },
+            "reason": "Started",
+            "reportingComponent": "kubelet",
+            "reportingInstance": "hw4-skills-control-plane",
+            "source": {
+                "component": "kubelet",
+                "host": "hw4-skills-control-plane"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-11-26T13:49:49Z",
+            "involvedObject": {
+                "apiVersion": "apps/v1",
+                "kind": "StatefulSet",
+                "name": "rustfs",
+                "namespace": "hw4",
+                "resourceVersion": "535",
+                "uid": "b3f8d73e-061b-4439-b598-e7e59810ba04"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-11-26T13:49:49Z",
+            "message": "create Claim disk6-rustfs-0 Pod rustfs-0 in StatefulSet rustfs success",
+            "metadata": {
+                "creationTimestamp": "2026-11-26T13:49:49Z",
+                "name": "rustfs.18eb9c89375fb461",
+                "namespace": "hw4",
+                "resourceVersion": "539",
+                "uid": "8bad3904-517d-4b02-9add-5cdba6a3ae84"
+            },
+            "reason": "SuccessfulCreate",
+            "reportingComponent": "statefulset-controller",
+            "reportingInstance": "",
+            "source": {
+                "component": "statefulset-controller"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-11-26T13:49:49Z",
+            "involvedObject": {
+                "apiVersion": "apps/v1",
+                "kind": "StatefulSet",
+                "name": "rustfs",
+                "namespace": "hw4",
+                "resourceVersion": "535",
+                "uid": "b3f8d73e-061b-4439-b598-e7e59810ba04"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-11-26T13:49:49Z",
+            "message": "create Claim disk7-rustfs-0 Pod rustfs-0 in StatefulSet rustfs success",
+            "metadata": {
+                "creationTimestamp": "2026-11-26T13:49:49Z",
+                "name": "rustfs.18eb9c89377e76ba",
+                "namespace": "hw4",
+                "resourceVersion": "541",
+                "uid": "83bf29bc-8bd8-4c55-a351-b24a66e63d81"
+            },
+            "reason": "SuccessfulCreate",
+            "reportingComponent": "statefulset-controller",
+            "reportingInstance": "",
+            "source": {
+                "component": "statefulset-controller"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-11-26T13:49:49Z",
+            "involvedObject": {
+                "apiVersion": "apps/v1",
+                "kind": "StatefulSet",
+                "name": "rustfs",
+                "namespace": "hw4",
+                "resourceVersion": "535",
+                "uid": "b3f8d73e-061b-4439-b598-e7e59810ba04"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-11-26T13:49:49Z",
+            "message": "create Claim disk8-rustfs-0 Pod rustfs-0 in StatefulSet rustfs success",
+            "metadata": {
+                "creationTimestamp": "2026-11-26T13:49:49Z",
+                "name": "rustfs.18eb9c8937937cba",
+                "namespace": "hw4",
+                "resourceVersion": "544",
+                "uid": "f808944c-0b56-4638-84cb-fad0e2724e5d"
+            },
+            "reason": "SuccessfulCreate",
+            "reportingComponent": "statefulset-controller",
+            "reportingInstance": "",
+            "source": {
+                "component": "statefulset-controller"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-11-26T13:49:49Z",
+            "involvedObject": {
+                "apiVersion": "apps/v1",
+                "kind": "StatefulSet",
+                "name": "rustfs",
+                "namespace": "hw4",
+                "resourceVersion": "535",
+                "uid": "b3f8d73e-061b-4439-b598-e7e59810ba04"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-11-26T13:49:49Z",
+            "message": "create Claim disk1-rustfs-0 Pod rustfs-0 in StatefulSet rustfs success",
+            "metadata": {
+                "creationTimestamp": "2026-11-26T13:49:49Z",
+                "name": "rustfs.18eb9c8937a2c6a0",
+                "namespace": "hw4",
+                "resourceVersion": "548",
+                "uid": "ce73cfa2-b9a2-4955-a318-d44e429ee408"
+            },
+            "reason": "SuccessfulCreate",
+            "reportingComponent": "statefulset-controller",
+            "reportingInstance": "",
+            "source": {
+                "component": "statefulset-controller"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-11-26T13:49:49Z",
+            "involvedObject": {
+                "apiVersion": "apps/v1",
+                "kind": "StatefulSet",
+                "name": "rustfs",
+                "namespace": "hw4",
+                "resourceVersion": "535",
+                "uid": "b3f8d73e-061b-4439-b598-e7e59810ba04"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-11-26T13:49:49Z",
+            "message": "create Claim disk2-rustfs-0 Pod rustfs-0 in StatefulSet rustfs success",
+            "metadata": {
+                "creationTimestamp": "2026-11-26T13:49:49Z",
+                "name": "rustfs.18eb9c8937b5b7bf",
+                "namespace": "hw4",
+                "resourceVersion": "551",
+                "uid": "e3964c06-81a2-43f7-babe-0bb1ab3cff35"
+            },
+            "reason": "SuccessfulCreate",
+            "reportingComponent": "statefulset-controller",
+            "reportingInstance": "",
+            "source": {
+                "component": "statefulset-controller"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-11-26T13:49:49Z",
+            "involvedObject": {
+                "apiVersion": "apps/v1",
+                "kind": "StatefulSet",
+                "name": "rustfs",
+                "namespace": "hw4",
+                "resourceVersion": "535",
+                "uid": "b3f8d73e-061b-4439-b598-e7e59810ba04"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-11-26T13:49:49Z",
+            "message": "create Claim disk3-rustfs-0 Pod rustfs-0 in StatefulSet rustfs success",
+            "metadata": {
+                "creationTimestamp": "2026-11-26T13:49:49Z",
+                "name": "rustfs.18eb9c8937d7e27e",
+                "namespace": "hw4",
+                "resourceVersion": "554",
+                "uid": "bd24a9e5-f688-43b7-8591-cb9fb54c0fdc"
+            },
+            "reason": "SuccessfulCreate",
+            "reportingComponent": "statefulset-controller",
+            "reportingInstance": "",
+            "source": {
+                "component": "statefulset-controller"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-11-26T13:49:49Z",
+            "involvedObject": {
+                "apiVersion": "apps/v1",
+                "kind": "StatefulSet",
+                "name": "rustfs",
+                "namespace": "hw4",
+                "resourceVersion": "535",
+                "uid": "b3f8d73e-061b-4439-b598-e7e59810ba04"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-11-26T13:49:49Z",
+            "message": "create Claim disk4-rustfs-0 Pod rustfs-0 in StatefulSet rustfs success",
+            "metadata": {
+                "creationTimestamp": "2026-11-26T13:49:49Z",
+                "name": "rustfs.18eb9c8937f29909",
+                "namespace": "hw4",
+                "resourceVersion": "556",
+                "uid": "8fd4ef3f-6af0-4684-a353-b49c956cf3b9"
+            },
+            "reason": "SuccessfulCreate",
+            "reportingComponent": "statefulset-controller",
+            "reportingInstance": "",
+            "source": {
+                "component": "statefulset-controller"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-11-26T13:49:49Z",
+            "involvedObject": {
+                "apiVersion": "apps/v1",
+                "kind": "StatefulSet",
+                "name": "rustfs",
+                "namespace": "hw4",
+                "resourceVersion": "535",
+                "uid": "b3f8d73e-061b-4439-b598-e7e59810ba04"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-11-26T13:49:49Z",
+            "message": "create Claim disk5-rustfs-0 Pod rustfs-0 in StatefulSet rustfs success",
+            "metadata": {
+                "creationTimestamp": "2026-11-26T13:49:49Z",
+                "name": "rustfs.18eb9c893800f6ee",
+                "namespace": "hw4",
+                "resourceVersion": "559",
+                "uid": "7b26d32b-8afc-47cd-b696-d93ef5ea64e2"
+            },
+            "reason": "SuccessfulCreate",
+            "reportingComponent": "statefulset-controller",
+            "reportingInstance": "",
+            "source": {
+                "component": "statefulset-controller"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-11-26T13:49:49Z",
+            "involvedObject": {
+                "apiVersion": "apps/v1",
+                "kind": "StatefulSet",
+                "name": "rustfs",
+                "namespace": "hw4",
+                "resourceVersion": "535",
+                "uid": "b3f8d73e-061b-4439-b598-e7e59810ba04"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-11-26T13:49:49Z",
+            "message": "create Pod rustfs-0 in StatefulSet rustfs successful",
+            "metadata": {
+                "creationTimestamp": "2026-11-26T13:49:49Z",
+                "name": "rustfs.18eb9c89382472ea",
+                "namespace": "hw4",
+                "resourceVersion": "561",
+                "uid": "72b51f0d-4d40-4eeb-a53a-88f65c6480ea"
+            },
+            "reason": "SuccessfulCreate",
+            "reportingComponent": "statefulset-controller",
+            "reportingInstance": "",
+            "source": {
+                "component": "statefulset-controller"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-11-26T13:50:27Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "kind": "Pod",
+                "name": "tuned-6ggg4",
+                "namespace": "hw4",
+                "resourceVersion": "846",
+                "uid": "b73923fe-a47c-4c19-9a54-0c460bb0bfb4"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-11-26T13:50:27Z",
+            "message": "Successfully assigned hw4/tuned-6ggg4 to hw4-skills-control-plane",
+            "metadata": {
+                "creationTimestamp": "2026-11-26T13:50:27Z",
+                "name": "tuned-6ggg4.18eb9c92052abfcc",
+                "namespace": "hw4",
+                "resourceVersion": "850",
+                "uid": "a4803f30-2425-4b61-9e8c-7eb83bd2f71c"
+            },
+            "reason": "Scheduled",
+            "reportingComponent": "default-scheduler",
+            "reportingInstance": "",
+            "source": {
+                "component": "default-scheduler"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-11-26T13:50:27Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "fieldPath": "spec.containers{worker}",
+                "kind": "Pod",
+                "name": "tuned-6ggg4",
+                "namespace": "hw4",
+                "resourceVersion": "848",
+                "uid": "b73923fe-a47c-4c19-9a54-0c460bb0bfb4"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-11-26T13:50:27Z",
+            "message": "Container image \"hw4-skills:1.0\" already present on machine",
+            "metadata": {
+                "creationTimestamp": "2026-11-26T13:50:27Z",
+                "name": "tuned-6ggg4.18eb9c921d4e7cfb",
+                "namespace": "hw4",
+                "resourceVersion": "852",
+                "uid": "2703cc2d-0bc4-4a9b-87aa-e5adea9dd439"
+            },
+            "reason": "Pulled",
+            "reportingComponent": "kubelet",
+            "reportingInstance": "hw4-skills-control-plane",
+            "source": {
+                "component": "kubelet",
+                "host": "hw4-skills-control-plane"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-11-26T13:50:27Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "fieldPath": "spec.containers{worker}",
+                "kind": "Pod",
+                "name": "tuned-6ggg4",
+                "namespace": "hw4",
+                "resourceVersion": "848",
+                "uid": "b73923fe-a47c-4c19-9a54-0c460bb0bfb4"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-11-26T13:50:27Z",
+            "message": "Created container: worker",
+            "metadata": {
+                "creationTimestamp": "2026-11-26T13:50:27Z",
+                "name": "tuned-6ggg4.18eb9c921ddc111f",
+                "namespace": "hw4",
+                "resourceVersion": "853",
+                "uid": "db279d05-05c9-41b0-b967-581af9931f50"
+            },
+            "reason": "Created",
+            "reportingComponent": "kubelet",
+            "reportingInstance": "hw4-skills-control-plane",
+            "source": {
+                "component": "kubelet",
+                "host": "hw4-skills-control-plane"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-11-26T13:50:27Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "fieldPath": "spec.containers{worker}",
+                "kind": "Pod",
+                "name": "tuned-6ggg4",
+                "namespace": "hw4",
+                "resourceVersion": "848",
+                "uid": "b73923fe-a47c-4c19-9a54-0c460bb0bfb4"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-11-26T13:50:27Z",
+            "message": "Started container worker",
+            "metadata": {
+                "creationTimestamp": "2026-11-26T13:50:27Z",
+                "name": "tuned-6ggg4.18eb9c9220dc90cc",
+                "namespace": "hw4",
+                "resourceVersion": "854",
+                "uid": "86a8487d-4203-4476-a6aa-d14ff0e96ce7"
+            },
+            "reason": "Started",
+            "reportingComponent": "kubelet",
+            "reportingInstance": "hw4-skills-control-plane",
+            "source": {
+                "component": "kubelet",
+                "host": "hw4-skills-control-plane"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-11-26T13:50:27Z",
+            "involvedObject": {
+                "apiVersion": "batch/v1",
+                "kind": "Job",
+                "name": "tuned",
+                "namespace": "hw4",
+                "resourceVersion": "845",
+                "uid": "5bcbdb4d-7b03-4ab5-9670-1631ad3f8a3b"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-11-26T13:50:27Z",
+            "message": "Created pod: tuned-6ggg4",
+            "metadata": {
+                "creationTimestamp": "2026-11-26T13:50:27Z",
+                "name": "tuned.18eb9c9204e2afb7",
+                "namespace": "hw4",
+                "resourceVersion": "847",
+                "uid": "1753b43f-080c-46d4-8d32-9cc520c68ca6"
+            },
+            "reason": "SuccessfulCreate",
+            "reportingComponent": "job-controller",
+            "reportingInstance": "",
+            "source": {
+                "component": "job-controller"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-11-26T13:50:32Z",
+            "involvedObject": {
+                "apiVersion": "batch/v1",
+                "kind": "Job",
+                "name": "tuned",
+                "namespace": "hw4",
+                "resourceVersion": "865",
+                "uid": "5bcbdb4d-7b03-4ab5-9670-1631ad3f8a3b"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-11-26T13:50:32Z",
+            "message": "Job completed",
+            "metadata": {
+                "creationTimestamp": "2026-11-26T13:50:32Z",
+                "name": "tuned.18eb9c93282fd867",
+                "namespace": "hw4",
+                "resourceVersion": "868",
+                "uid": "2981083b-82bb-4015-bb85-986e4d75b830"
+            },
+            "reason": "Completed",
+            "reportingComponent": "job-controller",
+            "reportingInstance": "",
+            "source": {
+                "component": "job-controller"
+            },
+            "type": "Normal"
+        }
+    ],
+    "kind": "List",
+    "metadata": {
+        "resourceVersion": ""
+    }
+}

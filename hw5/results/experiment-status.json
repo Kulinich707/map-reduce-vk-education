@@ -1,0 +1,14 @@
+{
+  "oom_reason": {
+    "containerID": "containerd://268f75f6ee0dcf1693b4753c93d6f1417192232f77403c842051d292e142ea2f",
+    "exitCode": 137,
+    "finishedAt": "2026-11-26T13:50:23Z",
+    "reason": "OOMKilled",
+    "startedAt": "2026-11-26T13:50:23Z"
+  },
+  "cpu_pending_verified": true,
+  "preemption_verified": true,
+  "quota_rejection_verified": true,
+  "quota_recovery_verified": true,
+  "completed_at": "2026-11-26T13:51:19Z"
+}
