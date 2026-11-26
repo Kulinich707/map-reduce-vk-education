@@ -1,0 +1,139 @@
+{
+    "apiVersion": "v1",
+    "items": [
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-11-26T13:51:09Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "kind": "Pod",
+                "name": "quota-first",
+                "namespace": "hw4-quota",
+                "resourceVersion": "1033",
+                "uid": "91497fa7-a8a8-4113-b00b-6b81c312856c"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-11-26T13:51:09Z",
+            "message": "Successfully assigned hw4-quota/quota-first to hw4-skills-control-plane",
+            "metadata": {
+                "creationTimestamp": "2026-11-26T13:51:09Z",
+                "name": "quota-first.18eb9c9be1ff6882",
+                "namespace": "hw4-quota",
+                "resourceVersion": "1035",
+                "uid": "06f50490-ad3c-4b00-95a0-786aa346d30b"
+            },
+            "reason": "Scheduled",
+            "reportingComponent": "default-scheduler",
+            "reportingInstance": "",
+            "source": {
+                "component": "default-scheduler"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-11-26T13:51:10Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "fieldPath": "spec.containers{sleep}",
+                "kind": "Pod",
+                "name": "quota-first",
+                "namespace": "hw4-quota",
+                "resourceVersion": "1034",
+                "uid": "91497fa7-a8a8-4113-b00b-6b81c312856c"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-11-26T13:51:10Z",
+            "message": "Container image \"hw4-skills:1.0\" already present on machine",
+            "metadata": {
+                "creationTimestamp": "2026-11-26T13:51:10Z",
+                "name": "quota-first.18eb9c9bf828b6e1",
+                "namespace": "hw4-quota",
+                "resourceVersion": "1037",
+                "uid": "51dfb67f-869e-426e-9389-fca0c37e4547"
+            },
+            "reason": "Pulled",
+            "reportingComponent": "kubelet",
+            "reportingInstance": "hw4-skills-control-plane",
+            "source": {
+                "component": "kubelet",
+                "host": "hw4-skills-control-plane"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-11-26T13:51:10Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "fieldPath": "spec.containers{sleep}",
+                "kind": "Pod",
+                "name": "quota-first",
+                "namespace": "hw4-quota",
+                "resourceVersion": "1034",
+                "uid": "91497fa7-a8a8-4113-b00b-6b81c312856c"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-11-26T13:51:10Z",
+            "message": "Created container: sleep",
+            "metadata": {
+                "creationTimestamp": "2026-11-26T13:51:10Z",
+                "name": "quota-first.18eb9c9bf8c24a26",
+                "namespace": "hw4-quota",
+                "resourceVersion": "1038",
+                "uid": "822558ed-b15c-4971-9ba4-9e28b4e663e3"
+            },
+            "reason": "Created",
+            "reportingComponent": "kubelet",
+            "reportingInstance": "hw4-skills-control-plane",
+            "source": {
+                "component": "kubelet",
+                "host": "hw4-skills-control-plane"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-11-26T13:51:10Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "fieldPath": "spec.containers{sleep}",
+                "kind": "Pod",
+                "name": "quota-first",
+                "namespace": "hw4-quota",
+                "resourceVersion": "1034",
+                "uid": "91497fa7-a8a8-4113-b00b-6b81c312856c"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-11-26T13:51:10Z",
+            "message": "Started container sleep",
+            "metadata": {
+                "creationTimestamp": "2026-11-26T13:51:10Z",
+                "name": "quota-first.18eb9c9c053d726f",
+                "namespace": "hw4-quota",
+                "resourceVersion": "1040",
+                "uid": "1916ae0b-e3e9-4429-83b9-601e4f088858"
+            },
+            "reason": "Started",
+            "reportingComponent": "kubelet",
+            "reportingInstance": "hw4-skills-control-plane",
+            "source": {
+                "component": "kubelet",
+                "host": "hw4-skills-control-plane"
+            },
+            "type": "Normal"
+        }
+    ],
+    "kind": "List",
+    "metadata": {
+        "resourceVersion": ""
+    }
+}

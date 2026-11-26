@@ -1,0 +1,171 @@
+$ kubectl --kubeconfig /Users/gpr/Documents/Codex/2026-11-26/new-chat/work/kubeconfig --cache-dir /Users/gpr/Documents/Codex/2026-11-26/new-chat/outputs/HW4_Kulinich_Kubernetes/.kubectl-cache describe pods -n hw4
+Name:             bootstrap-nkp9r
+Namespace:        hw4
+Priority:         0
+Service Account:  default
+Node:             hw4-skills-control-plane/172.24.0.2
+Start Time:       Thu, 26 Nov 2026 16:50:09 +0300
+Labels:           batch.kubernetes.io/controller-uid=2679ed89-ad93-47fa-8328-48135b836744
+                  batch.kubernetes.io/job-name=bootstrap
+                  controller-uid=2679ed89-ad93-47fa-8328-48135b836744
+                  job-name=bootstrap
+Annotations:      <none>
+Status:           Succeeded
+IP:               10.244.0.14
+IPs:
+  IP:           10.244.0.14
+Controlled By:  Job/bootstrap
+Containers:
+  worker:
+    Container ID:  containerd://8a4fddbf3fec999e3328ed298780218380aedc5a7ac5409a3e266e57b2bd8e0f
+    Image:         hw4-skills:1.0
+    Image ID:      sha256:20b9e4ec485f4bf5c5c8812cb57a3fc8236e1671c9d8d025cce337568d53becf
+    Port:          <none>
+    Host Port:     <none>
+    Args:
+      bootstrap
+      --run
+      bootstrap
+    State:          Terminated
+      Reason:       Completed
+      Exit Code:    0
+      Started:      Thu, 26 Nov 2026 16:50:09 +0300
+      Finished:     Thu, 26 Nov 2026 16:50:11 +0300
+    Ready:          False
+    Restart Count:  0
+    Limits:
+      cpu:     1
+      memory:  512Mi
+    Requests:
+      cpu:     250m
+      memory:  128Mi
+    Environment:
+      S3_ENDPOINT:    http://rustfs:9000
+      S3_ACCESS_KEY:  <set to the key 'access' in secret 's3-auth'>  Optional: false
+      S3_SECRET_KEY:  <set to the key 'secret' in secret 's3-auth'>  Optional: false
+    Mounts:
+      /var/run/secrets/kubernetes.io/serviceaccount from kube-api-access-mpxpb (ro)
+Conditions:
+  Type                        Status
+  PodReadyToStartContainers   False 
+  Initialized                 True 
+  Ready                       False 
+  ContainersReady             False 
+  PodScheduled                True 
+Volumes:
+  kube-api-access-mpxpb:
+    Type:                    Projected (a volume that contains injected data from multiple sources)
+    TokenExpirationSeconds:  3607
+    ConfigMapName:           kube-root-ca.crt
+    Optional:                false
+    DownwardAPI:             true
+QoS Class:                   Burstable
+Node-Selectors:              <none>
+Tolerations:                 node.kubernetes.io/not-ready:NoExecute op=Exists for 300s
+                             node.kubernetes.io/unreachable:NoExecute op=Exists for 300s
+
+
+Name:             rustfs-0
+Namespace:        hw4
+Priority:         0
+Service Account:  default
+Node:             hw4-skills-control-plane/172.24.0.2
+Start Time:       Thu, 26 Nov 2026 16:50:01 +0300
+Labels:           app=rustfs
+                  apps.kubernetes.io/pod-index=0
+                  controller-revision-hash=rustfs-7bdf5549c8
+                  statefulset.kubernetes.io/pod-name=rustfs-0
+Annotations:      <none>
+Status:           Running
+IP:               10.244.0.13
+IPs:
+  IP:           10.244.0.13
+Controlled By:  StatefulSet/rustfs
+Containers:
+  rustfs:
+    Container ID:  containerd://cbe7a70c6e6aa989ddad5a20b650c2534a8aa15e75d2b4900f6eca4f20d93950
+    Image:         rustfs/rustfs:latest
+    Image ID:      sha256:6024cc1b5bb731a1d1dbd80e85b271917eac6766554605e565bfb6e25e583f2e
+    Port:          9000/TCP
+    Host Port:     0/TCP
+    Args:
+      /data{1...8}
+    State:          Running
+      Started:      Thu, 26 Nov 2026 16:50:02 +0300
+    Ready:          True
+    Restart Count:  0
+    Limits:
+      cpu:     1
+      memory:  1Gi
+    Requests:
+      cpu:      250m
+      memory:   256Mi
+    Readiness:  http-get http://:9000/health delay=5s timeout=1s period=3s #success=1 #failure=3
+    Environment:
+      RUSTFS_ACCESS_KEY:                <set to the key 'access' in secret 's3-auth'>  Optional: false
+      RUSTFS_SECRET_KEY:                <set to the key 'secret' in secret 's3-auth'>  Optional: false
+      RUSTFS_ADDRESS:                   :9000
+      RUSTFS_CONSOLE_ENABLE:            false
+      RUSTFS_STORAGE_CLASS_STANDARD:    EC:4
+      RUSTFS_ERASURE_SET_DRIVE_COUNT:   8
+      RUSTFS_UNSAFE_BYPASS_DISK_CHECK:  true
+    Mounts:
+      /data1 from disk1 (rw)
+      /data2 from disk2 (rw)
+      /data3 from disk3 (rw)
+      /data4 from disk4 (rw)
+      /data5 from disk5 (rw)
+      /data6 from disk6 (rw)
+      /data7 from disk7 (rw)
+      /data8 from disk8 (rw)
+      /var/run/secrets/kubernetes.io/serviceaccount from kube-api-access-lc6ng (ro)
+Conditions:
+  Type                        Status
+  PodReadyToStartContainers   True 
+  Initialized                 True 
+  Ready                       True 
+  ContainersReady             True 
+  PodScheduled                True 
+Volumes:
+  disk7:
+    Type:       PersistentVolumeClaim (a reference to a PersistentVolumeClaim in the same namespace)
+    ClaimName:  disk7-rustfs-0
+    ReadOnly:   false
+  disk8:
+    Type:       PersistentVolumeClaim (a reference to a PersistentVolumeClaim in the same namespace)
+    ClaimName:  disk8-rustfs-0
+    ReadOnly:   false
+  disk1:
+    Type:       PersistentVolumeClaim (a reference to a PersistentVolumeClaim in the same namespace)
+    ClaimName:  disk1-rustfs-0
+    ReadOnly:   false
+  disk2:
+    Type:       PersistentVolumeClaim (a reference to a PersistentVolumeClaim in the same namespace)
+    ClaimName:  disk2-rustfs-0
+    ReadOnly:   false
+  disk3:
+    Type:       PersistentVolumeClaim (a reference to a PersistentVolumeClaim in the same namespace)
+    ClaimName:  disk3-rustfs-0
+    ReadOnly:   false
+  disk4:
+    Type:       PersistentVolumeClaim (a reference to a PersistentVolumeClaim in the same namespace)
+    ClaimName:  disk4-rustfs-0
+    ReadOnly:   false
+  disk5:
+    Type:       PersistentVolumeClaim (a reference to a PersistentVolumeClaim in the same namespace)
+    ClaimName:  disk5-rustfs-0
+    ReadOnly:   false
+  disk6:
+    Type:       PersistentVolumeClaim (a reference to a PersistentVolumeClaim in the same namespace)
+    ClaimName:  disk6-rustfs-0
+    ReadOnly:   false
+  kube-api-access-lc6ng:
+    Type:                    Projected (a volume that contains injected data from multiple sources)
+    TokenExpirationSeconds:  3607
+    ConfigMapName:           kube-root-ca.crt
+    Optional:                false
+    DownwardAPI:             true
+QoS Class:                   Burstable
+Node-Selectors:              <none>
+Tolerations:                 node.kubernetes.io/not-ready:NoExecute op=Exists for 300s
+                             node.kubernetes.io/unreachable:NoExecute op=Exists for 300s

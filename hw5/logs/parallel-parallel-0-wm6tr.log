@@ -1,0 +1,3 @@
+$ kubectl --kubeconfig /Users/gpr/Documents/Codex/2026-11-26/new-chat/work/kubeconfig --cache-dir /Users/gpr/Documents/Codex/2026-11-26/new-chat/outputs/HW4_Kulinich_Kubernetes/.kubectl-cache logs -n hw4 parallel-0-wm6tr
+{"started": "map", "input": "shards/0.csv", "index": "0"}
+{"output": "partials/0.json", "groups": 53520, "elapsed_seconds": 0.2643520830000625, "rss_peak_mib": 72.5390625, "cgroup_peak_bytes": 66740224}

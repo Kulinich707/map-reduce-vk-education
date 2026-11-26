@@ -1,0 +1,707 @@
+$ kubectl --kubeconfig /Users/gpr/Documents/Codex/2026-11-26/new-chat/work/kubeconfig --cache-dir /Users/gpr/Documents/Codex/2026-11-26/new-chat/outputs/HW4_Kulinich_Kubernetes/.kubectl-cache describe pods -n hw4
+Name:             bootstrap-nkp9r
+Namespace:        hw4
+Priority:         0
+Service Account:  default
+Node:             hw4-skills-control-plane/172.24.0.2
+Start Time:       Thu, 26 Nov 2026 16:50:09 +0300
+Labels:           batch.kubernetes.io/controller-uid=2679ed89-ad93-47fa-8328-48135b836744
+                  batch.kubernetes.io/job-name=bootstrap
+                  controller-uid=2679ed89-ad93-47fa-8328-48135b836744
+                  job-name=bootstrap
+Annotations:      <none>
+Status:           Succeeded
+IP:               10.244.0.14
+IPs:
+  IP:           10.244.0.14
+Controlled By:  Job/bootstrap
+Containers:
+  worker:
+    Container ID:  containerd://8a4fddbf3fec999e3328ed298780218380aedc5a7ac5409a3e266e57b2bd8e0f
+    Image:         hw4-skills:1.0
+    Image ID:      sha256:20b9e4ec485f4bf5c5c8812cb57a3fc8236e1671c9d8d025cce337568d53becf
+    Port:          <none>
+    Host Port:     <none>
+    Args:
+      bootstrap
+      --run
+      bootstrap
+    State:          Terminated
+      Reason:       Completed
+      Exit Code:    0
+      Started:      Thu, 26 Nov 2026 16:50:09 +0300
+      Finished:     Thu, 26 Nov 2026 16:50:11 +0300
+    Ready:          False
+    Restart Count:  0
+    Limits:
+      cpu:     1
+      memory:  512Mi
+    Requests:
+      cpu:     250m
+      memory:  128Mi
+    Environment:
+      S3_ENDPOINT:    http://rustfs:9000
+      S3_ACCESS_KEY:  <set to the key 'access' in secret 's3-auth'>  Optional: false
+      S3_SECRET_KEY:  <set to the key 'secret' in secret 's3-auth'>  Optional: false
+    Mounts:
+      /var/run/secrets/kubernetes.io/serviceaccount from kube-api-access-mpxpb (ro)
+Conditions:
+  Type                        Status
+  PodReadyToStartContainers   False 
+  Initialized                 True 
+  Ready                       False 
+  ContainersReady             False 
+  PodScheduled                True 
+Volumes:
+  kube-api-access-mpxpb:
+    Type:                    Projected (a volume that contains injected data from multiple sources)
+    TokenExpirationSeconds:  3607
+    ConfigMapName:           kube-root-ca.crt
+    Optional:                false
+    DownwardAPI:             true
+QoS Class:                   Burstable
+Node-Selectors:              <none>
+Tolerations:                 node.kubernetes.io/not-ready:NoExecute op=Exists for 300s
+                             node.kubernetes.io/unreachable:NoExecute op=Exists for 300s
+
+
+Name:             oom-6ggkx
+Namespace:        hw4
+Priority:         0
+Service Account:  default
+Node:             hw4-skills-control-plane/172.24.0.2
+Start Time:       Thu, 26 Nov 2026 16:50:22 +0300
+Labels:           batch.kubernetes.io/controller-uid=ceaebe9f-f007-44e3-bbc3-41fc19f90ba0
+                  batch.kubernetes.io/job-name=oom
+                  controller-uid=ceaebe9f-f007-44e3-bbc3-41fc19f90ba0
+                  job-name=oom
+Annotations:      <none>
+Status:           Failed
+IP:               10.244.0.16
+IPs:
+  IP:           10.244.0.16
+Controlled By:  Job/oom
+Containers:
+  worker:
+    Container ID:  containerd://268f75f6ee0dcf1693b4753c93d6f1417192232f77403c842051d292e142ea2f
+    Image:         hw4-skills:1.0
+    Image ID:      sha256:20b9e4ec485f4bf5c5c8812cb57a3fc8236e1671c9d8d025cce337568d53becf
+    Port:          <none>
+    Host Port:     <none>
+    Args:
+      single
+      --run
+      oom
+    State:          Terminated
+      Reason:       OOMKilled
+      Exit Code:    137
+      Started:      Thu, 26 Nov 2026 16:50:23 +0300
+      Finished:     Thu, 26 Nov 2026 16:50:23 +0300
+    Ready:          False
+    Restart Count:  0
+    Limits:
+      cpu:     1
+      memory:  56Mi
+    Requests:
+      cpu:     250m
+      memory:  56Mi
+    Environment:
+      S3_ENDPOINT:    http://rustfs:9000
+      S3_ACCESS_KEY:  <set to the key 'access' in secret 's3-auth'>  Optional: false
+      S3_SECRET_KEY:  <set to the key 'secret' in secret 's3-auth'>  Optional: false
+    Mounts:
+      /var/run/secrets/kubernetes.io/serviceaccount from kube-api-access-xhckb (ro)
+Conditions:
+  Type                        Status
+  PodReadyToStartContainers   False 
+  Initialized                 True 
+  Ready                       False 
+  ContainersReady             False 
+  PodScheduled                True 
+Volumes:
+  kube-api-access-xhckb:
+    Type:                    Projected (a volume that contains injected data from multiple sources)
+    TokenExpirationSeconds:  3607
+    ConfigMapName:           kube-root-ca.crt
+    Optional:                false
+    DownwardAPI:             true
+QoS Class:                   Burstable
+Node-Selectors:              <none>
+Tolerations:                 node.kubernetes.io/not-ready:NoExecute op=Exists for 300s
+                             node.kubernetes.io/unreachable:NoExecute op=Exists for 300s
+
+
+Name:             parallel-0-wm6tr
+Namespace:        hw4
+Priority:         0
+Service Account:  default
+Node:             hw4-skills-control-plane/172.24.0.2
+Start Time:       Thu, 26 Nov 2026 16:50:34 +0300
+Labels:           batch.kubernetes.io/controller-uid=d095bf5d-8c17-487b-9929-1c00b1c6dd17
+                  batch.kubernetes.io/job-completion-index=0
+                  batch.kubernetes.io/job-name=parallel
+                  controller-uid=d095bf5d-8c17-487b-9929-1c00b1c6dd17
+                  job-name=parallel
+Annotations:      batch.kubernetes.io/job-completion-index: 0
+Status:           Succeeded
+IP:               10.244.0.18
+IPs:
+  IP:           10.244.0.18
+Controlled By:  Job/parallel
+Containers:
+  worker:
+    Container ID:  containerd://f815878af0df696348bc684a8dd8765044ba10cceaa04e9a79d2fac7e10bd063
+    Image:         hw4-skills:1.0
+    Image ID:      sha256:20b9e4ec485f4bf5c5c8812cb57a3fc8236e1671c9d8d025cce337568d53becf
+    Port:          <none>
+    Host Port:     <none>
+    Args:
+      map
+      --run
+      parallel
+    State:          Terminated
+      Reason:       Completed
+      Exit Code:    0
+      Started:      Thu, 26 Nov 2026 16:50:34 +0300
+      Finished:     Thu, 26 Nov 2026 16:50:35 +0300
+    Ready:          False
+    Restart Count:  0
+    Limits:
+      cpu:     1
+      memory:  160Mi
+    Requests:
+      cpu:     250m
+      memory:  128Mi
+    Environment:
+      S3_ENDPOINT:           http://rustfs:9000
+      S3_ACCESS_KEY:         <set to the key 'access' in secret 's3-auth'>  Optional: false
+      S3_SECRET_KEY:         <set to the key 'secret' in secret 's3-auth'>  Optional: false
+      JOB_COMPLETION_INDEX:   (v1:metadata.labels['batch.kubernetes.io/job-completion-index'])
+    Mounts:
+      /var/run/secrets/kubernetes.io/serviceaccount from kube-api-access-z6qhd (ro)
+Conditions:
+  Type                        Status
+  PodReadyToStartContainers   False 
+  Initialized                 True 
+  Ready                       False 
+  ContainersReady             False 
+  PodScheduled                True 
+Volumes:
+  kube-api-access-z6qhd:
+    Type:                    Projected (a volume that contains injected data from multiple sources)
+    TokenExpirationSeconds:  3607
+    ConfigMapName:           kube-root-ca.crt
+    Optional:                false
+    DownwardAPI:             true
+QoS Class:                   Burstable
+Node-Selectors:              <none>
+Tolerations:                 node.kubernetes.io/not-ready:NoExecute op=Exists for 300s
+                             node.kubernetes.io/unreachable:NoExecute op=Exists for 300s
+
+
+Name:             parallel-1-mqkxk
+Namespace:        hw4
+Priority:         0
+Service Account:  default
+Node:             hw4-skills-control-plane/172.24.0.2
+Start Time:       Thu, 26 Nov 2026 16:50:34 +0300
+Labels:           batch.kubernetes.io/controller-uid=d095bf5d-8c17-487b-9929-1c00b1c6dd17
+                  batch.kubernetes.io/job-completion-index=1
+                  batch.kubernetes.io/job-name=parallel
+                  controller-uid=d095bf5d-8c17-487b-9929-1c00b1c6dd17
+                  job-name=parallel
+Annotations:      batch.kubernetes.io/job-completion-index: 1
+Status:           Succeeded
+IP:               10.244.0.19
+IPs:
+  IP:           10.244.0.19
+Controlled By:  Job/parallel
+Containers:
+  worker:
+    Container ID:  containerd://47b8df702de47f50e99ac028905cf821e3fd221db98d5c9f357a68ed6bd768a2
+    Image:         hw4-skills:1.0
+    Image ID:      sha256:20b9e4ec485f4bf5c5c8812cb57a3fc8236e1671c9d8d025cce337568d53becf
+    Port:          <none>
+    Host Port:     <none>
+    Args:
+      map
+      --run
+      parallel
+    State:          Terminated
+      Reason:       Completed
+      Exit Code:    0
+      Started:      Thu, 26 Nov 2026 16:50:34 +0300
+      Finished:     Thu, 26 Nov 2026 16:50:35 +0300
+    Ready:          False
+    Restart Count:  0
+    Limits:
+      cpu:     1
+      memory:  160Mi
+    Requests:
+      cpu:     250m
+      memory:  128Mi
+    Environment:
+      S3_ENDPOINT:           http://rustfs:9000
+      S3_ACCESS_KEY:         <set to the key 'access' in secret 's3-auth'>  Optional: false
+      S3_SECRET_KEY:         <set to the key 'secret' in secret 's3-auth'>  Optional: false
+      JOB_COMPLETION_INDEX:   (v1:metadata.labels['batch.kubernetes.io/job-completion-index'])
+    Mounts:
+      /var/run/secrets/kubernetes.io/serviceaccount from kube-api-access-d88ql (ro)
+Conditions:
+  Type                        Status
+  PodReadyToStartContainers   False 
+  Initialized                 True 
+  Ready                       False 
+  ContainersReady             False 
+  PodScheduled                True 
+Volumes:
+  kube-api-access-d88ql:
+    Type:                    Projected (a volume that contains injected data from multiple sources)
+    TokenExpirationSeconds:  3607
+    ConfigMapName:           kube-root-ca.crt
+    Optional:                false
+    DownwardAPI:             true
+QoS Class:                   Burstable
+Node-Selectors:              <none>
+Tolerations:                 node.kubernetes.io/not-ready:NoExecute op=Exists for 300s
+                             node.kubernetes.io/unreachable:NoExecute op=Exists for 300s
+
+
+Name:             parallel-2-6wv7k
+Namespace:        hw4
+Priority:         0
+Service Account:  default
+Node:             hw4-skills-control-plane/172.24.0.2
+Start Time:       Thu, 26 Nov 2026 16:50:34 +0300
+Labels:           batch.kubernetes.io/controller-uid=d095bf5d-8c17-487b-9929-1c00b1c6dd17
+                  batch.kubernetes.io/job-completion-index=2
+                  batch.kubernetes.io/job-name=parallel
+                  controller-uid=d095bf5d-8c17-487b-9929-1c00b1c6dd17
+                  job-name=parallel
+Annotations:      batch.kubernetes.io/job-completion-index: 2
+Status:           Succeeded
+IP:               10.244.0.20
+IPs:
+  IP:           10.244.0.20
+Controlled By:  Job/parallel
+Containers:
+  worker:
+    Container ID:  containerd://6f832424fada04a6faff9762f9f59a2998ed25583a350051f32aa970c753723c
+    Image:         hw4-skills:1.0
+    Image ID:      sha256:20b9e4ec485f4bf5c5c8812cb57a3fc8236e1671c9d8d025cce337568d53becf
+    Port:          <none>
+    Host Port:     <none>
+    Args:
+      map
+      --run
+      parallel
+    State:          Terminated
+      Reason:       Completed
+      Exit Code:    0
+      Started:      Thu, 26 Nov 2026 16:50:34 +0300
+      Finished:     Thu, 26 Nov 2026 16:50:35 +0300
+    Ready:          False
+    Restart Count:  0
+    Limits:
+      cpu:     1
+      memory:  160Mi
+    Requests:
+      cpu:     250m
+      memory:  128Mi
+    Environment:
+      S3_ENDPOINT:           http://rustfs:9000
+      S3_ACCESS_KEY:         <set to the key 'access' in secret 's3-auth'>  Optional: false
+      S3_SECRET_KEY:         <set to the key 'secret' in secret 's3-auth'>  Optional: false
+      JOB_COMPLETION_INDEX:   (v1:metadata.labels['batch.kubernetes.io/job-completion-index'])
+    Mounts:
+      /var/run/secrets/kubernetes.io/serviceaccount from kube-api-access-7wc46 (ro)
+Conditions:
+  Type                        Status
+  PodReadyToStartContainers   False 
+  Initialized                 True 
+  Ready                       False 
+  ContainersReady             False 
+  PodScheduled                True 
+Volumes:
+  kube-api-access-7wc46:
+    Type:                    Projected (a volume that contains injected data from multiple sources)
+    TokenExpirationSeconds:  3607
+    ConfigMapName:           kube-root-ca.crt
+    Optional:                false
+    DownwardAPI:             true
+QoS Class:                   Burstable
+Node-Selectors:              <none>
+Tolerations:                 node.kubernetes.io/not-ready:NoExecute op=Exists for 300s
+                             node.kubernetes.io/unreachable:NoExecute op=Exists for 300s
+
+
+Name:             parallel-3-2zddl
+Namespace:        hw4
+Priority:         0
+Service Account:  default
+Node:             hw4-skills-control-plane/172.24.0.2
+Start Time:       Thu, 26 Nov 2026 16:50:34 +0300
+Labels:           batch.kubernetes.io/controller-uid=d095bf5d-8c17-487b-9929-1c00b1c6dd17
+                  batch.kubernetes.io/job-completion-index=3
+                  batch.kubernetes.io/job-name=parallel
+                  controller-uid=d095bf5d-8c17-487b-9929-1c00b1c6dd17
+                  job-name=parallel
+Annotations:      batch.kubernetes.io/job-completion-index: 3
+Status:           Succeeded
+IP:               10.244.0.21
+IPs:
+  IP:           10.244.0.21
+Controlled By:  Job/parallel
+Containers:
+  worker:
+    Container ID:  containerd://783cce09053e619977eba6729d037622b885ff685015d2acc5c3085d94a45f8d
+    Image:         hw4-skills:1.0
+    Image ID:      sha256:20b9e4ec485f4bf5c5c8812cb57a3fc8236e1671c9d8d025cce337568d53becf
+    Port:          <none>
+    Host Port:     <none>
+    Args:
+      map
+      --run
+      parallel
+    State:          Terminated
+      Reason:       Completed
+      Exit Code:    0
+      Started:      Thu, 26 Nov 2026 16:50:34 +0300
+      Finished:     Thu, 26 Nov 2026 16:50:35 +0300
+    Ready:          False
+    Restart Count:  0
+    Limits:
+      cpu:     1
+      memory:  160Mi
+    Requests:
+      cpu:     250m
+      memory:  128Mi
+    Environment:
+      S3_ENDPOINT:           http://rustfs:9000
+      S3_ACCESS_KEY:         <set to the key 'access' in secret 's3-auth'>  Optional: false
+      S3_SECRET_KEY:         <set to the key 'secret' in secret 's3-auth'>  Optional: false
+      JOB_COMPLETION_INDEX:   (v1:metadata.labels['batch.kubernetes.io/job-completion-index'])
+    Mounts:
+      /var/run/secrets/kubernetes.io/serviceaccount from kube-api-access-rg926 (ro)
+Conditions:
+  Type                        Status
+  PodReadyToStartContainers   False 
+  Initialized                 True 
+  Ready                       False 
+  ContainersReady             False 
+  PodScheduled                True 
+Volumes:
+  kube-api-access-rg926:
+    Type:                    Projected (a volume that contains injected data from multiple sources)
+    TokenExpirationSeconds:  3607
+    ConfigMapName:           kube-root-ca.crt
+    Optional:                false
+    DownwardAPI:             true
+QoS Class:                   Burstable
+Node-Selectors:              <none>
+Tolerations:                 node.kubernetes.io/not-ready:NoExecute op=Exists for 300s
+                             node.kubernetes.io/unreachable:NoExecute op=Exists for 300s
+
+
+Name:             profile-kh6p9
+Namespace:        hw4
+Priority:         0
+Service Account:  default
+Node:             hw4-skills-control-plane/172.24.0.2
+Start Time:       Thu, 26 Nov 2026 16:50:16 +0300
+Labels:           batch.kubernetes.io/controller-uid=03261702-96a8-4c1e-9f8c-5f536dc15ff5
+                  batch.kubernetes.io/job-name=profile
+                  controller-uid=03261702-96a8-4c1e-9f8c-5f536dc15ff5
+                  job-name=profile
+Annotations:      <none>
+Status:           Succeeded
+IP:               10.244.0.15
+IPs:
+  IP:           10.244.0.15
+Controlled By:  Job/profile
+Containers:
+  worker:
+    Container ID:  containerd://7115fe77fec59edc5b7a01828a6e794bc53d3cb92966003ef59c03e847505f05
+    Image:         hw4-skills:1.0
+    Image ID:      sha256:20b9e4ec485f4bf5c5c8812cb57a3fc8236e1671c9d8d025cce337568d53becf
+    Port:          <none>
+    Host Port:     <none>
+    Args:
+      single
+      --run
+      profile
+    State:          Terminated
+      Reason:       Completed
+      Exit Code:    0
+      Started:      Thu, 26 Nov 2026 16:50:16 +0300
+      Finished:     Thu, 26 Nov 2026 16:50:18 +0300
+    Ready:          False
+    Restart Count:  0
+    Limits:
+      cpu:     1
+      memory:  512Mi
+    Requests:
+      cpu:     250m
+      memory:  128Mi
+    Environment:
+      S3_ENDPOINT:    http://rustfs:9000
+      S3_ACCESS_KEY:  <set to the key 'access' in secret 's3-auth'>  Optional: false
+      S3_SECRET_KEY:  <set to the key 'secret' in secret 's3-auth'>  Optional: false
+    Mounts:
+      /var/run/secrets/kubernetes.io/serviceaccount from kube-api-access-g8xzb (ro)
+Conditions:
+  Type                        Status
+  PodReadyToStartContainers   False 
+  Initialized                 True 
+  Ready                       False 
+  ContainersReady             False 
+  PodScheduled                True 
+Volumes:
+  kube-api-access-g8xzb:
+    Type:                    Projected (a volume that contains injected data from multiple sources)
+    TokenExpirationSeconds:  3607
+    ConfigMapName:           kube-root-ca.crt
+    Optional:                false
+    DownwardAPI:             true
+QoS Class:                   Burstable
+Node-Selectors:              <none>
+Tolerations:                 node.kubernetes.io/not-ready:NoExecute op=Exists for 300s
+                             node.kubernetes.io/unreachable:NoExecute op=Exists for 300s
+
+
+Name:             reduce-f2wqx
+Namespace:        hw4
+Priority:         0
+Service Account:  default
+Node:             hw4-skills-control-plane/172.24.0.2
+Start Time:       Thu, 26 Nov 2026 16:50:38 +0300
+Labels:           batch.kubernetes.io/controller-uid=585a0e05-e4af-4794-a8ad-5fd95110ae32
+                  batch.kubernetes.io/job-name=reduce
+                  controller-uid=585a0e05-e4af-4794-a8ad-5fd95110ae32
+                  job-name=reduce
+Annotations:      <none>
+Status:           Succeeded
+IP:               10.244.0.22
+IPs:
+  IP:           10.244.0.22
+Controlled By:  Job/reduce
+Containers:
+  worker:
+    Container ID:  containerd://8aefe7e9e23a2a94911edafca80b1b2aaff7119f642671b3c2081b5679d69878
+    Image:         hw4-skills:1.0
+    Image ID:      sha256:20b9e4ec485f4bf5c5c8812cb57a3fc8236e1671c9d8d025cce337568d53becf
+    Port:          <none>
+    Host Port:     <none>
+    Args:
+      reduce
+      --run
+      reduce
+    State:          Terminated
+      Reason:       Completed
+      Exit Code:    0
+      Started:      Thu, 26 Nov 2026 16:50:39 +0300
+      Finished:     Thu, 26 Nov 2026 16:50:40 +0300
+    Ready:          False
+    Restart Count:  0
+    Limits:
+      cpu:     1
+      memory:  256Mi
+    Requests:
+      cpu:     250m
+      memory:  128Mi
+    Environment:
+      S3_ENDPOINT:    http://rustfs:9000
+      S3_ACCESS_KEY:  <set to the key 'access' in secret 's3-auth'>  Optional: false
+      S3_SECRET_KEY:  <set to the key 'secret' in secret 's3-auth'>  Optional: false
+    Mounts:
+      /var/run/secrets/kubernetes.io/serviceaccount from kube-api-access-lt8c6 (ro)
+Conditions:
+  Type                        Status
+  PodReadyToStartContainers   False 
+  Initialized                 True 
+  Ready                       False 
+  ContainersReady             False 
+  PodScheduled                True 
+Volumes:
+  kube-api-access-lt8c6:
+    Type:                    Projected (a volume that contains injected data from multiple sources)
+    TokenExpirationSeconds:  3607
+    ConfigMapName:           kube-root-ca.crt
+    Optional:                false
+    DownwardAPI:             true
+QoS Class:                   Burstable
+Node-Selectors:              <none>
+Tolerations:                 node.kubernetes.io/not-ready:NoExecute op=Exists for 300s
+                             node.kubernetes.io/unreachable:NoExecute op=Exists for 300s
+
+
+Name:             rustfs-0
+Namespace:        hw4
+Priority:         0
+Service Account:  default
+Node:             hw4-skills-control-plane/172.24.0.2
+Start Time:       Thu, 26 Nov 2026 16:50:01 +0300
+Labels:           app=rustfs
+                  apps.kubernetes.io/pod-index=0
+                  controller-revision-hash=rustfs-7bdf5549c8
+                  statefulset.kubernetes.io/pod-name=rustfs-0
+Annotations:      <none>
+Status:           Running
+IP:               10.244.0.13
+IPs:
+  IP:           10.244.0.13
+Controlled By:  StatefulSet/rustfs
+Containers:
+  rustfs:
+    Container ID:  containerd://cbe7a70c6e6aa989ddad5a20b650c2534a8aa15e75d2b4900f6eca4f20d93950
+    Image:         rustfs/rustfs:latest
+    Image ID:      sha256:6024cc1b5bb731a1d1dbd80e85b271917eac6766554605e565bfb6e25e583f2e
+    Port:          9000/TCP
+    Host Port:     0/TCP
+    Args:
+      /data{1...8}
+    State:          Running
+      Started:      Thu, 26 Nov 2026 16:50:02 +0300
+    Ready:          True
+    Restart Count:  0
+    Limits:
+      cpu:     1
+      memory:  1Gi
+    Requests:
+      cpu:      250m
+      memory:   256Mi
+    Readiness:  http-get http://:9000/health delay=5s timeout=1s period=3s #success=1 #failure=3
+    Environment:
+      RUSTFS_ACCESS_KEY:                <set to the key 'access' in secret 's3-auth'>  Optional: false
+      RUSTFS_SECRET_KEY:                <set to the key 'secret' in secret 's3-auth'>  Optional: false
+      RUSTFS_ADDRESS:                   :9000
+      RUSTFS_CONSOLE_ENABLE:            false
+      RUSTFS_STORAGE_CLASS_STANDARD:    EC:4
+      RUSTFS_ERASURE_SET_DRIVE_COUNT:   8
+      RUSTFS_UNSAFE_BYPASS_DISK_CHECK:  true
+    Mounts:
+      /data1 from disk1 (rw)
+      /data2 from disk2 (rw)
+      /data3 from disk3 (rw)
+      /data4 from disk4 (rw)
+      /data5 from disk5 (rw)
+      /data6 from disk6 (rw)
+      /data7 from disk7 (rw)
+      /data8 from disk8 (rw)
+      /var/run/secrets/kubernetes.io/serviceaccount from kube-api-access-lc6ng (ro)
+Conditions:
+  Type                        Status
+  PodReadyToStartContainers   True 
+  Initialized                 True 
+  Ready                       True 
+  ContainersReady             True 
+  PodScheduled                True 
+Volumes:
+  disk7:
+    Type:       PersistentVolumeClaim (a reference to a PersistentVolumeClaim in the same namespace)
+    ClaimName:  disk7-rustfs-0
+    ReadOnly:   false
+  disk8:
+    Type:       PersistentVolumeClaim (a reference to a PersistentVolumeClaim in the same namespace)
+    ClaimName:  disk8-rustfs-0
+    ReadOnly:   false
+  disk1:
+    Type:       PersistentVolumeClaim (a reference to a PersistentVolumeClaim in the same namespace)
+    ClaimName:  disk1-rustfs-0
+    ReadOnly:   false
+  disk2:
+    Type:       PersistentVolumeClaim (a reference to a PersistentVolumeClaim in the same namespace)
+    ClaimName:  disk2-rustfs-0
+    ReadOnly:   false
+  disk3:
+    Type:       PersistentVolumeClaim (a reference to a PersistentVolumeClaim in the same namespace)
+    ClaimName:  disk3-rustfs-0
+    ReadOnly:   false
+  disk4:
+    Type:       PersistentVolumeClaim (a reference to a PersistentVolumeClaim in the same namespace)
+    ClaimName:  disk4-rustfs-0
+    ReadOnly:   false
+  disk5:
+    Type:       PersistentVolumeClaim (a reference to a PersistentVolumeClaim in the same namespace)
+    ClaimName:  disk5-rustfs-0
+    ReadOnly:   false
+  disk6:
+    Type:       PersistentVolumeClaim (a reference to a PersistentVolumeClaim in the same namespace)
+    ClaimName:  disk6-rustfs-0
+    ReadOnly:   false
+  kube-api-access-lc6ng:
+    Type:                    Projected (a volume that contains injected data from multiple sources)
+    TokenExpirationSeconds:  3607
+    ConfigMapName:           kube-root-ca.crt
+    Optional:                false
+    DownwardAPI:             true
+QoS Class:                   Burstable
+Node-Selectors:              <none>
+Tolerations:                 node.kubernetes.io/not-ready:NoExecute op=Exists for 300s
+                             node.kubernetes.io/unreachable:NoExecute op=Exists for 300s
+
+
+Name:             tuned-6ggg4
+Namespace:        hw4
+Priority:         0
+Service Account:  default
+Node:             hw4-skills-control-plane/172.24.0.2
+Start Time:       Thu, 26 Nov 2026 16:50:27 +0300
+Labels:           batch.kubernetes.io/controller-uid=5bcbdb4d-7b03-4ab5-9670-1631ad3f8a3b
+                  batch.kubernetes.io/job-name=tuned
+                  controller-uid=5bcbdb4d-7b03-4ab5-9670-1631ad3f8a3b
+                  job-name=tuned
+Annotations:      <none>
+Status:           Succeeded
+IP:               10.244.0.17
+IPs:
+  IP:           10.244.0.17
+Controlled By:  Job/tuned
+Containers:
+  worker:
+    Container ID:  containerd://f478c78c5252bc89fa5190357b40e442d39bc64d8df7861b0078195a78310591
+    Image:         hw4-skills:1.0
+    Image ID:      sha256:20b9e4ec485f4bf5c5c8812cb57a3fc8236e1671c9d8d025cce337568d53becf
+    Port:          <none>
+    Host Port:     <none>
+    Args:
+      single
+      --run
+      tuned
+    State:          Terminated
+      Reason:       Completed
+      Exit Code:    0
+      Started:      Thu, 26 Nov 2026 16:50:27 +0300
+      Finished:     Thu, 26 Nov 2026 16:50:29 +0300
+    Ready:          False
+    Restart Count:  0
+    Limits:
+      cpu:     1
+      memory:  160Mi
+    Requests:
+      cpu:     250m
+      memory:  128Mi
+    Environment:
+      S3_ENDPOINT:    http://rustfs:9000
+      S3_ACCESS_KEY:  <set to the key 'access' in secret 's3-auth'>  Optional: false
+      S3_SECRET_KEY:  <set to the key 'secret' in secret 's3-auth'>  Optional: false
+    Mounts:
+      /var/run/secrets/kubernetes.io/serviceaccount from kube-api-access-p87ns (ro)
+Conditions:
+  Type                        Status
+  PodReadyToStartContainers   False 
+  Initialized                 True 
+  Ready                       False 
+  ContainersReady             False 
+  PodScheduled                True 
+Volumes:
+  kube-api-access-p87ns:
+    Type:                    Projected (a volume that contains injected data from multiple sources)
+    TokenExpirationSeconds:  3607
+    ConfigMapName:           kube-root-ca.crt
+    Optional:                false
+    DownwardAPI:             true
+QoS Class:                   Burstable
+Node-Selectors:              <none>
+Tolerations:                 node.kubernetes.io/not-ready:NoExecute op=Exists for 300s
+                             node.kubernetes.io/unreachable:NoExecute op=Exists for 300s

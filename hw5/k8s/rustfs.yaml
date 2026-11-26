@@ -1,0 +1,258 @@
+{
+  "apiVersion": "apps/v1",
+  "kind": "StatefulSet",
+  "metadata": {
+    "name": "rustfs",
+    "namespace": "hw4"
+  },
+  "spec": {
+    "serviceName": "rustfs",
+    "replicas": 1,
+    "selector": {
+      "matchLabels": {
+        "app": "rustfs"
+      }
+    },
+    "template": {
+      "metadata": {
+        "labels": {
+          "app": "rustfs"
+        }
+      },
+      "spec": {
+        "securityContext": {
+          "fsGroup": 10001
+        },
+        "containers": [
+          {
+            "name": "rustfs",
+            "image": "rustfs/rustfs:latest",
+            "imagePullPolicy": "Never",
+            "args": [
+              "/data{1...8}"
+            ],
+            "ports": [
+              {
+                "containerPort": 9000
+              }
+            ],
+            "env": [
+              {
+                "name": "RUSTFS_ACCESS_KEY",
+                "valueFrom": {
+                  "secretKeyRef": {
+                    "name": "s3-auth",
+                    "key": "access"
+                  }
+                }
+              },
+              {
+                "name": "RUSTFS_SECRET_KEY",
+                "valueFrom": {
+                  "secretKeyRef": {
+                    "name": "s3-auth",
+                    "key": "secret"
+                  }
+                }
+              },
+              {
+                "name": "RUSTFS_ADDRESS",
+                "value": ":9000"
+              },
+              {
+                "name": "RUSTFS_CONSOLE_ENABLE",
+                "value": "false"
+              },
+              {
+                "name": "RUSTFS_STORAGE_CLASS_STANDARD",
+                "value": "EC:4"
+              },
+              {
+                "name": "RUSTFS_ERASURE_SET_DRIVE_COUNT",
+                "value": "8"
+              },
+              {
+                "name": "RUSTFS_UNSAFE_BYPASS_DISK_CHECK",
+                "value": "true"
+              }
+            ],
+            "resources": {
+              "requests": {
+                "cpu": "250m",
+                "memory": "256Mi"
+              },
+              "limits": {
+                "cpu": "1000m",
+                "memory": "1Gi"
+              }
+            },
+            "volumeMounts": [
+              {
+                "name": "disk1",
+                "mountPath": "/data1"
+              },
+              {
+                "name": "disk2",
+                "mountPath": "/data2"
+              },
+              {
+                "name": "disk3",
+                "mountPath": "/data3"
+              },
+              {
+                "name": "disk4",
+                "mountPath": "/data4"
+              },
+              {
+                "name": "disk5",
+                "mountPath": "/data5"
+              },
+              {
+                "name": "disk6",
+                "mountPath": "/data6"
+              },
+              {
+                "name": "disk7",
+                "mountPath": "/data7"
+              },
+              {
+                "name": "disk8",
+                "mountPath": "/data8"
+              }
+            ],
+            "readinessProbe": {
+              "httpGet": {
+                "path": "/health",
+                "port": 9000
+              },
+              "initialDelaySeconds": 5,
+              "periodSeconds": 3
+            }
+          }
+        ]
+      }
+    },
+    "volumeClaimTemplates": [
+      {
+        "metadata": {
+          "name": "disk1"
+        },
+        "spec": {
+          "accessModes": [
+            "ReadWriteOnce"
+          ],
+          "resources": {
+            "requests": {
+              "storage": "256Mi"
+            }
+          }
+        }
+      },
+      {
+        "metadata": {
+          "name": "disk2"
+        },
+        "spec": {
+          "accessModes": [
+            "ReadWriteOnce"
+          ],
+          "resources": {
+            "requests": {
+              "storage": "256Mi"
+            }
+          }
+        }
+      },
+      {
+        "metadata": {
+          "name": "disk3"
+        },
+        "spec": {
+          "accessModes": [
+            "ReadWriteOnce"
+          ],
+          "resources": {
+            "requests": {
+              "storage": "256Mi"
+            }
+          }
+        }
+      },
+      {
+        "metadata": {
+          "name": "disk4"
+        },
+        "spec": {
+          "accessModes": [
+            "ReadWriteOnce"
+          ],
+          "resources": {
+            "requests": {
+              "storage": "256Mi"
+            }
+          }
+        }
+      },
+      {
+        "metadata": {
+          "name": "disk5"
+        },
+        "spec": {
+          "accessModes": [
+            "ReadWriteOnce"
+          ],
+          "resources": {
+            "requests": {
+              "storage": "256Mi"
+            }
+          }
+        }
+      },
+      {
+        "metadata": {
+          "name": "disk6"
+        },
+        "spec": {
+          "accessModes": [
+            "ReadWriteOnce"
+          ],
+          "resources": {
+            "requests": {
+              "storage": "256Mi"
+            }
+          }
+        }
+      },
+      {
+        "metadata": {
+          "name": "disk7"
+        },
+        "spec": {
+          "accessModes": [
+            "ReadWriteOnce"
+          ],
+          "resources": {
+            "requests": {
+              "storage": "256Mi"
+            }
+          }
+        }
+      },
+      {
+        "metadata": {
+          "name": "disk8"
+        },
+        "spec": {
+          "accessModes": [
+            "ReadWriteOnce"
+          ],
+          "resources": {
+            "requests": {
+              "storage": "256Mi"
+            }
+          }
+        }
+      }
+    ]
+  }
+}

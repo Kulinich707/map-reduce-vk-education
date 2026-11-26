@@ -1,0 +1,437 @@
+[
+  {
+    "cap": 5,
+    "equal_all_keys": true,
+    "sha256": "e9e0eea41a845c49a5d6187fe90f46d7d5411fb4b868a509549cff07a4d97f03",
+    "counts": {
+      "1": {
+        "unique_groups": 922,
+        "emissions": 16083,
+        "top10": [
+          [
+            "[\"python\"]",
+            2515
+          ],
+          [
+            "[\"postgresql\"]",
+            991
+          ],
+          [
+            "[\"git\"]",
+            970
+          ],
+          [
+            "[\"docker\"]",
+            899
+          ],
+          [
+            "[\"django framework\"]",
+            764
+          ],
+          [
+            "[\"linux\"]",
+            741
+          ],
+          [
+            "[\"fastapi\"]",
+            529
+          ],
+          [
+            "[\"sql\"]",
+            462
+          ],
+          [
+            "[\"django\"]",
+            368
+          ],
+          [
+            "[\"flask\"]",
+            307
+          ]
+        ]
+      },
+      "2": {
+        "unique_groups": 5653,
+        "emissions": 28983,
+        "top10": [
+          [
+            "[\"postgresql\",\"python\"]",
+            784
+          ],
+          [
+            "[\"git\",\"python\"]",
+            544
+          ],
+          [
+            "[\"linux\",\"python\"]",
+            532
+          ],
+          [
+            "[\"python\",\"sql\"]",
+            449
+          ],
+          [
+            "[\"django framework\",\"python\"]",
+            443
+          ],
+          [
+            "[\"docker\",\"python\"]",
+            374
+          ],
+          [
+            "[\"docker\",\"git\"]",
+            319
+          ],
+          [
+            "[\"git\",\"linux\"]",
+            288
+          ],
+          [
+            "[\"git\",\"postgresql\"]",
+            283
+          ],
+          [
+            "[\"django framework\",\"postgresql\"]",
+            278
+          ]
+        ]
+      },
+      "3": {
+        "unique_groups": 10147,
+        "emissions": 26944,
+        "top10": [
+          [
+            "[\"django framework\",\"postgresql\",\"python\"]",
+            224
+          ],
+          [
+            "[\"git\",\"postgresql\",\"python\"]",
+            203
+          ],
+          [
+            "[\"git\",\"linux\",\"python\"]",
+            170
+          ],
+          [
+            "[\"docker\",\"postgresql\",\"python\"]",
+            149
+          ],
+          [
+            "[\"fastapi\",\"postgresql\",\"python\"]",
+            132
+          ],
+          [
+            "[\"linux\",\"postgresql\",\"python\"]",
+            121
+          ],
+          [
+            "[\"postgresql\",\"python\",\"sql\"]",
+            113
+          ],
+          [
+            "[\"django framework\",\"git\",\"python\"]",
+            104
+          ],
+          [
+            "[\"docker\",\"git\",\"python\"]",
+            101
+          ],
+          [
+            "[\"docker\",\"linux\",\"python\"]",
+            98
+          ]
+        ]
+      }
+    }
+  },
+  {
+    "cap": 10,
+    "equal_all_keys": true,
+    "sha256": "938d33fb34b77c66c665e2e4759249f2eb4a7f09d937f10ab0ab8726998bcf6e",
+    "counts": {
+      "1": {
+        "unique_groups": 1301,
+        "emissions": 22233,
+        "top10": [
+          [
+            "[\"python\"]",
+            3400
+          ],
+          [
+            "[\"postgresql\"]",
+            1370
+          ],
+          [
+            "[\"git\"]",
+            1081
+          ],
+          [
+            "[\"docker\"]",
+            949
+          ],
+          [
+            "[\"linux\"]",
+            917
+          ],
+          [
+            "[\"sql\"]",
+            902
+          ],
+          [
+            "[\"django framework\"]",
+            771
+          ],
+          [
+            "[\"fastapi\"]",
+            557
+          ],
+          [
+            "[\"redis\"]",
+            408
+          ],
+          [
+            "[\"django\"]",
+            378
+          ]
+        ]
+      },
+      "2": {
+        "unique_groups": 13655,
+        "emissions": 68956,
+        "top10": [
+          [
+            "[\"postgresql\",\"python\"]",
+            1293
+          ],
+          [
+            "[\"git\",\"python\"]",
+            967
+          ],
+          [
+            "[\"python\",\"sql\"]",
+            879
+          ],
+          [
+            "[\"linux\",\"python\"]",
+            840
+          ],
+          [
+            "[\"docker\",\"python\"]",
+            796
+          ],
+          [
+            "[\"django framework\",\"python\"]",
+            690
+          ],
+          [
+            "[\"git\",\"postgresql\"]",
+            486
+          ],
+          [
+            "[\"fastapi\",\"python\"]",
+            485
+          ],
+          [
+            "[\"docker\",\"postgresql\"]",
+            455
+          ],
+          [
+            "[\"django framework\",\"postgresql\"]",
+            428
+          ]
+        ]
+      },
+      "3": {
+        "unique_groups": 51975,
+        "emissions": 142465,
+        "top10": [
+          [
+            "[\"git\",\"postgresql\",\"python\"]",
+            454
+          ],
+          [
+            "[\"docker\",\"postgresql\",\"python\"]",
+            413
+          ],
+          [
+            "[\"django framework\",\"postgresql\",\"python\"]",
+            407
+          ],
+          [
+            "[\"git\",\"linux\",\"python\"]",
+            355
+          ],
+          [
+            "[\"postgresql\",\"python\",\"sql\"]",
+            323
+          ],
+          [
+            "[\"docker\",\"git\",\"python\"]",
+            319
+          ],
+          [
+            "[\"git\",\"python\",\"sql\"]",
+            285
+          ],
+          [
+            "[\"fastapi\",\"postgresql\",\"python\"]",
+            277
+          ],
+          [
+            "[\"linux\",\"postgresql\",\"python\"]",
+            248
+          ],
+          [
+            "[\"django framework\",\"git\",\"python\"]",
+            243
+          ]
+        ]
+      }
+    }
+  },
+  {
+    "cap": 30,
+    "equal_all_keys": true,
+    "sha256": "ce02b3368869dc18d0fab36b363e6edde2b0bdfe74b087f208aaaa8952af109e",
+    "counts": {
+      "1": {
+        "unique_groups": 1480,
+        "emissions": 24585,
+        "top10": [
+          [
+            "[\"python\"]",
+            3558
+          ],
+          [
+            "[\"postgresql\"]",
+            1449
+          ],
+          [
+            "[\"git\"]",
+            1085
+          ],
+          [
+            "[\"sql\"]",
+            1048
+          ],
+          [
+            "[\"docker\"]",
+            949
+          ],
+          [
+            "[\"linux\"]",
+            936
+          ],
+          [
+            "[\"django framework\"]",
+            771
+          ],
+          [
+            "[\"fastapi\"]",
+            557
+          ],
+          [
+            "[\"redis\"]",
+            506
+          ],
+          [
+            "[\"django\"]",
+            378
+          ]
+        ]
+      },
+      "2": {
+        "unique_groups": 22168,
+        "emissions": 100812,
+        "top10": [
+          [
+            "[\"postgresql\",\"python\"]",
+            1405
+          ],
+          [
+            "[\"git\",\"python\"]",
+            1044
+          ],
+          [
+            "[\"python\",\"sql\"]",
+            1022
+          ],
+          [
+            "[\"linux\",\"python\"]",
+            905
+          ],
+          [
+            "[\"docker\",\"python\"]",
+            904
+          ],
+          [
+            "[\"django framework\",\"python\"]",
+            748
+          ],
+          [
+            "[\"fastapi\",\"python\"]",
+            531
+          ],
+          [
+            "[\"git\",\"postgresql\"]",
+            526
+          ],
+          [
+            "[\"docker\",\"postgresql\"]",
+            516
+          ],
+          [
+            "[\"python\",\"redis\"]",
+            477
+          ]
+        ]
+      },
+      "3": {
+        "unique_groups": 146371,
+        "emissions": 359923,
+        "top10": [
+          [
+            "[\"git\",\"postgresql\",\"python\"]",
+            506
+          ],
+          [
+            "[\"docker\",\"postgresql\",\"python\"]",
+            494
+          ],
+          [
+            "[\"django framework\",\"postgresql\",\"python\"]",
+            444
+          ],
+          [
+            "[\"postgresql\",\"python\",\"sql\"]",
+            411
+          ],
+          [
+            "[\"git\",\"linux\",\"python\"]",
+            399
+          ],
+          [
+            "[\"docker\",\"git\",\"python\"]",
+            374
+          ],
+          [
+            "[\"git\",\"python\",\"sql\"]",
+            366
+          ],
+          [
+            "[\"fastapi\",\"postgresql\",\"python\"]",
+            316
+          ],
+          [
+            "[\"docker\",\"python\",\"sql\"]",
+            310
+          ],
+          [
+            "[\"postgresql\",\"python\",\"redis\"]",
+            308
+          ]
+        ]
+      }
+    }
+  }
+]

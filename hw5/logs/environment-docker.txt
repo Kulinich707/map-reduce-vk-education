@@ -1,0 +1,2 @@
+$ docker info --format Server={{.ServerVersion}} CPU={{.NCPU}} Memory={{.MemTotal}}
+Server=29.8.0 CPU=12 Memory=8319238144

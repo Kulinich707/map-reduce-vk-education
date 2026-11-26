@@ -1,0 +1,2 @@
+$ kubectl --kubeconfig /Users/gpr/Documents/Codex/2026-11-26/new-chat/work/kubeconfig --cache-dir /Users/gpr/Documents/Codex/2026-11-26/new-chat/outputs/HW4_Kulinich_Kubernetes/.kubectl-cache apply -f /Users/gpr/Documents/Codex/2026-11-26/new-chat/outputs/HW4_Kulinich_Kubernetes/k8s/namespace.yaml
+namespace/hw4 created

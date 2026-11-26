@@ -1,0 +1,2 @@
+$ kubectl --kubeconfig /Users/gpr/Documents/Codex/2026-11-26/new-chat/work/kubeconfig --cache-dir /Users/gpr/Documents/Codex/2026-11-26/new-chat/outputs/HW4_Kulinich_Kubernetes/.kubectl-cache delete pod cpu-wait -n hw4 --wait=true
+pod "cpu-wait" deleted from hw4 namespace

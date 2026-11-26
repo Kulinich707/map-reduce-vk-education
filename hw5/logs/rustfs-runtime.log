@@ -1,0 +1,4 @@
+$ kubectl --kubeconfig /Users/gpr/Documents/Codex/2026-11-26/new-chat/work/kubeconfig --cache-dir /Users/gpr/Documents/Codex/2026-11-26/new-chat/outputs/HW4_Kulinich_Kubernetes/.kubectl-cache logs rustfs-0 -n hw4
+Initializing data directories: /data
+Initializing log directory: /logs
+Starting: /usr/bin/rustfs /data{1...8}

@@ -1,0 +1,11 @@
+rank,skill_1,skill_2,count
+1,postgresql,python,1405
+2,git,python,1044
+3,python,sql,1022
+4,linux,python,905
+5,docker,python,904
+6,django framework,python,748
+7,fastapi,python,531
+8,git,postgresql,526
+9,docker,postgresql,516
+10,python,redis,477

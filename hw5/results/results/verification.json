@@ -1,0 +1,51 @@
+{
+  "all_groups_equal_hw3": true,
+  "cgroup_peak_bytes": 166621184,
+  "elapsed_seconds": 0.5694545830000379,
+  "groups": 170019,
+  "parallel_equal_serial": true,
+  "rss_peak_mib": 141.12890625,
+  "serial_equal_hw3": true,
+  "top10_pairs": [
+    [
+      "[\"postgresql\",\"python\"]",
+      1405
+    ],
+    [
+      "[\"git\",\"python\"]",
+      1044
+    ],
+    [
+      "[\"python\",\"sql\"]",
+      1022
+    ],
+    [
+      "[\"linux\",\"python\"]",
+      905
+    ],
+    [
+      "[\"docker\",\"python\"]",
+      904
+    ],
+    [
+      "[\"django framework\",\"python\"]",
+      748
+    ],
+    [
+      "[\"fastapi\",\"python\"]",
+      531
+    ],
+    [
+      "[\"git\",\"postgresql\"]",
+      526
+    ],
+    [
+      "[\"docker\",\"postgresql\"]",
+      516
+    ],
+    [
+      "[\"python\",\"redis\"]",
+      477
+    ]
+  ]
+}

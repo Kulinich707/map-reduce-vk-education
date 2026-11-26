@@ -1,0 +1,8 @@
+{
+  "full_input_equal_hw3": true,
+  "groups": 170019,
+  "multiline_csv_roundtrip": true,
+  "global_dedup_before_split": true,
+  "filter_before_dedup": true,
+  "parallel_shard_sum_equal": true
+}

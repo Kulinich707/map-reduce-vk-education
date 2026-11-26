@@ -1,0 +1,115 @@
+#!/usr/bin/env python3
+"""Build a Russian PDF only from real saved Kubernetes/S3 evidence."""
+import json,html,hashlib
+from pathlib import Path
+from reportlab.platypus import SimpleDocTemplate,Paragraph,Spacer,Table,TableStyle,PageBreak,KeepTogether
+from reportlab.lib import colors
+from reportlab.lib.styles import getSampleStyleSheet,ParagraphStyle
+from reportlab.pdfbase import pdfmetrics
+from reportlab.pdfbase.ttfonts import TTFont
+ROOT=Path(__file__).resolve().parents[1]; R=ROOT/'results';L=ROOT/'logs'
+def read(p):return json.loads(p.read_text())
+m=read(R/'memory-sizing.json');v=read(R/'results/verification.json');e=read(R/'experiment-status.json');sched=read(R/'scheduling.json');nodes=read(L/'environment-nodes.json')['items'];bootpod=next(p for p in read(L/'bootstrap-pods.json')['items'] if p['metadata']['labels'].get('job-name')=='bootstrap')['metadata']['name'];boot=json.loads((L/('bootstrap-'+bootpod+'.log')).read_text().splitlines()[-1])
+font_candidates=[('/System/Library/Fonts/Supplemental/Arial.ttf','/System/Library/Fonts/Supplemental/Arial Bold.ttf'),('/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf','/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf')]
+f,b=next((f,b) for f,b in font_candidates if Path(f).exists());pdfmetrics.registerFont(TTFont('Body',f));pdfmetrics.registerFont(TTFont('BodyBold',b));pdfmetrics.registerFontFamily('Body',normal='Body',bold='BodyBold',italic='Body',boldItalic='BodyBold')
+styles=getSampleStyleSheet()
+styles.add(ParagraphStyle(name='TextRu',fontName='Body',fontSize=10,leading=15,spaceAfter=9,textColor=colors.HexColor('#203044')))
+styles.add(ParagraphStyle(name='TitleRu',fontName='BodyBold',fontSize=26,leading=32,spaceAfter=19,textColor=colors.HexColor('#12243A')))
+styles.add(ParagraphStyle(name='HeadRu',fontName='BodyBold',fontSize=18,leading=23,spaceAfter=16,textColor=colors.HexColor('#12243A')))
+styles.add(ParagraphStyle(name='SubRu',fontName='BodyBold',fontSize=12,leading=17,spaceBefore=9,spaceAfter=8,textColor=colors.HexColor('#176B73')))
+styles.add(ParagraphStyle(name='SmallRu',fontName='Body',fontSize=8,leading=11,spaceAfter=7,textColor=colors.HexColor('#34465A')))
+flow=[]
+def p(t,style='TextRu'):flow.append(Paragraph(t,styles[style]))
+def heading(t):p(t,'HeadRu')
+def sub(t):p(t,'SubRu')
+def page():flow.append(PageBreak())
+def table(rows,widths=None):
+    data=[[Paragraph(html.escape(str(c)).replace('\n','<br/>'),styles['SmallRu']) for c in row] for row in rows]
+    t=Table(data,colWidths=widths,repeatRows=1,hAlign='LEFT');t.setStyle(TableStyle([('BACKGROUND',(0,0),(-1,0),colors.HexColor('#E2EEF0')),('VALIGN',(0,0),(-1,-1),'TOP'),('LINEBELOW',(0,0),(-1,0),.7,colors.HexColor('#176B73')),('ROWBACKGROUNDS',(0,1),(-1,-1),[colors.white,colors.HexColor('#F4F6F9')]),('LEFTPADDING',(0,0),(-1,-1),8),('RIGHTPADDING',(0,0),(-1,-1),8),('TOPPADDING',(0,0),(-1,-1),7),('BOTTOMPADDING',(0,0),(-1,-1),6)]));flow.append(t);flow.append(Spacer(1,10))
+def evidence(t):
+    t=html.escape(t).replace('\n','<br/>');box=Table([[Paragraph(t,styles['SmallRu'])]],colWidths=[483]);box.setStyle(TableStyle([('BACKGROUND',(0,0),(-1,-1),colors.HexColor('#EEF3F7')),('BOX',(0,0),(-1,-1),.5,colors.HexColor('#CAD5DF')),('LEFTPADDING',(0,0),(-1,-1),10),('TOPPADDING',(0,0),(-1,-1),10),('BOTTOMPADDING',(0,0),(-1,-1),10)]));flow.append(box);flow.append(Spacer(1,10))
+def event(reason,filename):
+    return next(x for x in read(L/filename)['items'] if x.get('reason')==reason)
+
+p('ДОМАШНЯЯ РАБОТА № 4','SubRu');p('Kubernetes:<br/>ресурсы, приоритеты<br/>и параллельный расчёт','TitleRu')
+p('Кулинич Павел Васильевич<br/>Инженерия данных 1.3<br/>26 ноября 2026 г. · Europe/Moscow')
+p('Реальное локальное развёртывание RustFS и расчёта навыков из ДЗ3. Все численные результаты ниже взяты из сохранённых журналов и JSON, а не из имитации вывода.')
+table([['Требование','Подтверждение'],['Образ и Kubernetes Job','Dockerfile; k8s/profile.yaml и tuned.yaml'],['OOMKilled и подбор памяти',f"OOMKilled, exitCode={e['oom_reason']['exitCode']}; предел {m['tuned_limit_mib']} MiB"],['S3 внутри кластера','RustFS StatefulSet, Service и 8 PVC, EC 4+4'],['Параллельный расчёт','Indexed Job, 4 части; все группы совпали с ДЗ3'],['Ожидание CPU и вытеснение','Unschedulable / Insufficient cpu; событие Preempted'],['Квота namespace','Forbidden: exceeded quota; успешный повтор после освобождения'],['Сравнение систем','Ответы о YARN, Mesos и Kubernetes, страницы 7-8']],[170,313])
+p('Первичные доказательства: logs/ и results/. Полный код и воспроизводимый сценарий приложены в рабочей папке. Операции Git не выполнялись.','SmallRu')
+page();heading('1. Среда, данные и S3')
+ni=nodes[0]['status']['nodeInfo']
+table([['Параметр','Фактическое значение'],['Kubernetes / runtime',ni['kubeletVersion']+' / '+ni['containerRuntimeVersion']],['Узел',nodes[0]['metadata']['name']+'; '+ni['architecture']],['Allocatable CPU / memory',str(nodes[0]['status']['allocatable']['cpu'])+' / '+nodes[0]['status']['allocatable']['memory']],['Кластер','kind hw4-skills; kindest/node:v1.34.0'],['Вход ДЗ3',f"60 583 502 байта; SHA-256 {boot['uploaded_sha256']}"],['Отфильтровано и дедуплицировано',str(boot['unique_python_rows'])+' вакансий Python']],[155,328])
+p('Использован нормализованный вход data/vacancies.csv из присланного ДЗ3. Исходный CSV из ДЗ2 отличается от датасета ДЗ3: переносится архитектура хранилища RustFS, а вход расчёта берётся из ДЗ3, чтобы обеспечить точное совпадение результата.')
+sub('Перенос конфигурации хранилища')
+p('RustFS запущен внутри Kubernetes как StatefulSet rustfs с восемью PersistentVolumeClaim по 256 MiB. Service rustfs:9000 доступен задачам через DNS внутри namespace hw4. Использован тот же digest образа, что в ДЗ2; он загружается в kind локально. Параметры EC:4 и ширина erasure set 8 сохранены. Восемь путей на одном физическом компьютере требуют лабораторного bypass проверки дисков.')
+p('Старое хранилище не подменялось: создан новый экземпляр и в него загружен вход ДЗ3. После PUT выполнен GET и проверено совпадение SHA-256 с локальным файлом. Секрет генерируется при запуске и передаётся через Secret/env; его значение не записывается в журналы и комплект.')
+evidence('input/vacancies.csv -> bootstrap -> shards/0.csv ... shards/3.csv\n4 Indexed Job Pods -> partials/0.json ... partials/3.json\nReduce Job -> results/parallel.json -> сравнение с reference/combined_30.json')
+p('PVC сохраняют данные при пересоздании Pod, но удаление всего kind-кластера удалит локальное хранилище. Это односерверный учебный стенд, без независимых дисков и высокой доступности.','SmallRu')
+page();heading('2. Память: OOMKilled и рабочий предел')
+p('Сначала выполнен успешный профильный запуск с пределом 512 MiB. Измерены high-water RSS процесса и memory.peak cgroup v2. Для настройки лимита используется cgroup peak: он учитывает память контейнера шире, чем RSS одного процесса.')
+peak=m['measured']['cgroup_peak_bytes']/1048576
+table([['Измерение','Значение'],['RSS high-water',f"{m['measured']['rss_peak_mib']:.2f} MiB"],['Пик cgroup',f'{peak:.2f} MiB'],['Сниженный предел',f"{m['low_limit_mib']} MiB"],['Рабочий предел',f"{m['tuned_limit_mib']} MiB"],['Формула','ceil(peak_MiB × 1.30 / 16) × 16'],['Requests / limits CPU','250m / 1000m']],[215,268])
+p('Предел намеренно снижен примерно до половины измеренного пика. Запущена та же программа с тем же входом и без искусственного выделения памяти. backoffLimit=0 и restartPolicy=Never сохраняют единственную неуспешную попытку как доказательство.')
+evidence(json.dumps(e['oom_reason'],ensure_ascii=False,indent=2))
+p('После OOM выбран предел с запасом 30%, округлённый вверх до 16 MiB. Повторный tuned Job завершился успешно, результат совпал с ДЗ3. Это проверенный для данного входа предел с запасом, а не доказанный минимальный порог. При росте данных измерение нужно повторить.')
+p('Requests участвуют в планировании; memory limit ограничивает контейнер через cgroup. Превышение памяти может привести к OOMKilled, CPU limit вызывает throttling. Exit code 137 отдельно не доказывает OOM: в отчёте проверено именно поле reason=OOMKilled. [1]')
+p('Доказательства: results/memory-sizing.json, logs/oom-pods.json, logs/oom-describe.txt, logs/tuned-pods.json.','SmallRu')
+page();heading('3. Параллельный расчёт и топ-10')
+p('Сохранены исходные функции map_chunk и chunks из ДЗ3. Фильтр: отдельное слово Python в названии, без учёта регистра. Первая подходящая запись каждого id сохраняется. Навыки приводятся к нижнему регистру, пробелы нормализуются, дубли навыков удаляются. Лексикографический стек ограничен 30 навыками; считаются одиночные навыки, пары и тройки.')
+p('Перед разбиением выполняется общая фильтрация и дедупликация id. Затем CSV-записи распределяются по четырём частям round-robin. Разбиение производится csv.DictReader/DictWriter, поэтому переносы внутри полей и кавычки сохраняются. Каждый индекс Job читает собственный S3-объект; четыре Pod выполняются с parallelism=4. Reducer запускается после завершения всех четырёх индексов. [2]')
+table([['№','Пара навыков','Частота ДЗ3 = Kubernetes']]+[[i,' + '.join(json.loads(k)),n] for i,(k,n) in enumerate(v['top10_pairs'],1)],[28,300,155])
+p(f"Проверены все {v['groups']:,} групп: serial_equal_hw3={v['serial_equal_hw3']}, all_groups_equal_hw3={v['all_groups_equal_hw3']}, parallel_equal_serial={v['parallel_equal_serial']}. Равенство проверяет точные ключи и целочисленные частоты, а не только визуальное совпадение топ-10.")
+p('Повторный запуск индекса перезаписывает partials/{index}.json по стабильному ключу. Reducer читает каждый индекс ровно один раз, поэтому повторы не удваивают сумму. Для повторного полного эксперимента создаётся чистый учебный кластер.','SmallRu')
+page();heading('4. CPU: ожидание и вытеснение')
+sub('Нехватка CPU')
+p(f"Узел имеет {sched['allocatable_cpu']} allocatable CPU. Pod low запрашивает {sched['pod_request']}; второй Pod cpu-wait с таким же запросом и preemptionPolicy=Never не помещается. Контейнеры спят, поэтому фактическая загрузка CPU мала: проверяется учёт requests планировщиком.")
+pending=read(L/'cpu-pending-pods.json')['items'];cond=next(c for x in pending if x['metadata']['name']=='cpu-wait' for c in x['status']['conditions'] if c.get('reason')=='Unschedulable')
+evidence('Pod cpu-wait / PodScheduled=False\n'+cond['message'])
+p('Pod создан API-сервером, но остаётся Pending, пока не освободятся запрошенные ресурсы. Наличие физически простаивающего CPU не отменяет уже зарезервированных requests. Снимки: logs/cpu-pending-pods.json и cpu-pending-describe.txt.')
+sub('Вытеснение более высоким приоритетом')
+p('После фиксации ожидания cpu-wait удалён. Создан high с PriorityClass=hw4-high (1000); у low PriorityClass=hw4-low (10). Для high разрешено PreemptLowerPriority. Запросы обоих Pod одинаковы; одновременно они не помещаются. Планировщик освобождает ресурсы, вытесняя low. [3]')
+ev=event('Preempted','preemption-events.json');evidence(ev['reason']+' / '+ev['involvedObject']['name']+'\n'+ev.get('message',''))
+p('Проверяется событие Preempted с UID исходного low и состояние Running у high. Поэтому исчезновение low не принимается само по себе за доказательство вытеснения. В этом опыте low - отдельный Pod; контроллер не восстанавливает его автоматически.')
+p('Приоритет не создаёт дополнительные ресурсы и не обходит ResourceQuota. Вытеснение возможно только при наличии подходящих жертв и соблюдении ограничений размещения. Не всякий Pending Pod может быть запущен вытеснением. [3]')
+page();heading('5. Квота пространства имён')
+p('В отдельном namespace hw4-quota создан ResourceQuota: requests.cpu=200m, limits.cpu=200m, requests.memory=128Mi, limits.memory=128Mi, pods=1. Первый Pod запрашивает 150m CPU и 64Mi памяти; второй такой же Pod превышает CPU-квоту и ограничение числа Pod. [4]')
+quota=(L/'quota-rejection.txt').read_text();evidence(quota.split('\n',1)[1].strip())
+p('В отличие от дефицита CPU на узле, Pod не переходит в Pending: API-сервер отклоняет создание с Forbidden / exceeded quota. Для Job аналогичная ошибка возникла бы у контроллера при создании Pod; поэтому здесь использованы отдельные Pod, чтобы явно зафиксировать ответ admission.')
+table([['Шаг','Наблюдение'],['Создать quota-first','Running; used CPU=150m, pods=1'],['Создать quota-rejected','API Forbidden, exceeded quota'],['Удалить quota-first','Зарезервированная квота освобождается'],['Повторить quota-rejected','Создание успешно, Pod Running']],[185,298])
+p('Успешный повтор подтверждён logs/quota-after-release.txt и quota-recovered-pods.json. Квота задаёт верхнюю границу потребления namespace и не резервирует ему долю физического узла. Для значений по умолчанию можно дополнительно использовать LimitRange; в этой работе requests и limits заданы явно. [4]')
+sub('Три разных причины отсутствия результата')
+table([['Механизм','Этап','Свидетельство'],['OOM memory limit','Контейнер уже запущен','terminated.reason=OOMKilled'],['Недостаточно CPU requests','Планирование','Pod Pending; Insufficient cpu'],['ResourceQuota','Создание через API','Forbidden; Pod не создан']],[130,145,208])
+p('Первичные файлы: logs/quota-describe.txt, quota-rejection.txt, quota-recovered-pods.json. После опыта тестовые Pod квоты удалены.','SmallRu')
+page();heading('6. Ответы: соответствие YARN, Mesos и Kubernetes')
+sub('Кто управляет ресурсами и жизненным циклом?')
+p('В YARN ResourceManager распределяет ресурсы, NodeManager управляет выполнением на узле, а ApplicationMaster конкретного приложения запрашивает контейнеры и следит за задачами. В Kubernetes scheduler выбирает узел для Pod, kubelet запускает контейнеры через runtime, а Job controller следит за завершениями и повторными попытками. Аналогия ApplicationMaster с Job controller частичная: общей логики DAG и shuffle у обычного Job нет. [5]')
+table([['Роль','YARN','Mesos','Kubernetes'],['Управление кластером','ResourceManager','Master + allocator','Control plane / API'],['Выбор размещения','Scheduler + запросы AM','Allocator + framework scheduler','kube-scheduler'],['Агент узла','NodeManager','Agent + executor','kubelet + runtime'],['Единица выполнения','YARN container','Task','Pod / container'],['Жизненный цикл batch','ApplicationMaster','Framework','Job controller + приложение'],['Граница ресурсов','Queue / user','Role','Namespace + ResourceQuota']],[107,116,126,134])
+sub('Почему Mesos называют двухуровневым?')
+p('Mesos предлагает framework набор ресурсов (resource offer); framework scheduler решает, какие предложения принять и какие задачи разместить. Master определяет объём предложения, framework выбирает работу. Обычный Kubernetes scheduler непосредственно назначает Pod узлу по декларативным требованиям. Framework scheduler Mesos нельзя отождествить с Kubernetes Job controller. [6]')
+sub('Чем YARN container отличается от Docker-контейнера?')
+p('YARN container - выделение ресурсов и среда запуска процесса; это не обязательно OCI-контейнер и не формат образа Docker. Docker/OCI-контейнер в Kubernetes запускается runtime внутри Pod. Термин «container» сам по себе не означает одинаковую модель изоляции. [5]')
+page();heading('7. Планирование, изоляция и выбор системы')
+sub('Как соотносятся очереди, квоты и приоритеты?')
+p('YARN CapacityScheduler делит ёмкость между очередями, допускает использование свободной доли и поддерживает возврат ресурсов через preemption по конфигурации. В Kubernetes ResourceQuota ограничивает суммарные requests/limits namespace при admission, а PriorityClass влияет на очередь Pod и вытеснение. Это функциональные аналогии, но ResourceQuota не является гарантированной долей ёмкости очереди. [7, 3, 4]')
+p('В Mesos политики распределения применяются к framework/role, а quota задаётся на уровне role. Это другая граница управления, чем namespace Kubernetes. Поэтому механическое соответствие «одна очередь = один namespace = один role» не переносит все гарантии планирования. [8]')
+sub('Где реализуются MapReduce и локальность данных?')
+p('Для данного приложения чтение идёт по S3 API: Pod может выполняться на любом доступном узле. В коде отдельно реализованы разбиение, Combine и Reduce. Kubernetes Job запускает процессы и отслеживает завершения, но не реализует сам MapReduce, shuffle или locality относительно S3-объектов. Для сложных графов обработки потребуется отдельный движок либо оператор.')
+sub('Что произойдёт при отказе и можно ли гарантировать ускорение?')
+p('Job может повторить неуспешную задачу при подходящем backoffLimit, поэтому результат индекса должен быть идемпотентным. В опыте OOM повторы отключены намеренно. Повторное выполнение не решает слишком маленький memory limit. Параллелизм 4 увеличивает одновременный спрос на память и CPU; ускорение зависит от S3, запуска Pod и затрат Reduce, поэтому одно только число Pod не доказывает ускорения. [2]')
+sub('Какую систему выбрать для этой работы?')
+p('Для упакованной Python-программы и S3 выбран Kubernetes: единые манифесты для batch и хранилища, requests/limits, приоритеты и квоты проверяются на одном стенде. Для существующего Hadoop-окружения с очередями и HDFS разумно рассматривать YARN. Mesos полезен как пример двухуровневого планирования; проект переведён в Apache Attic, что нужно учитывать при выборе нового стека. [9]')
+p('Ограничения: один узел, один физический компьютер; нет теста отказа узла и распределённого S3 между машинами. Эксперименты показывают поведение планировщика и cgroups, а не production-отказоустойчивость. Конкретный предел памяти зависит от входа и версии runtime.')
+page();heading('8. Воспроизведение и источники')
+p('Нужны работающий Docker, kubectl, curl и Python 3. Для построения PDF отдельно установите reportlab. Запускать из корня рабочей папки. scripts/start.sh создаёт только выделенный кластер hw4-skills и сохраняет kubeconfig в .local/. При наличии одноимённого кластера сначала сохраните нужные данные; сценарий не удаляет его автоматически.')
+evidence('bash scripts/start.sh\n# После проверки результатов, при необходимости:\nkind delete cluster --name hw4-skills\n# PDF из сохранённых измерений без повторения кластера:\npython3 scripts/build_report.py')
+p('Не применяйте k8s/*.yaml одной командой: среди файлов есть намеренно неуспешные OOM и quota-rejected. Правильный порядок, ожидания и проверки зафиксированы в scripts/run_lab.py. Секрет создаётся автоматически; его манифест не сохраняется. Для повторного опыта нужны новые Job или чистый выделенный кластер.')
+sub('Состав комплекта')
+p('Dockerfile и requirements.txt; src/ с исходными функциями ДЗ3 и S3 worker; data/ с нормализованным входом; reference/ с эталоном; k8s/ с фактически применёнными манифестами; scripts/ с полным сценарием; logs/ с командами, stdout, Pod/Job/Event JSON; results/ с частотами, метриками и проверками; materials/ с присланными материалами. SHA256SUMS.txt позволяет проверить целостность файлов.')
+sub('Официальная документация (проверена 26.11.2026)')
+sources=[('1','Ресурсы контейнеров','https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/'),('2','Kubernetes Jobs','https://kubernetes.io/docs/concepts/workloads/controllers/job/'),('3','Приоритеты и вытеснение','https://kubernetes.io/docs/concepts/scheduling-eviction/pod-priority-preemption/'),('4','ResourceQuota','https://kubernetes.io/docs/concepts/policy/resource-quotas/'),('5','YARN Architecture','https://hadoop.apache.org/docs/current/hadoop-yarn/hadoop-yarn-site/YARN.html'),('6','Mesos Architecture','https://mesos.apache.org/documentation/latest/architecture/'),('7','YARN CapacityScheduler','https://hadoop.apache.org/docs/current/hadoop-yarn/hadoop-yarn-site/CapacityScheduler.html'),('8','Mesos Quota','https://mesos.apache.org/documentation/latest/quota/'),('9','Mesos / Apache Attic','https://attic.apache.org/projects/mesos.html')]
+for n,title,url in sources:p(f'[{n}] {title}: <link href="{url}" color="#176B73">{url}</link>','SmallRu')
+
+def footer(c,d):
+    c.setStrokeColor(colors.HexColor('#CBD5DF'));c.line(55,43,540,43);c.setFont('Body',8);c.setFillColor(colors.HexColor('#536478'));c.drawString(55,29,'Кулинич П. В. · Kubernetes · ДЗ4');c.drawRightString(540,29,str(d.page))
+out=ROOT/'report/HW4_Kulinich_Kubernetes.pdf';SimpleDocTemplate(str(out),pagesize=(595.28,841.89),rightMargin=55,leftMargin=55,topMargin=48,bottomMargin=60,title='ДЗ4 - Kubernetes - Кулинич П. В.',author='Кулинич Павел Васильевич').build(flow,onFirstPage=footer,onLaterPages=footer)
+print(out)
